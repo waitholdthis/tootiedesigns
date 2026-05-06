@@ -66,11 +66,28 @@ const related = projects.filter((item) => item.slug !== project.slug).slice(0, 3
             <span></span>
             <span></span>
           </div>
-          <div class="device-screen">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
+          <div class:list={["device-screen", project.slug === "diverse-hair-designs-peachie" && "salon-preview"]}>
+            <div class="device-nav">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="device-hero-block">
+              <span></span>
+              <strong>{project.category}</strong>
+              <p>{project.title}</p>
+            </div>
+            <div class="device-card-list">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="device-gallery">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
           </div>
         </div>
         <div class="case-stats">

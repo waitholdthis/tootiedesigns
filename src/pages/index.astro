@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import BridgeHighlight from "../components/BridgeHighlight";
+import LaserIntro from "../components/LaserIntro";
 import PerspectiveBlueprint from "../components/PerspectiveBlueprint";
 import ProjectShowcase from "../components/ProjectShowcase";
 import { capabilities, process, projectNotes, projects, tech, websiteShowcase } from "../data/site";
@@ -25,6 +26,7 @@ const filters = [
     <title>Tootie Designs | Multidisciplinary Creation</title>
   </head>
   <body>
+    <LaserIntro client:load />
     <header class="site-header" aria-label="Primary navigation">
       <a class="brand" href="#top" aria-label="Tootie Designs home">
         <span class="brand-mark">TD</span>
