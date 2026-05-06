@@ -3,7 +3,7 @@ import "../styles/global.css";
 import BridgeHighlight from "../components/BridgeHighlight";
 import PerspectiveBlueprint from "../components/PerspectiveBlueprint";
 import ProjectShowcase from "../components/ProjectShowcase";
-import { capabilities, process, projects, tech } from "../data/site";
+import { capabilities, process, projectNotes, projects, tech, websiteShowcase } from "../data/site";
 
 const filters = [
   { value: "all", label: "All" },
@@ -79,6 +79,37 @@ const filters = [
         <BridgeHighlight client:visible />
       </section>
 
+      <section class="proof-band section-shell" aria-label="Studio proof points">
+        <div>
+          <span>01</span>
+          <strong>Strategy to launch</strong>
+          <p>Positioning, copy, interface design, development, and deployment.</p>
+        </div>
+        <div>
+          <span>02</span>
+          <strong>Defense-informed precision</strong>
+          <p>Built from Fayetteville, NC with respect for clarity, service, and execution.</p>
+        </div>
+        <div>
+          <span>03</span>
+          <strong>Digital and physical craft</strong>
+          <p>Software, websites, fabrication, wood, and textile work under one disciplined studio.</p>
+        </div>
+      </section>
+
+      <section class="brand-lockup section-shell" aria-label="Brand system">
+        <div class="brand-sigil">TD</div>
+        <div>
+          <p class="eyebrow">Studio Standard</p>
+          <h2>Design that can brief, build, and finish.</h2>
+        </div>
+        <p>
+          Tootie Designs combines strategic web creation, defense-informed systems thinking,
+          and tactile fabrication under a single visual language: industrial elegance,
+          disciplined grids, dark materials, and precise finish.
+        </p>
+      </section>
+
       <section class="section-shell" id="capabilities" aria-labelledby="capabilities-title">
         <div class="section-heading">
           <p class="eyebrow">Capabilities</p>
@@ -92,6 +123,38 @@ const filters = [
                 <h3>{capability.title}</h3>
                 <span></span>
                 <p>{capability.description}</p>
+                <ul>
+                  {capability.services.map((service) => <li>{service}</li>)}
+                </ul>
+              </article>
+            ))
+          }
+        </div>
+      </section>
+
+      <section class="section-shell website-showcase" aria-labelledby="website-showcase-title">
+        <div class="section-heading split">
+          <div>
+            <p class="eyebrow">Website Design Showcase</p>
+            <h2 id="website-showcase-title">Digital Lab builds made to look credible on arrival.</h2>
+          </div>
+          <a class="button secondary" href="/work/website-design-portfolio/">View Website Case Study</a>
+        </div>
+        <div class="website-grid">
+          {
+            websiteShowcase.map((item) => (
+              <article class="website-card">
+                <div class="website-frame" aria-hidden="true">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <p class="eyebrow">{item.type}</p>
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+                <div>
+                  {item.highlights.map((highlight) => <span>{highlight}</span>)}
+                </div>
               </article>
             ))
           }
@@ -146,6 +209,23 @@ const filters = [
         </div>
       </section>
 
+      <section class="section-shell project-notes" aria-labelledby="notes-title">
+        <div class="section-heading">
+          <p class="eyebrow">Project Notes</p>
+          <h2 id="notes-title">Proof points without the noise.</h2>
+        </div>
+        <div class="notes-grid">
+          {
+            projectNotes.map((note) => (
+              <figure>
+                <blockquote>{note.quote}</blockquote>
+                <figcaption>{note.source}</figcaption>
+              </figure>
+            ))
+          }
+        </div>
+      </section>
+
       <section class="section-shell about" aria-labelledby="about-title">
         <p class="eyebrow">About the Studio</p>
         <h2 id="about-title">Multidisciplinary creation, grounded in Fayetteville precision.</h2>
@@ -187,6 +267,29 @@ const filters = [
             </select>
           </label>
           <label>
+            Timeline
+            <select name="timeline">
+              <option>Exploring options</option>
+              <option>Ready to start this month</option>
+              <option>Need a fast launch</option>
+              <option>Planning for a future phase</option>
+            </select>
+          </label>
+          <label>
+            Budget Range
+            <select name="budget">
+              <option>Not sure yet</option>
+              <option>Under $1,000</option>
+              <option>$1,000 - $3,000</option>
+              <option>$3,000 - $7,500</option>
+              <option>$7,500+</option>
+            </select>
+          </label>
+          <label>
+            Existing Website or Reference
+            <input name="reference" type="url" placeholder="https://" />
+          </label>
+          <label>
             Brief
             <textarea name="brief" rows="4"></textarea>
           </label>
@@ -196,9 +299,14 @@ const filters = [
     </main>
 
     <footer class="site-footer">
-      <span>Tootie Designs</span>
-      <span>Fayetteville, NC</span>
-      <span>Precision / Texture / Innovation</span>
+      <div>
+        <strong>Tootie Designs</strong>
+        <span>Fayetteville, NC</span>
+      </div>
+      <div>
+        <span>Website Design / Software / Tactical Consulting / Fabrication</span>
+        <span>Precision / Texture / Innovation</span>
+      </div>
     </footer>
   </body>
 </html>

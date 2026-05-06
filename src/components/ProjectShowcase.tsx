@@ -80,7 +80,8 @@ function SpotlightProjectCard({ project }: { project: Project & { isVisible: boo
   }
 
   return (
-    <article
+    <a
+      href={`/work/${project.slug}/`}
       className={`project-card spotlight-card ${project.size}${project.isVisible ? "" : " is-hidden"}`}
       data-category={project.filter}
       onPointerMove={handlePointerMove}
@@ -94,6 +95,7 @@ function SpotlightProjectCard({ project }: { project: Project & { isVisible: boo
       </div>
       <h3>{project.title}</h3>
       <p>{project.description}</p>
-    </article>
+      <span className="project-link">View Case Study</span>
+    </a>
   );
 }

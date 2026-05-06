@@ -1,0 +1,145 @@
+---
+import "../../styles/global.css";
+import { projects, tech } from "../../data/site";
+
+export function getStaticPaths() {
+  return projects.map((project) => ({
+    params: { slug: project.slug },
+    props: { project },
+  }));
+}
+
+const { project } = Astro.props;
+const related = projects.filter((item) => item.slug !== project.slug).slice(0, 3);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={`${project.title} case study by Tootie Designs.`} />
+    <title>{project.title} | Tootie Designs Case Study</title>
+  </head>
+  <body>
+    <header class="site-header" aria-label="Primary navigation">
+      <a class="brand" href="/" aria-label="Tootie Designs home">
+        <span class="brand-mark">TD</span>
+        <span>Tootie Designs</span>
+      </a>
+      <nav>
+        <a href="/#work">Work</a>
+        <a href="/#capabilities">Capabilities</a>
+        <a href="/#process">Process</a>
+        <a href="/#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="case-hero section-shell">
+        <a class="back-link" href="/#work">Back to Selected Work</a>
+        <div class="case-hero-grid">
+          <div>
+            <p class="eyebrow">{project.caseStudy.eyebrow}</p>
+            <h1>{project.title}</h1>
+            <p class="hero-copy">{project.caseStudy.summary}</p>
+          </div>
+          <aside class="case-meta">
+            <span>{project.category}</span>
+            <strong>{project.meta}</strong>
+            <p>{project.description}</p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="case-visual section-shell" aria-label={`${project.title} visual system`}>
+        <div class="case-device">
+          <div class="device-bar">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="device-screen">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <div class="case-stats">
+          {project.caseStudy.stats.map((stat) => <span>{stat}</span>)}
+        </div>
+      </section>
+
+      <section class="case-body section-shell">
+        <article>
+          <p class="eyebrow">Challenge</p>
+          <h2>What needed to be solved.</h2>
+          <p>{project.caseStudy.challenge}</p>
+        </article>
+        <article>
+          <p class="eyebrow">Approach</p>
+          <h2>How the work was shaped.</h2>
+          <p>{project.caseStudy.approach}</p>
+        </article>
+        <article>
+          <p class="eyebrow">Outcome</p>
+          <h2>What the work communicates.</h2>
+          <p>{project.caseStudy.outcome}</p>
+        </article>
+      </section>
+
+      <section class="section-shell deliverables" aria-labelledby="deliverables-title">
+        <div>
+          <p class="eyebrow">Deliverables</p>
+          <h2 id="deliverables-title">Built with a clear scope.</h2>
+        </div>
+        <div class="deliverable-grid">
+          {project.caseStudy.deliverables.map((item) => <span>{item}</span>)}
+        </div>
+      </section>
+
+      <section class="tech-ticker" aria-label="Technology and materials">
+        <div>
+          {[...tech, ...tech].map((item) => <span>{item}</span>)}
+        </div>
+      </section>
+
+      <section class="section-shell related-work" aria-labelledby="related-title">
+        <div class="section-heading">
+          <p class="eyebrow">More Work</p>
+          <h2 id="related-title">Other studio directions.</h2>
+        </div>
+        <div class="related-grid">
+          {
+            related.map((item) => (
+              <a class="related-card" href={`/work/${item.slug}/`}>
+                <span>{item.category}</span>
+                <strong>{item.title}</strong>
+                <p>{item.description}</p>
+              </a>
+            ))
+          }
+        </div>
+      </section>
+
+      <section class="section-shell contact case-contact" id="contact" aria-labelledby="case-contact-title">
+        <div>
+          <p class="eyebrow">Start a Project</p>
+          <h2 id="case-contact-title">Need work with this level of structure?</h2>
+          <p>
+            Bring the goal, audience, and constraints. Tootie Designs can shape the
+            system, site, object, or engagement from there.
+          </p>
+        </div>
+        <a class="button primary" href="/#contact">Open the Project Brief</a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Tootie Designs</span>
+      <span>Fayetteville, NC</span>
+      <span>Precision / Texture / Innovation</span>
+    </footer>
+  </body>
+</html>

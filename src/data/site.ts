@@ -4,35 +4,83 @@ export const capabilities = [
     kicker: "Digital Lab",
     description:
       "Mission-aware web and application architecture for dashboards, workflows, and operational tools.",
+    services: ["Dashboards and admin tools", "Workflow applications", "API-connected interfaces", "Deployment planning"],
   },
   {
     title: "Website Design & Creation",
     kicker: "Digital Lab",
     description:
       "Cinematic brand websites, landing pages, and portfolio systems designed, written, built, and deployed with a premium digital workshop feel.",
+    services: ["Website strategy", "Responsive design", "Copy structure", "Astro front-end builds"],
   },
   {
     title: "Tactical Consulting",
     kicker: "Tactical Desk",
     description:
       "Defense-informed planning support, C-UAS thinking, and structured decision products for complex environments.",
+    services: ["Mission analysis", "Planning artifacts", "Decision frameworks", "Readiness documentation"],
   },
   {
     title: "Digital Fabrication",
     kicker: "Physical Forge",
     description:
       "Laser engraving, vector preparation, material testing, and clean finished components with tight tolerances.",
+    services: ["Laser engraving", "SVG/DXF prep", "Material testing", "Component finishing"],
   },
   {
     title: "Material Craft",
     kicker: "Pattern Room",
     description:
       "Woodwork, crochet, and tactile goods framed through pattern logic, structure, and hand-finished detail.",
+    services: ["Woodwork studies", "Crochet commissions", "Pattern logic", "Texture exploration"],
+  },
+];
+
+export const websiteShowcase = [
+  {
+    title: "Studio Portfolio Systems",
+    type: "Brand Website",
+    description:
+      "Dark-mode, cinematic portfolio sites with responsive case studies, sharp service positioning, and launch-ready structure.",
+    highlights: ["Portfolio architecture", "Case-study pages", "Mobile polish"],
+  },
+  {
+    title: "Service Landing Pages",
+    type: "Conversion Page",
+    description:
+      "Focused one-page websites for services, products, and creative offers that need clarity, confidence, and a strong first impression.",
+    highlights: ["Offer hierarchy", "CTA strategy", "Fast static builds"],
+  },
+  {
+    title: "Technical Product Interfaces",
+    type: "Web Application",
+    description:
+      "Interface-forward web builds for complex tools, dashboards, and operational products where usability and credibility matter.",
+    highlights: ["UX systems", "Dashboard visuals", "React/Astro delivery"],
+  },
+];
+
+export const projectNotes = [
+  {
+    quote:
+      "The work is approached like a mission brief: define the objective, remove ambiguity, and build until the outcome feels clear.",
+    source: "Studio Note / Process",
+  },
+  {
+    quote:
+      "Digital systems and physical craft are treated as the same discipline: structure, repetition, tolerance, and finish.",
+    source: "Studio Note / Method",
+  },
+  {
+    quote:
+      "The goal is not just a good-looking deliverable. The goal is a piece of work that earns trust quickly.",
+    source: "Studio Note / Standard",
   },
 ];
 
 export const projects = [
   {
+    slug: "mdpt-cuas-framework",
     title: "MDPT: C-UAS Framework",
     category: "Digital Systems",
     filter: "digital",
@@ -40,8 +88,22 @@ export const projects = [
     meta: "Real-time planning / CesiumJS / sensor logic",
     description:
       "A multi-domain planning environment for counter-UAS workflows, built around operational clarity and rapid interpretation.",
+    caseStudy: {
+      eyebrow: "Digital Lab / Defense Software",
+      summary:
+        "A mission-focused planning interface concept built to help complex C-UAS information feel structured, scannable, and actionable.",
+      challenge:
+        "Counter-UAS planning can involve scattered map context, sensor inputs, decision points, and operational constraints. The interface needed to frame that complexity without overwhelming the operator.",
+      approach:
+        "The system direction prioritizes layered geospatial context, status hierarchy, and fast recognition patterns. Tactical data is treated as interface architecture: clear zones, disciplined panels, and visual emphasis only where it supports a decision.",
+      outcome:
+        "The result is a professional planning framework that communicates readiness, technical fluency, and defense-sector awareness through a polished digital product experience.",
+      deliverables: ["Interface architecture", "Operational dashboard UX", "Geospatial planning patterns", "C-UAS workflow framing"],
+      stats: ["CesiumJS map logic", "Real-time sensor concept", "Mission-ready UI"],
+    },
   },
   {
+    slug: "defense-sector-consulting",
     title: "Defense Sector Consulting",
     category: "Tactical Consulting",
     filter: "tactical",
@@ -49,8 +111,22 @@ export const projects = [
     meta: "Mission analysis / readiness / doctrine",
     description:
       "Structured advisory work that turns ambiguous requirements into clear planning artifacts and decision support.",
+    caseStudy: {
+      eyebrow: "Tactical Desk / Advisory",
+      summary:
+        "Defense-informed consulting support for translating broad mission needs into organized planning products and operational clarity.",
+      challenge:
+        "High-stakes environments often contain competing priorities, incomplete information, and multiple stakeholder needs. The work requires structure before execution can become useful.",
+      approach:
+        "Tootie Designs frames the mission, audience, constraints, and decision requirements first. From there, planning products are organized into usable artifacts that support alignment and action.",
+      outcome:
+        "The engagement model gives clients cleaner thinking, sharper documentation, and a more disciplined path from ambiguity to execution.",
+      deliverables: ["Mission analysis", "Planning support", "Decision frameworks", "Readiness-oriented documentation"],
+      stats: ["Defense-informed", "Structured outputs", "Fayetteville, NC"],
+    },
   },
   {
+    slug: "gymnastics-performance-app",
     title: "Gymnastics Performance App",
     category: "Digital Systems",
     filter: "digital",
@@ -58,8 +134,22 @@ export const projects = [
     meta: "React Native / cross-platform deployment",
     description:
       "A performance-focused application concept for athletes, coaches, and progress tracking across devices.",
+    caseStudy: {
+      eyebrow: "Digital Lab / Mobile Product",
+      summary:
+        "A cross-platform app direction for making gymnastics progress, routines, and performance notes easier to track.",
+      challenge:
+        "Athletic tracking tools need to be fast, low-friction, and useful across repeat sessions. The experience has to serve both training discipline and everyday use.",
+      approach:
+        "The interface direction centers repeatable logging, clear progress states, and mobile-friendly flows. The product structure is designed for coaches, athletes, and families who need clarity without administrative drag.",
+      outcome:
+        "A focused mobile product foundation that shows Tootie Designs can move from domain need to structured app experience.",
+      deliverables: ["React Native app structure", "Mobile UX flows", "Progress tracking patterns", "Cross-platform deployment planning"],
+      stats: ["Mobile-first", "React Native", "Performance tracking"],
+    },
   },
   {
+    slug: "website-design-portfolio",
     title: "Website Design Portfolio",
     category: "Website Design",
     filter: "digital",
@@ -67,8 +157,22 @@ export const projects = [
     meta: "Astro / responsive UX / brand systems",
     description:
       "Custom websites shaped from strategy, copy, visual direction, responsive interface design, and deployment.",
+    caseStudy: {
+      eyebrow: "Digital Lab / Website Design",
+      summary:
+        "Cinematic, conversion-aware websites built from brand strategy, content structure, responsive design, and production-ready front-end implementation.",
+      challenge:
+        "A professional website has to do more than look good. It has to explain the offer, create trust, guide attention, and work cleanly on every device.",
+      approach:
+        "Each website starts with positioning and information architecture, then moves into visual direction, copy, responsive interface design, and deployment. The result is a site that feels custom rather than templated.",
+      outcome:
+        "A reusable website creation process that can support portfolios, landing pages, service businesses, and technically sophisticated brands.",
+      deliverables: ["Brand-led web design", "Responsive Astro builds", "Copy and content structure", "Deployment-ready front ends"],
+      stats: ["Strategy to launch", "Mobile responsive", "SEO-ready structure"],
+    },
   },
   {
+    slug: "landing-page-systems",
     title: "Landing Page Systems",
     category: "Website Design",
     filter: "digital",
@@ -76,8 +180,22 @@ export const projects = [
     meta: "UX writing / conversion / deployment",
     description:
       "Focused digital experiences for brands, products, portfolios, and service launches that need polish from the first screen.",
+    caseStudy: {
+      eyebrow: "Digital Lab / Landing Pages",
+      summary:
+        "Focused single-page digital experiences designed to introduce an offer quickly, clearly, and with visual confidence.",
+      challenge:
+        "Landing pages have limited time to earn attention. Every headline, section, and call to action has to work without clutter.",
+      approach:
+        "Tootie Designs builds landing pages around a direct offer, sharp visual hierarchy, concise copy, and responsive sections that make the next step obvious.",
+      outcome:
+        "A polished launch surface for services, products, portfolios, and campaigns that need to feel credible from the first screen.",
+      deliverables: ["Landing page strategy", "UX writing", "Responsive layout", "Launch-ready implementation"],
+      stats: ["Fast launch path", "Conversion-focused", "Premium first impression"],
+    },
   },
   {
+    slug: "precision-components",
     title: "Precision Components",
     category: "Physical Fabrication",
     filter: "fabrication",
@@ -85,8 +203,22 @@ export const projects = [
     meta: "DXF / SVG / laser tolerances",
     description:
       "Clean laser-cut and engraved work where vector discipline, material choice, and finish quality carry the design.",
+    caseStudy: {
+      eyebrow: "Physical Forge / Laser Work",
+      summary:
+        "Laser-cut and engraved components developed with attention to vector quality, material behavior, and finished presentation.",
+      challenge:
+        "Physical fabrication depends on details that are easy to overlook: path cleanliness, burn behavior, edge quality, material contrast, and tolerance.",
+      approach:
+        "Design files are prepared with production in mind, then refined through material-aware decisions that balance precision, durability, and visual finish.",
+      outcome:
+        "Objects and components that communicate care through crisp edges, intentional depth, and controlled material contrast.",
+      deliverables: ["SVG/DXF preparation", "Laser engraving", "Material testing", "Finished component design"],
+      stats: ["Vector discipline", "Material tolerances", "Hand-finished"],
+    },
   },
   {
+    slug: "algorithmic-textiles",
     title: "Algorithmic Textiles",
     category: "Physical Fabrication",
     filter: "fabrication",
@@ -94,8 +226,22 @@ export const projects = [
     meta: "Pattern math / repetition / tension",
     description:
       "Crochet studies treated as structural pattern systems: soft materials, exact logic, and visible rhythm.",
+    caseStudy: {
+      eyebrow: "Pattern Room / Textile Craft",
+      summary:
+        "Crochet and textile work framed as structured pattern logic: repetition, tension, rhythm, and hand control.",
+      challenge:
+        "Textile work can be misread as purely decorative. The goal is to show the underlying discipline: pattern systems, structure, and repeatable execution.",
+      approach:
+        "The work is positioned as material logic. Each piece emphasizes the relationship between pattern, texture, structure, and finish.",
+      outcome:
+        "A craft category that sits naturally beside software and fabrication because it reveals the same respect for systems and detail.",
+      deliverables: ["Pattern design", "Crochet goods", "Material studies", "Texture exploration"],
+      stats: ["Pattern logic", "Tactile systems", "Handmade finish"],
+    },
   },
   {
+    slug: "wood-engraving-studies",
     title: "Wood + Engraving Studies",
     category: "Physical Fabrication",
     filter: "fabrication",
@@ -103,6 +249,19 @@ export const projects = [
     meta: "Golden oak / grain / depth",
     description:
       "Hand-finished wood and engraving pieces designed around tactile contrast, shadow, and durable presentation.",
+    caseStudy: {
+      eyebrow: "Physical Forge / Woodwork",
+      summary:
+        "Wood and engraving studies that use grain, shadow, depth, and finish as core design materials.",
+      challenge:
+        "Woodwork has to balance natural variation with precise intent. The design needs to respect the material while still feeling refined.",
+      approach:
+        "Pieces are shaped around contrast: dark engraving against golden oak, clean edges against organic grain, and durable finishing against tactile warmth.",
+      outcome:
+        "Objects that feel crafted, professional, and visually aligned with the broader Tootie Designs industrial-elegance language.",
+      deliverables: ["Woodwork studies", "Engraved surfaces", "Finish refinement", "Material presentation"],
+      stats: ["Golden oak", "Engraved depth", "Tactile finish"],
+    },
   },
 ];
 

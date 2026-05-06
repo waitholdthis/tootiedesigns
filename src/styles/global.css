@@ -329,6 +329,85 @@ h3 {
   background-size: 100% 0.24em;
 }
 
+.proof-band {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  margin-bottom: clamp(4rem, 8vw, 7rem);
+  border: 1px solid var(--line);
+  background: var(--line);
+}
+
+.proof-band div {
+  min-height: 12rem;
+  padding: 1.15rem;
+  background:
+    linear-gradient(145deg, rgba(182, 138, 85, 0.1), transparent),
+    rgba(13, 17, 21, 0.94);
+}
+
+.proof-band span,
+.case-meta span,
+.case-stats span,
+.related-card span,
+.back-link,
+.deliverable-grid span,
+.project-link {
+  color: var(--bronze-2);
+  font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.74rem;
+  text-transform: uppercase;
+}
+
+.proof-band strong {
+  display: block;
+  margin: 0.75rem 0 0.5rem;
+  font-size: 1.05rem;
+}
+
+.proof-band p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.brand-lockup {
+  display: grid;
+  grid-template-columns: 10rem minmax(0, 0.86fr) minmax(18rem, 0.74fr);
+  gap: clamp(1rem, 4vw, 3rem);
+  align-items: center;
+  margin-bottom: clamp(4rem, 8vw, 7rem);
+  padding: clamp(1rem, 3vw, 1.5rem);
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(135deg, rgba(182, 138, 85, 0.11), transparent),
+    rgba(11, 16, 22, 0.82);
+}
+
+.brand-sigil {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1;
+  border: 1px solid rgba(210, 173, 116, 0.45);
+  background:
+    linear-gradient(135deg, rgba(182, 138, 85, 0.28), rgba(11, 22, 38, 0.72)),
+    rgba(255, 255, 255, 0.03);
+  color: var(--bronze-2);
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 850;
+}
+
+.brand-lockup h2 {
+  max-width: 13ch;
+  font-size: clamp(2rem, 4vw, 4rem);
+}
+
+.brand-lockup p:last-child {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
 .section-heading {
   display: grid;
   gap: 1rem;
@@ -380,6 +459,111 @@ h3 {
   height: 1px;
   margin: 1.5rem 0;
   background: linear-gradient(90deg, var(--bronze), transparent);
+}
+
+.capability-card ul {
+  display: grid;
+  gap: 0.5rem;
+  margin: 1.2rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.capability-card li {
+  color: #cfc5b8;
+  font-size: 0.86rem;
+}
+
+.capability-card li::before {
+  color: var(--bronze-2);
+  content: "+ ";
+}
+
+.website-showcase {
+  padding-top: clamp(4rem, 9vw, 8rem);
+}
+
+.website-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  border: 1px solid var(--line);
+  background: var(--line);
+}
+
+.website-card {
+  display: grid;
+  align-content: start;
+  min-height: 32rem;
+  padding: 1rem;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.035), transparent),
+    rgba(16, 20, 24, 0.94);
+}
+
+.website-frame {
+  position: relative;
+  min-height: 12rem;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0 1.9rem, transparent 1.9rem),
+    linear-gradient(rgba(210, 173, 116, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(210, 173, 116, 0.055) 1px, transparent 1px),
+    rgba(9, 16, 26, 0.82);
+  background-size: auto, 32px 32px, 32px 32px, auto;
+}
+
+.website-frame span {
+  position: absolute;
+  display: block;
+  border: 1px solid rgba(210, 173, 116, 0.22);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.website-frame span:nth-child(1) {
+  inset: 3rem 8% auto;
+  height: 28%;
+}
+
+.website-frame span:nth-child(2) {
+  left: 8%;
+  bottom: 12%;
+  width: 38%;
+  height: 22%;
+}
+
+.website-frame span:nth-child(3) {
+  right: 8%;
+  bottom: 12%;
+  width: 38%;
+  height: 22%;
+}
+
+.website-card h3 {
+  max-width: 12ch;
+}
+
+.website-card p:not(.eyebrow) {
+  color: var(--muted);
+  line-height: 1.62;
+}
+
+.website-card div:last-child {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.website-card div:last-child span {
+  border: 1px solid rgba(210, 173, 116, 0.22);
+  padding: 0.35rem 0.5rem;
+  color: var(--bronze-2);
+  font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.7rem;
+  text-transform: uppercase;
 }
 
 .work-section {
@@ -534,6 +718,16 @@ h3 {
   max-width: 12ch;
 }
 
+.project-link {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  width: fit-content;
+  margin-top: 1rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid rgba(210, 173, 116, 0.28);
+}
+
 .blueprint {
   display: grid;
   align-items: center;
@@ -677,6 +871,41 @@ h3 {
   text-transform: uppercase;
 }
 
+.project-notes {
+  padding-bottom: clamp(4rem, 8vw, 7rem);
+}
+
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  border: 1px solid var(--line);
+  background: var(--line);
+}
+
+.notes-grid figure {
+  min-height: 18rem;
+  margin: 0;
+  padding: 1.15rem;
+  background:
+    linear-gradient(145deg, rgba(182, 138, 85, 0.08), transparent),
+    rgba(16, 20, 24, 0.94);
+}
+
+.notes-grid blockquote {
+  margin: 0 0 1.25rem;
+  color: #e7dfd4;
+  font-size: clamp(1.2rem, 2vw, 1.55rem);
+  line-height: 1.25;
+}
+
+.notes-grid figcaption {
+  color: var(--bronze-2);
+  font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.74rem;
+  text-transform: uppercase;
+}
+
 .about {
   padding-bottom: clamp(4rem, 9vw, 7rem);
 }
@@ -701,7 +930,13 @@ h3 {
 
 .contact form {
   display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
+}
+
+.contact form label:has(textarea),
+.contact form button {
+  grid-column: 1 / -1;
 }
 
 label {
@@ -729,12 +964,227 @@ textarea {
 .site-footer {
   display: flex;
   justify-content: space-between;
-  gap: 1rem;
+  align-items: end;
+  gap: 2rem;
   width: min(1180px, calc(100% - 2rem));
   margin: 2rem auto 0;
   padding: 2rem 0;
   color: var(--muted);
   font-size: 0.85rem;
+}
+
+.site-footer div {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.site-footer div:last-child {
+  justify-items: end;
+  text-align: right;
+}
+
+.site-footer strong {
+  color: var(--bone);
+}
+
+.case-hero {
+  padding-top: clamp(8rem, 12vw, 11rem);
+  padding-bottom: clamp(2rem, 5vw, 4rem);
+}
+
+.back-link {
+  display: inline-flex;
+  margin-bottom: 2rem;
+}
+
+.case-hero-grid {
+  display: grid;
+  align-items: end;
+  grid-template-columns: minmax(0, 1fr) minmax(18rem, 24rem);
+  gap: clamp(1.5rem, 5vw, 4rem);
+}
+
+.case-hero h1 {
+  max-width: 11ch;
+}
+
+.case-meta {
+  padding: 1.2rem;
+  border: 1px solid var(--line);
+  background: rgba(16, 20, 24, 0.86);
+}
+
+.case-meta strong {
+  display: block;
+  margin: 0.8rem 0;
+  color: var(--bone);
+  font-size: 1.05rem;
+}
+
+.case-meta p,
+.case-body p,
+.related-card p {
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.case-visual {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(16rem, 0.34fr);
+  gap: 1rem;
+  margin-bottom: clamp(4rem, 8vw, 7rem);
+}
+
+.case-device {
+  min-height: clamp(24rem, 52vw, 34rem);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background:
+    radial-gradient(circle at 76% 18%, rgba(210, 173, 116, 0.16), transparent 22%),
+    linear-gradient(rgba(210, 173, 116, 0.065) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(210, 173, 116, 0.065) 1px, transparent 1px),
+    rgba(10, 14, 18, 0.96);
+  background-size: auto, 42px 42px, 42px 42px, auto;
+}
+
+.device-bar {
+  display: flex;
+  gap: 0.45rem;
+  padding: 1rem;
+  border-bottom: 1px solid rgba(210, 173, 116, 0.18);
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.device-bar span {
+  width: 0.58rem;
+  height: 0.58rem;
+  border: 1px solid rgba(210, 173, 116, 0.58);
+  border-radius: 50%;
+}
+
+.device-screen {
+  display: grid;
+  grid-template-columns: 0.72fr 1.28fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1rem;
+  height: calc(100% - 2.65rem);
+  padding: clamp(1rem, 3vw, 2rem);
+}
+
+.device-screen span {
+  min-height: 8rem;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  background:
+    linear-gradient(145deg, rgba(210, 173, 116, 0.12), transparent),
+    rgba(11, 22, 38, 0.62);
+}
+
+.device-screen span:nth-child(2) {
+  grid-row: span 2;
+  background:
+    radial-gradient(circle at 50% 42%, rgba(28, 86, 134, 0.42), transparent 26%),
+    linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    rgba(9, 16, 26, 0.82);
+  background-size: auto, 34px 34px, 34px 34px, auto;
+}
+
+.case-stats {
+  display: grid;
+  gap: 1px;
+  border: 1px solid var(--line);
+  background: var(--line);
+}
+
+.case-stats span {
+  display: grid;
+  align-content: center;
+  min-height: 7rem;
+  padding: 1rem;
+  background: rgba(16, 20, 24, 0.94);
+}
+
+.case-body {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  border: 1px solid var(--line);
+  background: var(--line);
+}
+
+.case-body article {
+  min-height: 24rem;
+  padding: clamp(1rem, 2vw, 1.4rem);
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.035), transparent),
+    rgba(16, 20, 24, 0.94);
+}
+
+.case-body h2 {
+  max-width: 10ch;
+  margin-bottom: 1rem;
+  font-size: clamp(1.7rem, 3vw, 2.8rem);
+}
+
+.deliverables {
+  display: grid;
+  grid-template-columns: minmax(0, 0.72fr) minmax(0, 1fr);
+  gap: clamp(1.5rem, 5vw, 4rem);
+  padding: clamp(4rem, 8vw, 7rem) 0 0;
+}
+
+.deliverable-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: start;
+  gap: 0.75rem;
+}
+
+.deliverable-grid span {
+  min-height: 2.75rem;
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--line);
+  padding: 0 0.85rem;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.related-work {
+  padding-bottom: clamp(4rem, 8vw, 7rem);
+}
+
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  border: 1px solid var(--line);
+  background: var(--line);
+}
+
+.related-card {
+  min-height: 15rem;
+  padding: 1rem;
+  background: rgba(16, 20, 24, 0.94);
+  transition:
+    transform 180ms ease,
+    background 180ms ease;
+}
+
+.related-card:hover {
+  transform: translateY(-4px);
+  background: rgba(20, 26, 31, 0.98);
+}
+
+.related-card strong {
+  display: block;
+  margin: 0.75rem 0;
+  color: var(--bone);
+  font-size: 1.2rem;
+}
+
+.case-contact {
+  align-items: center;
+  margin-bottom: 2rem;
 }
 
 @keyframes slow-drift {
@@ -799,7 +1249,11 @@ textarea {
   .hero,
   .blueprint,
   .contact,
-  .section-heading.split {
+  .brand-lockup,
+  .section-heading.split,
+  .case-hero-grid,
+  .case-visual,
+  .deliverables {
     grid-template-columns: 1fr;
   }
 
@@ -831,7 +1285,12 @@ textarea {
   }
 
   .capability-grid,
-  .process-grid {
+  .process-grid,
+  .proof-band,
+  .website-grid,
+  .case-body,
+  .notes-grid,
+  .related-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -932,14 +1391,30 @@ textarea {
 
   .capability-grid,
   .process-grid,
+  .proof-band,
+  .website-grid,
+  .case-body,
+  .notes-grid,
+  .related-grid,
   .site-footer {
     grid-template-columns: 1fr;
   }
 
   .capability-card,
-  .process-card {
+  .process-card,
+  .proof-band div,
+  .website-card,
+  .notes-grid figure {
     min-height: 13rem;
     padding: 1rem;
+  }
+
+  .brand-lockup {
+    gap: 1.25rem;
+  }
+
+  .brand-sigil {
+    width: min(100%, 8rem);
   }
 
   .statement {
@@ -1007,6 +1482,45 @@ textarea {
     padding: 1rem;
   }
 
+  .contact form {
+    grid-template-columns: 1fr;
+  }
+
+  .case-hero {
+    padding-top: 6rem;
+  }
+
+  .case-meta,
+  .case-body article,
+  .related-card {
+    padding: 1rem;
+  }
+
+  .case-body article {
+    min-height: auto;
+  }
+
+  .case-device {
+    min-height: 22rem;
+  }
+
+  .case-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .case-stats span {
+    min-height: 4rem;
+  }
+
+  .device-screen {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, minmax(3.5rem, 1fr));
+  }
+
+  .device-screen span:nth-child(2) {
+    grid-row: span 1;
+  }
+
   input,
   select,
   textarea {
@@ -1015,6 +1529,11 @@ textarea {
 
   .site-footer {
     display: grid;
+  }
+
+  .site-footer div:last-child {
+    justify-items: start;
+    text-align: left;
   }
 }
 
