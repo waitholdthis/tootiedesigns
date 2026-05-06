@@ -118,12 +118,12 @@ textarea {
 .hero {
   position: relative;
   display: grid;
-  min-height: 94svh;
+  min-height: 88svh;
   align-items: end;
   grid-template-columns: minmax(0, 1fr) 21rem;
   gap: clamp(1.5rem, 4vw, 3rem);
   padding-top: 7rem;
-  padding-bottom: clamp(2rem, 6vw, 5rem);
+  padding-bottom: clamp(2rem, 5vw, 4rem);
 }
 
 .hero-media {
@@ -165,8 +165,8 @@ textarea {
 }
 
 .hero-content {
-  max-width: 760px;
-  padding: clamp(1.25rem, 3vw, 2rem);
+  max-width: 650px;
+  padding: clamp(1.1rem, 2.4vw, 1.55rem);
   border: 1px solid rgba(255, 255, 255, 0.13);
   background: linear-gradient(135deg, rgba(14, 18, 22, 0.7), rgba(14, 24, 40, 0.36));
   backdrop-filter: blur(16px);
@@ -197,9 +197,9 @@ h3 {
 }
 
 h1 {
-  max-width: 10ch;
-  margin-bottom: 1.25rem;
-  font-size: clamp(3.4rem, 8vw, 7.3rem);
+  max-width: 11ch;
+  margin-bottom: 1rem;
+  font-size: clamp(3rem, 6.8vw, 5.85rem);
 }
 
 h2 {
@@ -214,10 +214,10 @@ h3 {
 }
 
 .hero-copy {
-  max-width: 44rem;
+  max-width: 38rem;
   color: #d8d1c8;
-  font-size: clamp(1.05rem, 2vw, 1.32rem);
-  line-height: 1.6;
+  font-size: clamp(1rem, 1.45vw, 1.12rem);
+  line-height: 1.55;
 }
 
 .hero-actions,
@@ -679,7 +679,9 @@ h3 {
 }
 
 .project-card:nth-child(4) .project-texture,
-.project-card:nth-child(5) .project-texture {
+.project-card:nth-child(5) .project-texture,
+.project-card:nth-child(6) .project-texture,
+.project-card:nth-child(7) .project-texture {
   background:
     linear-gradient(180deg, transparent 0%, rgba(5, 8, 12, 0.92) 78%),
     radial-gradient(circle at 78% 18%, rgba(210, 173, 116, 0.22), transparent 24%),
@@ -689,13 +691,20 @@ h3 {
   background-size: auto, auto, 44px 44px, 44px 44px, auto;
 }
 
-.project-card:nth-child(7) .project-texture {
+.project-card:nth-child(8) .project-texture {
+  background:
+    linear-gradient(180deg, transparent 0%, rgba(5, 8, 12, 0.94) 78%),
+    radial-gradient(circle at 78% 22%, rgba(182, 138, 85, 0.22), transparent 24%),
+    repeating-linear-gradient(108deg, rgba(210, 173, 116, 0.16) 0 2px, transparent 2px 14px);
+}
+
+.project-card:nth-child(9) .project-texture {
   background:
     linear-gradient(180deg, transparent 0%, rgba(5, 8, 12, 0.94) 78%),
     repeating-radial-gradient(circle at 30% 25%, rgba(210, 173, 116, 0.2) 0 2px, transparent 2px 11px);
 }
 
-.project-card:nth-child(8) .project-texture {
+.project-card:nth-child(10) .project-texture {
   background:
     linear-gradient(180deg, transparent 0%, rgba(5, 8, 12, 0.94) 78%),
     repeating-linear-gradient(92deg, rgba(201, 144, 78, 0.18) 0 4px, rgba(67, 39, 19, 0.14) 4px 11px);
@@ -1028,6 +1037,11 @@ textarea {
   line-height: 1.65;
 }
 
+.case-live-link {
+  width: 100%;
+  margin-top: 1rem;
+}
+
 .case-visual {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(16rem, 0.34fr);
@@ -1260,7 +1274,7 @@ textarea {
   .hero {
     min-height: auto;
     padding-top: 7rem;
-    padding-bottom: 2rem;
+    padding-bottom: 1.5rem;
   }
 
   .hero-media {
@@ -1355,8 +1369,8 @@ textarea {
   }
 
   h1 {
-    max-width: 9ch;
-    font-size: clamp(2.65rem, 15vw, 3.8rem);
+    max-width: 10ch;
+    font-size: clamp(2.35rem, 12.4vw, 3.25rem);
   }
 
   h2 {
@@ -1376,7 +1390,7 @@ textarea {
   .hero-copy,
   .about p,
   .blueprint-copy p {
-    font-size: 1rem;
+    font-size: 0.98rem;
   }
 
   .hero-actions {
@@ -1543,7 +1557,7 @@ textarea {
   }
 
   h1 {
-    font-size: clamp(2.35rem, 14vw, 3.25rem);
+    font-size: clamp(2.1rem, 12vw, 2.85rem);
   }
 
   h2 {

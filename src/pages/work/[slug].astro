@@ -48,6 +48,13 @@ const related = projects.filter((item) => item.slug !== project.slug).slice(0, 3
             <span>{project.category}</span>
             <strong>{project.meta}</strong>
             <p>{project.description}</p>
+            {
+              "url" in project.caseStudy && project.caseStudy.url && (
+                <a class="button secondary case-live-link" href={project.caseStudy.url} target="_blank" rel="noreferrer">
+                  Visit Live Site
+                </a>
+              )
+            }
           </aside>
         </div>
       </section>

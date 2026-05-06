@@ -38,6 +38,20 @@ export const capabilities = [
 
 export const websiteShowcase = [
   {
+    title: "Parker Tootill Authority Site",
+    type: "Professional Website",
+    description:
+      "A credibility-focused personal website for a senior CBRN Warrant Officer, positioning defense, CWMD, homeland security, and emergency management expertise.",
+    highlights: ["Authority positioning", "Defense-sector copy", "Responsive web presence"],
+  },
+  {
+    title: "Diverse Hair Designs by Peachie",
+    type: "Luxury Service Website",
+    description:
+      "A refined salon website for a North Carolina hair brand, built around elegant service presentation, gallery depth, testimonials, booking, and contact flow.",
+    highlights: ["Luxury service design", "Gallery experience", "Booking-ready UX"],
+  },
+  {
     title: "Studio Portfolio Systems",
     type: "Brand Website",
     description:
@@ -169,6 +183,54 @@ export const projects = [
         "A reusable website creation process that can support portfolios, landing pages, service businesses, and technically sophisticated brands.",
       deliverables: ["Brand-led web design", "Responsive Astro builds", "Copy and content structure", "Deployment-ready front ends"],
       stats: ["Strategy to launch", "Mobile responsive", "SEO-ready structure"],
+    },
+  },
+  {
+    slug: "parker-tootill-authority-site",
+    title: "Parker Tootill Authority Site",
+    category: "Website Design",
+    filter: "digital",
+    size: "medium",
+    meta: "Personal brand / defense expertise / responsive site",
+    description:
+      "A professional authority website for Parker Tootill, framing CBRN, CWMD, Homeland Security, and Emergency Management expertise.",
+    caseStudy: {
+      eyebrow: "Digital Lab / Professional Website",
+      summary:
+        "A focused personal brand website designed to present defense-sector expertise with clarity, credibility, and a polished digital presence.",
+      challenge:
+        "The site needed to communicate deep professional expertise without feeling cluttered or overly academic. The content had to quickly establish credibility across CBRN, CWMD, Homeland Security, Emergency Management, and defense leadership.",
+      approach:
+        "The structure centers authority first: a clear professional identity, relevant domain keywords, concise positioning, and a responsive interface that works as both a personal profile and subject-matter landing page.",
+      outcome:
+        "The finished site gives Parker Tootill a dedicated web presence that supports professional discovery, credibility, and defense/public-safety positioning.",
+      deliverables: ["Personal brand website", "Professional positioning", "SEO metadata", "Responsive front-end build"],
+      stats: ["Live website", "Defense expertise", "Authority-focused UX"],
+      url: "https://parker.tootiedesigns.com/",
+    },
+  },
+  {
+    slug: "diverse-hair-designs-peachie",
+    title: "Diverse Hair Designs by Peachie",
+    category: "Website Design",
+    filter: "digital",
+    size: "medium",
+    meta: "Luxury salon / gallery UX / GitHub Pages",
+    description:
+      "A luxury salon website for Diverse Hair Designs by Peachie, showcasing services, transformations, testimonials, and booking pathways.",
+    caseStudy: {
+      eyebrow: "Digital Lab / Luxury Service Website",
+      summary:
+        "A polished beauty and service-brand website built to feel elegant, personal, and conversion-ready for salon clients in North Carolina.",
+      challenge:
+        "The site needed to present a warm luxury hair brand with enough depth for service discovery, image-heavy portfolio browsing, testimonials, staff credibility, and clear contact paths without overwhelming visitors.",
+      approach:
+        "The design uses soft editorial styling, refined typography, a cinematic hero, service cards, gallery interaction, testimonial motion, and contact details that support both browsing and booking intent.",
+      outcome:
+        "The finished site gives Diverse Hair Designs by Peachie a professional web presence that feels premium, approachable, and ready for client discovery.",
+      deliverables: ["Luxury service website", "Responsive salon layout", "Gallery and lightbox UX", "Booking/contact pathways"],
+      stats: ["Live website", "North Carolina salon", "Gallery-rich UX"],
+      url: "https://waitholdthis.github.io/peachie_test/",
     },
   },
   {
