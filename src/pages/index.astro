@@ -246,14 +246,19 @@ const filters = [
             component, or a crafted commission, the first step is a clear brief.
           </p>
         </div>
-        <form name="contact" method="post">
+        <form name="contact" method="post" action="https://formsubmit.co/tootiedesigns18@gmail.com">
+          <input type="hidden" name="_subject" value="New Tootie Designs Inquiry" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_next" value="https://tootiedesigns.com/thanks/" />
+          <input type="text" name="_honey" class="form-honey" tabindex="-1" autocomplete="off" />
           <label>
             Name
-            <input name="name" autocomplete="name" />
+            <input name="name" autocomplete="name" required />
           </label>
           <label>
             Email
-            <input name="email" type="email" autocomplete="email" />
+            <input name="email" type="email" autocomplete="email" required />
           </label>
           <label>
             Project Type
@@ -291,7 +296,7 @@ const filters = [
           </label>
           <label>
             Brief
-            <textarea name="brief" rows="4"></textarea>
+            <textarea name="brief" rows="4" required></textarea>
           </label>
           <button class="button primary" type="submit">Send Inquiry</button>
         </form>
@@ -306,6 +311,7 @@ const filters = [
       <div>
         <span>Website Design / Software / Tactical Consulting / Fabrication</span>
         <span>Precision / Texture / Innovation</span>
+        <a href="https://www.facebook.com/profile.php?id=100063801085109" target="_blank" rel="noreferrer">Facebook</a>
       </div>
     </footer>
   </body>

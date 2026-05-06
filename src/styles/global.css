@@ -119,7 +119,7 @@ textarea {
   position: relative;
   display: grid;
   min-height: 88svh;
-  align-items: end;
+  align-items: center;
   grid-template-columns: minmax(0, 1fr) 21rem;
   gap: clamp(1.5rem, 4vw, 3rem);
   padding-top: 7rem;
@@ -921,6 +921,7 @@ h3 {
 
 .about h2 {
   max-width: 16ch;
+  margin-bottom: clamp(1.25rem, 3vw, 2rem);
 }
 
 .about p {
@@ -970,6 +971,27 @@ textarea {
   resize: vertical;
 }
 
+.form-honey {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.thanks-page {
+  min-height: calc(100svh - 8rem);
+  display: grid;
+  align-content: center;
+  padding-top: 8rem;
+  padding-bottom: 4rem;
+}
+
+.thanks-page h1 {
+  max-width: 10ch;
+}
+
 .site-footer {
   display: flex;
   justify-content: space-between;
@@ -993,6 +1015,17 @@ textarea {
 }
 
 .site-footer strong {
+  color: var(--bone);
+}
+
+.site-footer a {
+  color: var(--bronze-2);
+  font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.74rem;
+  text-transform: uppercase;
+}
+
+.site-footer a:hover {
   color: var(--bone);
 }
 
