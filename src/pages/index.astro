@@ -1,0 +1,252 @@
+---
+import "../styles/global.css";
+import { capabilities, process, projects, tech } from "../data/site";
+
+const filters = [
+  ["all", "All"],
+  ["digital", "Digital Systems"],
+  ["tactical", "Tactical Consulting"],
+  ["fabrication", "Physical Fabrication"],
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Tootie Designs is a Fayetteville, NC multidisciplinary creative studio building precision software, tactical systems, laser fabrication, woodworking, and textile craft."
+    />
+    <title>Tootie Designs | Multidisciplinary Creation</title>
+  </head>
+  <body>
+    <header class="site-header" aria-label="Primary navigation">
+      <a class="brand" href="#top" aria-label="Tootie Designs home">
+        <span class="brand-mark">TD</span>
+        <span>Tootie Designs</span>
+      </a>
+      <nav>
+        <a href="#work">Work</a>
+        <a href="#capabilities">Capabilities</a>
+        <a href="#process">Process</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero section-shell" aria-labelledby="hero-title">
+        <div class="hero-media" aria-hidden="true">
+          <img src="/hero-workshop.png" alt="" />
+          <div class="scanline"></div>
+        </div>
+        <div class="hero-content">
+          <p class="eyebrow">Fayetteville, NC / Digital Workshop</p>
+          <h1 id="hero-title">Precision-built systems. Hand-finished creations.</h1>
+          <p class="hero-copy">
+            Tootie Designs bridges defense-grade problem solving, full-stack software,
+            laser fabrication, woodworking, and textile craft into one multidisciplinary studio.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#work">View the Work</a>
+            <a class="button secondary" href="#contact">Start a Project</a>
+          </div>
+        </div>
+        <aside class="hero-panel" aria-label="Studio pillars">
+          <div>
+            <span>01</span>
+            <strong>Precision</strong>
+            <p>Software, defense planning, and operational structure.</p>
+          </div>
+          <div>
+            <span>02</span>
+            <strong>Texture</strong>
+            <p>Oak grain, textile pattern, engraved depth, and finish.</p>
+          </div>
+          <div>
+            <span>03</span>
+            <strong>Innovation</strong>
+            <p>Laser paths, interfaces, prototypes, and deployable tools.</p>
+          </div>
+        </aside>
+      </section>
+
+      <section class="statement section-shell" aria-label="Brand statement">
+        <p>
+          Applying the precision of military planning and the logic of full-stack engineering
+          to every medium, from digital interfaces to physical fabrication.
+        </p>
+      </section>
+
+      <section class="section-shell" id="capabilities" aria-labelledby="capabilities-title">
+        <div class="section-heading">
+          <p class="eyebrow">Capabilities</p>
+          <h2 id="capabilities-title">Built like a system. Finished like an object.</h2>
+        </div>
+        <div class="capability-grid">
+          {
+            capabilities.map((capability) => (
+              <article class="capability-card">
+                <p>{capability.kicker}</p>
+                <h3>{capability.title}</h3>
+                <span></span>
+                <p>{capability.description}</p>
+              </article>
+            ))
+          }
+        </div>
+      </section>
+
+      <section class="section-shell work-section" id="work" aria-labelledby="work-title">
+        <div class="section-heading split">
+          <div>
+            <p class="eyebrow">Selected Work</p>
+            <h2 id="work-title">A portfolio organized by discipline, not by limitation.</h2>
+          </div>
+          <div class="filter-bar" aria-label="Project filters">
+            {
+              filters.map(([value, label], index) => (
+                <button class:list={["filter-button", index === 0 && "active"]} data-filter={value}>
+                  {label}
+                </button>
+              ))
+            }
+          </div>
+        </div>
+
+        <div class="project-grid" data-project-grid>
+          {
+            projects.map((project) => (
+              <article class:list={["project-card", project.size]} data-category={project.filter}>
+                <div class="project-texture" aria-hidden="true"></div>
+                <div class="project-topline">
+                  <span>{project.category}</span>
+                  <span>{project.meta}</span>
+                </div>
+                <h3>{project.title}</h3>
+                <p>{project.description}</p>
+              </article>
+            ))
+          }
+        </div>
+      </section>
+
+      <section class="section-shell blueprint" aria-labelledby="blueprint-title">
+        <div class="blueprint-visual" aria-hidden="true">
+          <div class="vector-card">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="material-card"></div>
+        </div>
+        <div class="blueprint-copy">
+          <p class="eyebrow">Blueprint to Reality</p>
+          <h2 id="blueprint-title">From concept path to finished surface.</h2>
+          <p>
+            Every engagement moves through the same disciplined arc: clarify the target,
+            design the system, execute the build, then refine the finish until the work
+            feels inevitable.
+          </p>
+        </div>
+      </section>
+
+      <section class="section-shell" id="process" aria-labelledby="process-title">
+        <div class="section-heading">
+          <p class="eyebrow">Process</p>
+          <h2 id="process-title">The workshop method.</h2>
+        </div>
+        <div class="process-grid">
+          {
+            process.map(([number, title, description]) => (
+              <article class="process-card">
+                <span>{number}</span>
+                <h3>{title}</h3>
+                <p>{description}</p>
+              </article>
+            ))
+          }
+        </div>
+      </section>
+
+      <section class="tech-ticker" aria-label="Technology and materials">
+        <div>
+          {[...tech, ...tech].map((item) => <span>{item}</span>)}
+        </div>
+      </section>
+
+      <section class="section-shell about" aria-labelledby="about-title">
+        <p class="eyebrow">About the Studio</p>
+        <h2 id="about-title">Multidisciplinary creation, grounded in Fayetteville precision.</h2>
+        <p>
+          Tootie Designs was built on the belief that precision is not limited to one
+          medium. The same logic that shapes software architecture can guide a laser path.
+          The same discipline behind tactical planning can appear in a clean interface, a
+          finished wood surface, or the repeated structure of a crocheted pattern.
+        </p>
+      </section>
+
+      <section class="section-shell contact" id="contact" aria-labelledby="contact-title">
+        <div>
+          <p class="eyebrow">Start a Project</p>
+          <h2 id="contact-title">Bring the mission, material, or idea.</h2>
+          <p>
+            Whether the need is a planning tool, a polished web system, a fabricated
+            component, or a crafted commission, the first step is a clear brief.
+          </p>
+        </div>
+        <form name="contact" method="post">
+          <label>
+            Name
+            <input name="name" autocomplete="name" />
+          </label>
+          <label>
+            Email
+            <input name="email" type="email" autocomplete="email" />
+          </label>
+          <label>
+            Project Type
+            <select name="project-type">
+              <option>Website Design / Creation</option>
+              <option>Software / Web App Project</option>
+              <option>Defense / Consulting Inquiry</option>
+              <option>Laser / Wood Fabrication</option>
+              <option>Handmade / Crochet Commission</option>
+              <option>General Collaboration</option>
+            </select>
+          </label>
+          <label>
+            Brief
+            <textarea name="brief" rows="4"></textarea>
+          </label>
+          <button class="button primary" type="submit">Send Inquiry</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Tootie Designs</span>
+      <span>Fayetteville, NC</span>
+      <span>Precision / Texture / Innovation</span>
+    </footer>
+
+    <script>
+      const buttons = document.querySelectorAll("[data-filter]");
+      const cards = document.querySelectorAll("[data-category]");
+
+      buttons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const filter = button.getAttribute("data-filter");
+          buttons.forEach((item) => item.classList.remove("active"));
+          button.classList.add("active");
+
+          cards.forEach((card) => {
+            const isVisible = filter === "all" || card.getAttribute("data-category") === filter;
+            card.classList.toggle("is-hidden", !isVisible);
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
