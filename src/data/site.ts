@@ -106,6 +106,8 @@ export const projects = [
   },
 ];
 
+export type Project = (typeof projects)[number];
+
 export const process = [
   ["01", "Discovery", "Define the mission, audience, constraints, and measure of success."],
   ["02", "Architecture", "Translate ideas into interfaces, plans, vectors, materials, and systems."],
