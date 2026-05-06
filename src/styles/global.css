@@ -25,6 +25,7 @@ html {
 
 body {
   margin: 0;
+  overflow-x: hidden;
   background:
     radial-gradient(circle at 72% 10%, rgba(182, 138, 85, 0.12), transparent 28rem),
     linear-gradient(135deg, var(--charcoal) 0%, #0c1118 42%, var(--navy) 100%);
@@ -192,6 +193,7 @@ h2,
 h3 {
   letter-spacing: 0;
   line-height: 0.98;
+  overflow-wrap: anywhere;
 }
 
 h1 {
@@ -393,6 +395,7 @@ h3 {
   padding: 0 0.9rem;
   background: rgba(255, 255, 255, 0.04);
   color: var(--muted);
+  white-space: nowrap;
 }
 
 .filter-button.active,
@@ -561,7 +564,7 @@ h3 {
 .perspective-grid {
   position: absolute;
   inset: -18% -12% -8%;
-  z-index: -1;
+  z-index: 0;
   overflow: hidden;
   transform: perspective(620px) rotateX(62deg) translateY(4%);
   transform-origin: center bottom;
@@ -593,6 +596,7 @@ h3 {
 .vector-card {
   position: absolute;
   inset: 12% 12% auto auto;
+  z-index: 1;
   width: 58%;
   aspect-ratio: 1.4;
   border: 1px solid rgba(210, 173, 116, 0.44);
@@ -628,6 +632,7 @@ h3 {
   position: absolute;
   left: 8%;
   bottom: 10%;
+  z-index: 1;
   width: 52%;
   aspect-ratio: 1.16;
   border: 1px solid rgba(255, 255, 255, 0.11);
@@ -784,6 +789,7 @@ textarea {
   .site-header {
     position: absolute;
     align-items: flex-start;
+    padding: 0.85rem 1rem;
   }
 
   .site-header nav {
@@ -800,6 +806,24 @@ textarea {
   .hero {
     min-height: auto;
     padding-top: 7rem;
+    padding-bottom: 2rem;
+  }
+
+  .hero-media {
+    inset: 4.8rem 0 auto;
+    height: min(58svh, 34rem);
+  }
+
+  .hero-media::after {
+    background:
+      linear-gradient(90deg, rgba(10, 13, 16, 0.88), rgba(10, 13, 16, 0.64)),
+      linear-gradient(0deg, rgba(10, 13, 16, 0.94), rgba(10, 13, 16, 0.22) 55%);
+  }
+
+  .hero-content,
+  .hero-panel div,
+  .contact {
+    backdrop-filter: blur(10px);
   }
 
   .hero-panel {
@@ -813,6 +837,11 @@ textarea {
 
   .filter-bar {
     justify-content: flex-start;
+    max-width: 100%;
+    padding-bottom: 0.25rem;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    scrollbar-width: thin;
   }
 
   .project-card,
@@ -820,24 +849,85 @@ textarea {
   .project-card.medium,
   .project-card.small {
     grid-column: span 6;
+    min-height: 19rem;
+    transform: none;
+  }
+
+  .project-card:hover {
+    transform: translateY(-3px);
+  }
+
+  .spotlight-card::after {
+    opacity: 0.55;
+    background:
+      radial-gradient(
+        circle at 78% 18%,
+        rgba(210, 173, 116, 0.16),
+        rgba(210, 173, 116, 0.06) 28%,
+        transparent 54%
+      );
   }
 }
 
 @media (max-width: 620px) {
   .section-shell {
-    width: min(100% - 1rem, 1180px);
+    width: min(100% - 1.25rem, 1180px);
+  }
+
+  .brand {
+    gap: 0.75rem;
+    font-size: 0.95rem;
+  }
+
+  .brand-mark {
+    width: 2rem;
+    height: 2rem;
+    font-size: 0.82rem;
+  }
+
+  .hero {
+    gap: 1rem;
+    padding-top: 6rem;
   }
 
   .hero-content {
     padding: 1rem;
+    background: linear-gradient(135deg, rgba(14, 18, 22, 0.82), rgba(14, 24, 40, 0.52));
   }
 
   h1 {
-    font-size: clamp(2.9rem, 18vw, 4.2rem);
+    max-width: 9ch;
+    font-size: clamp(2.65rem, 15vw, 3.8rem);
   }
 
   h2 {
-    font-size: clamp(2.05rem, 12vw, 3.1rem);
+    max-width: 11ch;
+    font-size: clamp(1.95rem, 10.5vw, 2.85rem);
+  }
+
+  h3 {
+    font-size: clamp(1.22rem, 7vw, 1.75rem);
+  }
+
+  .eyebrow {
+    font-size: 0.68rem;
+    line-height: 1.4;
+  }
+
+  .hero-copy,
+  .about p,
+  .blueprint-copy p {
+    font-size: 1rem;
+  }
+
+  .hero-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .button {
+    width: 100%;
+    min-height: 3rem;
   }
 
   .capability-grid,
@@ -849,6 +939,30 @@ textarea {
   .capability-card,
   .process-card {
     min-height: 13rem;
+    padding: 1rem;
+  }
+
+  .statement {
+    padding: 2.5rem 0 3rem;
+  }
+
+  .statement p {
+    font-size: clamp(1.58rem, 9vw, 2.35rem);
+    line-height: 1.12;
+  }
+
+  .work-section {
+    padding-top: 3rem;
+  }
+
+  .filter-bar {
+    margin-inline: -0.15rem;
+  }
+
+  .filter-button {
+    min-height: 2.6rem;
+    padding: 0 0.82rem;
+    font-size: 0.85rem;
   }
 
   .project-card,
@@ -856,18 +970,71 @@ textarea {
   .project-card.medium,
   .project-card.small {
     grid-column: span 12;
-    min-height: 18rem;
+    min-height: 17rem;
+    padding: 1rem;
   }
 
   .project-topline {
     display: grid;
+    gap: 0.35rem;
   }
 
   .blueprint-visual {
     min-height: 21rem;
   }
 
+  .blueprint {
+    padding: 4rem 0;
+  }
+
+  .vector-card {
+    inset: 12% 8% auto auto;
+    width: 68%;
+  }
+
+  .material-card {
+    left: 8%;
+    bottom: 12%;
+    width: 62%;
+  }
+
+  .perspective-grid {
+    transform: perspective(520px) rotateX(66deg) translateY(8%);
+    opacity: 0.54;
+  }
+
+  .contact {
+    padding: 1rem;
+  }
+
+  input,
+  select,
+  textarea {
+    font-size: 1rem;
+  }
+
   .site-footer {
     display: grid;
+  }
+}
+
+@media (max-width: 390px) {
+  .hero-media {
+    height: 30rem;
+  }
+
+  h1 {
+    font-size: clamp(2.35rem, 14vw, 3.25rem);
+  }
+
+  h2 {
+    font-size: clamp(1.78rem, 9vw, 2.45rem);
+  }
+
+  .project-card,
+  .project-card.large,
+  .project-card.medium,
+  .project-card.small {
+    min-height: 18rem;
   }
 }
