@@ -1,5 +1,8 @@
 ---
 import "../styles/global.css";
+
+const base = import.meta.env.BASE_URL;
+const basePath = base.endsWith("/") ? base : `${base}/`;
 ---
 
 <!doctype html>
@@ -12,15 +15,15 @@ import "../styles/global.css";
   </head>
   <body>
     <header class="site-header" aria-label="Primary navigation">
-      <a class="brand" href="/" aria-label="Tootie Designs home">
-        <span class="brand-mark"><img src="/tootie-logo-transparent.png" alt="" /></span>
+      <a class="brand" href={basePath} aria-label="Tootie Designs home">
+        <span class="brand-mark"><img src={`${basePath}tootie-logo-transparent.png`} alt="" /></span>
         <span>Tootie Designs</span>
       </a>
       <nav>
-        <a href="/#work">Work</a>
-        <a href="/#capabilities">Capabilities</a>
-        <a href="/#process">Process</a>
-        <a href="/#contact">Contact</a>
+        <a href={`${basePath}#work`}>Work</a>
+        <a href={`${basePath}#capabilities`}>Capabilities</a>
+        <a href={`${basePath}#process`}>Process</a>
+        <a href={`${basePath}#contact`}>Contact</a>
       </nav>
     </header>
 
@@ -33,8 +36,8 @@ import "../styles/global.css";
           and follow up with a clear next step.
         </p>
         <div class="hero-actions">
-          <a class="button primary" href="/">Return Home</a>
-          <a class="button secondary" href="/#work">View the Work</a>
+          <a class="button primary" href={basePath}>Return Home</a>
+          <a class="button secondary" href={`${basePath}#work`}>View the Work</a>
         </div>
       </section>
     </main>

@@ -48,6 +48,8 @@ export default function ProjectShowcase({ filters, projects }: Props) {
 }
 
 function SpotlightProjectCard({ project }: { project: Project & { isVisible: boolean } }) {
+  const base = import.meta.env.BASE_URL;
+  const basePath = base.endsWith("/") ? base : `${base}/`;
   const [style, setStyle] = useState<CSSProperties>({
     "--spotlight-x": "50%",
     "--spotlight-y": "50%",
@@ -81,7 +83,7 @@ function SpotlightProjectCard({ project }: { project: Project & { isVisible: boo
 
   return (
     <a
-      href={`/work/${project.slug}/`}
+      href={`${basePath}work/${project.slug}/`}
       className={`project-card spotlight-card ${project.size}${project.isVisible ? "" : " is-hidden"}`}
       data-category={project.filter}
       onPointerMove={handlePointerMove}

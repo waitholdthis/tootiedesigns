@@ -11,6 +11,8 @@ export function getStaticPaths() {
 
 const { project } = Astro.props;
 const related = projects.filter((item) => item.slug !== project.slug).slice(0, 3);
+const base = import.meta.env.BASE_URL;
+const basePath = base.endsWith("/") ? base : `${base}/`;
 ---
 
 <!doctype html>
@@ -23,21 +25,21 @@ const related = projects.filter((item) => item.slug !== project.slug).slice(0, 3
   </head>
   <body>
     <header class="site-header" aria-label="Primary navigation">
-      <a class="brand" href="/" aria-label="Tootie Designs home">
-        <span class="brand-mark"><img src="/tootie-logo-transparent.png" alt="" /></span>
+      <a class="brand" href={basePath} aria-label="Tootie Designs home">
+        <span class="brand-mark"><img src={`${basePath}tootie-logo-transparent.png`} alt="" /></span>
         <span>Tootie Designs</span>
       </a>
       <nav>
-        <a href="/#work">Work</a>
-        <a href="/#capabilities">Capabilities</a>
-        <a href="/#process">Process</a>
-        <a href="/#contact">Contact</a>
+        <a href={`${basePath}#work`}>Work</a>
+        <a href={`${basePath}#capabilities`}>Capabilities</a>
+        <a href={`${basePath}#process`}>Process</a>
+        <a href={`${basePath}#contact`}>Contact</a>
       </nav>
     </header>
 
     <main>
       <section class="case-hero section-shell">
-        <a class="back-link" href="/#work">Back to Selected Work</a>
+        <a class="back-link" href={`${basePath}#work`}>Back to Selected Work</a>
         <div class="case-hero-grid">
           <div>
             <p class="eyebrow">{project.caseStudy.eyebrow}</p>
@@ -276,7 +278,7 @@ const related = projects.filter((item) => item.slug !== project.slug).slice(0, 3
         <div class="related-grid">
           {
             related.map((item) => (
-              <a class="related-card" href={`/work/${item.slug}/`}>
+              <a class="related-card" href={`${basePath}work/${item.slug}/`}>
                 <span>{item.category}</span>
                 <strong>{item.title}</strong>
                 <p>{item.description}</p>
@@ -295,7 +297,7 @@ const related = projects.filter((item) => item.slug !== project.slug).slice(0, 3
             system, site, object, or engagement from there.
           </p>
         </div>
-        <a class="button primary" href="/#contact">Open the Project Brief</a>
+        <a class="button primary" href={`${basePath}#contact`}>Open the Project Brief</a>
       </section>
     </main>
 

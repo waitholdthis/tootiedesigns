@@ -6,6 +6,10 @@ import PerspectiveBlueprint from "../components/PerspectiveBlueprint";
 import ProjectShowcase from "../components/ProjectShowcase";
 import { capabilities, process, projectNotes, projects, tech, websiteShowcase } from "../data/site";
 
+const base = import.meta.env.BASE_URL;
+const basePath = base.endsWith("/") ? base : `${base}/`;
+const deploymentOrigin = Astro.site?.toString().replace(/\/$/, "") ?? "https://tootiedesigns.com";
+const deploymentBase = `${deploymentOrigin}${base === "/" ? "" : base.replace(/\/$/, "")}`;
 const filters = [
   { value: "all", label: "All" },
   { value: "digital", label: "Digital Systems" },
@@ -29,7 +33,7 @@ const filters = [
     <LaserIntro client:load />
     <header class="site-header" aria-label="Primary navigation">
       <a class="brand" href="#top" aria-label="Tootie Designs home">
-        <span class="brand-mark"><img src="/tootie-logo-transparent.png" alt="" /></span>
+        <span class="brand-mark"><img src={`${basePath}tootie-logo-transparent.png`} alt="" /></span>
         <span>Tootie Designs</span>
       </a>
       <nav>
@@ -43,7 +47,7 @@ const filters = [
     <main id="top">
       <section class="hero section-shell" aria-labelledby="hero-title">
         <div class="hero-media" aria-hidden="true">
-          <img src="/hero-workshop.png" alt="" />
+          <img src={`${basePath}hero-workshop.png`} alt="" />
           <div class="scanline"></div>
         </div>
         <div class="hero-content">
@@ -107,7 +111,7 @@ const filters = [
       </section>
 
       <section class="brand-lockup section-shell" aria-label="Brand system">
-        <div class="brand-sigil"><img src="/tootie-logo-transparent.png" alt="Tootie Designs multidisciplinary creation logo" /></div>
+        <div class="brand-sigil"><img src={`${basePath}tootie-logo-transparent.png`} alt="Tootie Designs multidisciplinary creation logo" /></div>
         <div>
           <p class="eyebrow">Studio Standard</p>
           <h2>Design that can brief, build, and finish.</h2>
@@ -147,7 +151,7 @@ const filters = [
             <p class="eyebrow">Website Design Showcase</p>
             <h2 id="website-showcase-title">Digital Lab builds made to look credible on arrival.</h2>
           </div>
-          <a class="button secondary" href="/work/website-design-portfolio/">View Website Case Study</a>
+          <a class="button secondary" href={`${basePath}work/website-design-portfolio/`}>View Website Case Study</a>
         </div>
         <div class="website-grid">
           {
@@ -262,7 +266,7 @@ const filters = [
           <input type="hidden" name="_subject" value="New Tootie Designs Inquiry" />
           <input type="hidden" name="_template" value="table" />
           <input type="hidden" name="_captcha" value="false" />
-          <input type="hidden" name="_next" value="https://tootiedesigns.com/thanks/" />
+          <input type="hidden" name="_next" value={`${deploymentBase}/thanks/`} />
           <input type="text" name="_honey" class="form-honey" tabindex="-1" autocomplete="off" />
           <label>
             Name
