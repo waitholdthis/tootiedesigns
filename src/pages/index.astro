@@ -220,15 +220,18 @@ const filters = [
 
       <section class="section-shell project-notes" aria-labelledby="notes-title">
         <div class="section-heading">
-          <p class="eyebrow">Project Notes</p>
-          <h2 id="notes-title">Proof points without the noise.</h2>
+          <p class="eyebrow">Testimonials / Project Notes</p>
+          <h2 id="notes-title">Named proof, ready for real voices.</h2>
         </div>
         <div class="notes-grid">
           {
             projectNotes.map((note) => (
               <figure>
                 <blockquote>{note.quote}</blockquote>
-                <figcaption>{note.source}</figcaption>
+                <figcaption>
+                  <strong>{note.name}</strong>
+                  <span>{note.projectType}</span>
+                </figcaption>
               </figure>
             ))
           }

@@ -60,35 +60,174 @@ const related = projects.filter((item) => item.slug !== project.slug).slice(0, 3
       </section>
 
       <section class="case-visual section-shell" aria-label={`${project.title} visual system`}>
-        <div class="case-device">
+        <div
+          class:list={[
+            "case-device",
+            project.slug === "mdpt-cuas-framework" && "mdpt-case-device",
+            project.slug === "parker-tootill-authority-site" && "parker-case-device",
+            project.slug === "diverse-hair-designs-peachie" && "peachie-case-device",
+          ]}
+        >
           <div class="device-bar">
             <span></span>
             <span></span>
             <span></span>
           </div>
-          <div class:list={["device-screen", project.slug === "diverse-hair-designs-peachie" && "salon-preview"]}>
-            <div class="device-nav">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-            <div class="device-hero-block">
-              <span></span>
-              <strong>{project.category}</strong>
-              <p>{project.title}</p>
-            </div>
-            <div class="device-card-list">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-            <div class="device-gallery">
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-          </div>
+          {
+            project.slug === "mdpt-cuas-framework" ? (
+              <div class="mdpt-screen">
+                <div class="mdpt-map">
+                  <span class="terrain-grid"></span>
+                  <span class="cuas-bubble orange one"></span>
+                  <span class="cuas-bubble orange two"></span>
+                  <span class="cuas-bubble cyan three"></span>
+                  <span class="cuas-bubble cyan four"></span>
+                  <span class="impact-line"></span>
+                  <span class="impact-point"></span>
+                  <span class="threat-label">DJI FPV / Adapted Attack</span>
+                  <span class="impact-label">Predicted Impact</span>
+                </div>
+                <aside class="mdpt-layer-panel">
+                  <strong>Active C-UAS Layer</strong>
+                  <div class="mdpt-counts">
+                    <span>5<small>deployed</small></span>
+                    <span>5<small>ready</small></span>
+                    <span>0<small>threat</small></span>
+                  </div>
+                  <ul>
+                    <li><span></span> IM-SHORAD <b>Ready</b></li>
+                    <li><span></span> IM-SHORAD <b>Ready</b></li>
+                    <li><span></span> FS-LIDS Heavy <b>Ready</b></li>
+                    <li><span></span> RF-JAM <b>Ready</b></li>
+                  </ul>
+                </aside>
+                <aside class="mdpt-warning-panel">
+                  <strong>Impact Warning System</strong>
+                  <span class="monitor">Monitor</span>
+                  <b>32:33</b>
+                  <p>Move personnel to hardened overhead cover or below-grade shelter.</p>
+                  <div>
+                    <span>Severe</span>
+                    <span>Moderate</span>
+                    <span>Light</span>
+                  </div>
+                </aside>
+                <div class="mdpt-architecture">
+                  <span>External Inputs</span>
+                  <span>Backend Services</span>
+                  <span>Cesium 3D UI</span>
+                  <span>Analysis Outputs</span>
+                </div>
+              </div>
+            ) : project.slug === "parker-tootill-authority-site" ? (
+              <div class="parker-screen">
+                <section class="parker-summary">
+                  <h3><span>Executive</span> Summary</h3>
+                  <div>
+                    <span></span>
+                    <p>Senior CBRN Warrant Officer with 23 years of operational leadership.</p>
+                  </div>
+                  <div>
+                    <span></span>
+                    <p>Subject matter expert in CWMD, interagency coordination, and emergency management.</p>
+                  </div>
+                  <div>
+                    <span></span>
+                    <p>Designed large-scale CBRN exercises that validated readiness and surfaced gaps.</p>
+                  </div>
+                </section>
+                <section class="parker-radar" aria-label="Skills proficiency overview">
+                  <strong>Skills Proficiency Overview</strong>
+                  <div class="radar-chart">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <i></i>
+                  </div>
+                  <div class="radar-legend">
+                    <span>Advanced</span>
+                    <span>Working</span>
+                    <span>Foundational</span>
+                  </div>
+                </section>
+                <section class="parker-projects">
+                  <h3>Selected <span>Projects</span> & Case Studies</h3>
+                  <div class="parker-card">
+                    <strong>Corps-Wide CBRN Readiness Assessment</strong>
+                    <p>Assessment frameworks / stakeholder coordination / training management</p>
+                  </div>
+                  <div class="parker-card">
+                    <strong>Multi-Echelon CWMD Exercise Series</strong>
+                    <p>Scenario design / evaluation methodology / after action review</p>
+                  </div>
+                </section>
+              </div>
+            ) : project.slug === "diverse-hair-designs-peachie" ? (
+              <div class="peachie-screen">
+                <section class="peachie-hero-preview">
+                  <span class="peachie-city"></span>
+                  <div>
+                    <small>Fayetteville, North Carolina</small>
+                    <h3>Your Hair,<br />Our <em>Artistry</em></h3>
+                  </div>
+                </section>
+                <section class="peachie-testimonial">
+                  <small>Client Love</small>
+                  <h3>Kind <em>Words</em></h3>
+                  <p>
+                    Walking into Diverse Hair Designs feels like walking into a sanctuary.
+                    Peachie listens, understands, and always delivers beyond expectations.
+                  </p>
+                  <span></span>
+                </section>
+                <section class="peachie-services">
+                  <div>
+                    <small>What We Offer</small>
+                    <h3>Our <em>Services</em></h3>
+                  </div>
+                  <article>
+                    <span class="hair-card updo"></span>
+                    <strong>The Cut Wash & Style</strong>
+                    <p>45 min <b>$55+</b></p>
+                  </article>
+                  <article>
+                    <span class="hair-card balayage"></span>
+                    <strong>The Full Balayage</strong>
+                    <p>3 hr 30 min <b>$350+</b></p>
+                  </article>
+                  <article>
+                    <span class="hair-card highlights"></span>
+                    <strong>Partial Highlights</strong>
+                    <p>2 hr 30 min <b>$190+</b></p>
+                  </article>
+                </section>
+              </div>
+            ) : (
+              <div class:list={["device-screen", project.slug === "diverse-hair-designs-peachie" && "salon-preview"]}>
+                <div class="device-nav">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <div class="device-hero-block">
+                  <span></span>
+                  <strong>{project.category}</strong>
+                  <p>{project.title}</p>
+                </div>
+                <div class="device-card-list">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <div class="device-gallery">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+            )
+          }
         </div>
         <div class="case-stats">
           {project.caseStudy.stats.map((stat) => <span>{stat}</span>)}

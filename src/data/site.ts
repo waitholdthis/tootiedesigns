@@ -76,19 +76,22 @@ export const websiteShowcase = [
 
 export const projectNotes = [
   {
+    name: "Tootie Designs",
+    projectType: "Process Note",
     quote:
       "The work is approached like a mission brief: define the objective, remove ambiguity, and build until the outcome feels clear.",
-    source: "Studio Note / Process",
   },
   {
+    name: "Tootie Designs",
+    projectType: "Method Note",
     quote:
       "Digital systems and physical craft are treated as the same discipline: structure, repetition, tolerance, and finish.",
-    source: "Studio Note / Method",
   },
   {
+    name: "Tootie Designs",
+    projectType: "Standard Note",
     quote:
       "The goal is not just a good-looking deliverable. The goal is a piece of work that earns trust quickly.",
-    source: "Studio Note / Standard",
   },
 ];
 
