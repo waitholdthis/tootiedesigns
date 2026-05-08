@@ -31,8 +31,8 @@ export const capabilities = [
     title: "Material Craft",
     kicker: "Pattern Room",
     description:
-      "Woodwork, crochet, and tactile goods framed through pattern logic, structure, and hand-finished detail.",
-    services: ["Woodwork studies", "Crochet commissions", "Pattern logic", "Texture exploration"],
+      "Woodwork and tactile goods framed through pattern logic, structure, and hand-finished detail.",
+    services: ["Woodwork studies", "Pattern logic", "Texture exploration", "Material studies"],
   },
 ];
 
@@ -280,29 +280,6 @@ export const projects = [
         "Objects and components that communicate care through crisp edges, intentional depth, and controlled material contrast.",
       deliverables: ["SVG/DXF preparation", "Laser engraving", "Material testing", "Finished component design"],
       stats: ["Vector discipline", "Material tolerances", "Hand-finished"],
-    },
-  },
-  {
-    slug: "algorithmic-textiles",
-    title: "Algorithmic Textiles",
-    category: "Physical Fabrication",
-    filter: "fabrication",
-    size: "small",
-    meta: "Pattern math / repetition / tension",
-    description:
-      "Crochet studies treated as structural pattern systems: soft materials, exact logic, and visible rhythm.",
-    caseStudy: {
-      eyebrow: "Pattern Room / Textile Craft",
-      summary:
-        "Crochet and textile work framed as structured pattern logic: repetition, tension, rhythm, and hand control.",
-      challenge:
-        "Textile work can be misread as purely decorative. The goal is to show the underlying discipline: pattern systems, structure, and repeatable execution.",
-      approach:
-        "The work is positioned as material logic. Each piece emphasizes the relationship between pattern, texture, structure, and finish.",
-      outcome:
-        "A craft category that sits naturally beside software and fabrication because it reveals the same respect for systems and detail.",
-      deliverables: ["Pattern design", "Crochet goods", "Material studies", "Texture exploration"],
-      stats: ["Pattern logic", "Tactile systems", "Handmade finish"],
     },
   },
   {
