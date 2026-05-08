@@ -517,7 +517,7 @@ h3 {
 }
 
 .trust-line {
-  padding: clamp(1.5rem, 4vw, 2.75rem) 0 0;
+  padding: clamp(1.25rem, 3vw, 2rem) 0 0;
 }
 
 .trust-line p {
@@ -539,7 +539,7 @@ h3 {
 }
 
 .statement {
-  padding: clamp(3rem, 8vw, 6rem) 0;
+  padding: clamp(2.25rem, 5vw, 4.5rem) 0;
 }
 
 .statement p {
@@ -552,8 +552,8 @@ h3 {
 
 .bridge-highlight span {
   display: inline;
-  opacity: 0.42;
-  filter: blur(8px);
+  opacity: 0.86;
+  filter: blur(0);
   transition:
     opacity 760ms ease,
     filter 760ms ease,
@@ -581,7 +581,7 @@ h3 {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1px;
-  margin-bottom: clamp(4rem, 8vw, 7rem);
+  margin-bottom: clamp(3rem, 6vw, 5.25rem);
   border: 1px solid var(--line);
   background: var(--line);
 }
@@ -624,7 +624,7 @@ h3 {
   grid-template-columns: 10rem minmax(0, 0.86fr) minmax(18rem, 0.74fr);
   gap: clamp(1rem, 4vw, 3rem);
   align-items: center;
-  margin-bottom: clamp(4rem, 8vw, 7rem);
+  margin-bottom: clamp(3rem, 6vw, 5.25rem);
   padding: clamp(1rem, 3vw, 1.5rem);
   border: 1px solid var(--line);
   background:
@@ -661,7 +661,7 @@ h3 {
 .section-heading {
   display: grid;
   gap: 1rem;
-  margin-bottom: clamp(1.5rem, 4vw, 2.5rem);
+  margin-bottom: clamp(1.25rem, 3vw, 2rem);
 }
 
 .section-heading.split {
@@ -680,7 +680,7 @@ h3 {
 
 .capability-card,
 .process-card {
-  min-height: 20rem;
+  min-height: 18rem;
   padding: 1.25rem;
   background:
     linear-gradient(145deg, rgba(255, 255, 255, 0.035), transparent),
@@ -730,7 +730,7 @@ h3 {
 }
 
 .website-showcase {
-  padding-top: clamp(4rem, 9vw, 8rem);
+  padding-top: clamp(3rem, 6vw, 5.5rem);
 }
 
 .website-grid {
@@ -744,7 +744,7 @@ h3 {
 .website-card {
   display: grid;
   align-content: start;
-  min-height: 32rem;
+  min-height: 28rem;
   padding: 1rem;
   background:
     linear-gradient(145deg, rgba(255, 255, 255, 0.035), transparent),
@@ -817,7 +817,7 @@ h3 {
 }
 
 .work-section {
-  padding-top: clamp(4rem, 9vw, 8rem);
+  padding-top: clamp(3rem, 6vw, 5.5rem);
 }
 
 .filter-bar {
@@ -992,7 +992,7 @@ h3 {
   align-items: center;
   grid-template-columns: minmax(0, 1.1fr) minmax(18rem, 0.9fr);
   gap: clamp(1.5rem, 5vw, 4rem);
-  padding: clamp(5rem, 10vw, 9rem) 0;
+  padding: clamp(4rem, 7vw, 6.5rem) 0;
 }
 
 .blueprint-visual {
@@ -1131,7 +1131,7 @@ h3 {
 }
 
 .project-notes {
-  padding-bottom: clamp(4rem, 8vw, 7rem);
+  padding-bottom: clamp(3rem, 6vw, 5rem);
 }
 
 .notes-grid {
@@ -1182,7 +1182,7 @@ h3 {
 }
 
 .about {
-  padding-bottom: clamp(4rem, 9vw, 7rem);
+  padding-bottom: clamp(3rem, 6vw, 5rem);
 }
 
 .about h2 {
@@ -1199,7 +1199,7 @@ h3 {
   display: grid;
   grid-template-columns: minmax(0, 0.92fr) minmax(20rem, 0.78fr);
   gap: clamp(1.5rem, 4vw, 3rem);
-  padding: clamp(2rem, 6vw, 4rem);
+  padding: clamp(1.5rem, 4vw, 3rem);
   border: 1px solid var(--line);
   background: linear-gradient(135deg, rgba(182, 138, 85, 0.12), rgba(11, 22, 38, 0.42));
 }

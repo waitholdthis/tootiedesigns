@@ -34,6 +34,27 @@ export const capabilities = [
       "Woodwork and tactile goods framed through pattern logic, structure, and hand-finished detail.",
     services: ["Woodwork studies", "Pattern logic", "Texture exploration", "Material studies"],
   },
+  {
+    title: "Brand & Identity Systems",
+    kicker: "Identity Bench",
+    description:
+      "Logos, visual systems, service positioning, and launch-ready brand direction for polished public presence.",
+    services: ["Logo direction", "Brand language", "Visual systems", "Launch assets"],
+  },
+  {
+    title: "Product Prototyping",
+    kicker: "Prototype Bay",
+    description:
+      "Fast concepts for tools, products, interfaces, and physical ideas before full buildout.",
+    services: ["Concept sketches", "Interface prototypes", "Material tests", "Build planning"],
+  },
+  {
+    title: "Content & Copy Strategy",
+    kicker: "Signal Desk",
+    description:
+      "Clear words for websites, case studies, service pages, and professional positioning.",
+    services: ["Website copy", "Case study writing", "Offer clarity", "SEO structure"],
+  },
 ];
 
 export const websiteShowcase = [
@@ -71,6 +92,13 @@ export const websiteShowcase = [
     description:
       "Interface-forward web builds for complex tools, dashboards, and operational products where usability and credibility matter.",
     highlights: ["UX systems", "Dashboard visuals", "React/Astro delivery"],
+  },
+  {
+    title: "Portfolio Case Study Hubs",
+    type: "Portfolio Website",
+    description:
+      "Expandable portfolio systems for showing selected work, process depth, project proof, and client-ready case studies.",
+    highlights: ["Work galleries", "Case study structure", "Proof-driven UX"],
   },
 ];
 

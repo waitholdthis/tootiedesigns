@@ -8,7 +8,7 @@ export default function LaserIntro() {
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const hasPlayed = window.sessionStorage.getItem("tootie-laser-intro-played");
 
-    if (reducedMotion || hasPlayed) return;
+    if (reducedMotion || hasPlayed || window.location.hash) return;
 
     const originalOverflow = document.body.style.overflow;
     window.scrollTo({ top: 0, left: 0, behavior: "auto" });
@@ -21,7 +21,6 @@ export default function LaserIntro() {
     const hiddenTimer = window.setTimeout(() => {
       setIsVisible(false);
       document.body.style.overflow = originalOverflow;
-      window.scrollTo({ top: 0, left: 0, behavior: "auto" });
     }, 5200);
 
     return () => {
@@ -36,7 +35,6 @@ export default function LaserIntro() {
     window.setTimeout(() => {
       setIsVisible(false);
       document.body.style.overflow = "";
-      window.scrollTo({ top: 0, left: 0, behavior: "auto" });
     }, 420);
   }
 
