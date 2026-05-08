@@ -143,6 +143,7 @@ export const projects = [
         "The system direction prioritizes layered geospatial context, status hierarchy, and fast recognition patterns. Tactical data is treated as interface architecture: clear zones, disciplined panels, and visual emphasis only where it supports a decision.",
       outcome:
         "The result is a professional planning framework that communicates readiness, technical fluency, and defense-sector awareness through a polished digital product experience.",
+      cta: { label: "Request a Demo", href: "#contact" },
       deliverables: ["Interface architecture", "Operational dashboard UX", "Geospatial planning patterns", "Defensive Fires workflow framing"],
       stats: ["CesiumJS map logic", "Real-time sensor concept", "Mission-ready UI"],
     },

@@ -51,6 +51,13 @@ const basePath = base.endsWith("/") ? base : `${base}/`;
             <strong>{project.meta}</strong>
             <p>{project.description}</p>
             {
+              "cta" in project.caseStudy && project.caseStudy.cta && (
+                <a class="button primary case-live-link" href={project.caseStudy.cta.href}>
+                  {project.caseStudy.cta.label}
+                </a>
+              )
+            }
+            {
               "url" in project.caseStudy && project.caseStudy.url && (
                 <a class="button secondary case-live-link" href={project.caseStudy.url} target="_blank" rel="noreferrer">
                   Visit Live Site
