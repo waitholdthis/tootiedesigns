@@ -17,7 +17,7 @@ export const capabilities = [
     title: "Tactical Consulting",
     kicker: "Tactical Desk",
     description:
-      "Defense-informed planning support, C-UAS thinking, and structured decision products for complex environments.",
+      "Defense-informed planning support, Defensive Fires thinking, and structured decision products for complex environments.",
     services: ["Mission analysis", "Planning artifacts", "Decision frameworks", "Readiness documentation"],
   },
   {
@@ -98,24 +98,24 @@ export const projectNotes = [
 export const projects = [
   {
     slug: "mdpt-cuas-framework",
-    title: "MDPT: C-UAS Framework",
+    title: "MDPT: Defensive Fires Framework",
     category: "Digital Systems",
     filter: "digital",
     size: "large",
     meta: "Real-time planning / CesiumJS / sensor logic",
     description:
-      "A multi-domain planning environment for counter-UAS workflows, built around operational clarity and rapid interpretation.",
+      "A multi-domain planning environment for Defensive Fires workflows, built around operational clarity and rapid interpretation.",
     caseStudy: {
       eyebrow: "Digital Lab / Defense Software",
       summary:
-        "A mission-focused planning interface concept built to help complex C-UAS information feel structured, scannable, and actionable.",
+        "A mission-focused planning interface concept built to help complex Defensive Fires information feel structured, scannable, and actionable.",
       challenge:
-        "Counter-UAS planning can involve scattered map context, sensor inputs, decision points, and operational constraints. The interface needed to frame that complexity without overwhelming the operator.",
+        "Defensive Fires planning can involve scattered map context, sensor inputs, decision points, and operational constraints. The interface needed to frame that complexity without overwhelming the operator.",
       approach:
         "The system direction prioritizes layered geospatial context, status hierarchy, and fast recognition patterns. Tactical data is treated as interface architecture: clear zones, disciplined panels, and visual emphasis only where it supports a decision.",
       outcome:
         "The result is a professional planning framework that communicates readiness, technical fluency, and defense-sector awareness through a polished digital product experience.",
-      deliverables: ["Interface architecture", "Operational dashboard UX", "Geospatial planning patterns", "C-UAS workflow framing"],
+      deliverables: ["Interface architecture", "Operational dashboard UX", "Geospatial planning patterns", "Defensive Fires workflow framing"],
       stats: ["CesiumJS map logic", "Real-time sensor concept", "Mission-ready UI"],
     },
   },
