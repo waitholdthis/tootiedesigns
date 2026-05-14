@@ -14,7 +14,7 @@ export const capabilities = [
     services: ["Website strategy", "Responsive design", "Copy structure", "Astro front-end builds"],
   },
   {
-    title: "Tactical Consulting",
+    title: "Tactical Advising",
     kicker: "Tactical Desk",
     description:
       "Defense-informed planning support, Defensive Fires thinking, and structured decision products for complex environments.",
@@ -157,8 +157,8 @@ export const projects = [
   },
   {
     slug: "defense-sector-consulting",
-    title: "Defense Sector Consulting",
-    category: "Tactical Consulting",
+    title: "Defense Sector Advising",
+    category: "Tactical Advising",
     filter: "tactical",
     size: "medium",
     meta: "Mission analysis / readiness / doctrine",
@@ -167,7 +167,7 @@ export const projects = [
     caseStudy: {
       eyebrow: "Tactical Desk / Advisory",
       summary:
-        "Defense-informed consulting support for translating broad mission needs into organized planning products and operational clarity.",
+        "Defense-informed advising support for translating broad mission needs into organized planning products and operational clarity.",
       challenge:
         "High-stakes environments often contain competing priorities, incomplete information, and multiple stakeholder needs. The work requires structure before execution can become useful.",
       approach:

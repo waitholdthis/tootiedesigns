@@ -1,6 +1,6 @@
 # Tootie Designs
 
-Cinematic portfolio site for Tootie Designs, a Fayetteville, NC multidisciplinary creative studio spanning digital systems, tactical consulting, fabrication, woodworking, and textile craft.
+Cinematic portfolio site for Tootie Designs, a Fayetteville, NC multidisciplinary creative studio spanning digital systems, tactical advising, fabrication, woodworking, and textile craft.
 
 ## Commands
 
