@@ -354,12 +354,14 @@ textarea {
 
 .hero-media {
   position: absolute;
-  inset: 5.4rem 0 0;
+  inset: 5.4rem auto 0 50%;
   z-index: -1;
+  width: 100vw;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.08);
   background: #0d1117;
   box-shadow: var(--shadow);
+  transform: translateX(-50%);
 }
 
 .hero-media::after {
@@ -2674,7 +2676,7 @@ textarea {
   }
 
   .hero-media {
-    inset: 4.8rem 0 auto;
+    inset: 4.8rem auto auto 50%;
     height: min(58svh, 34rem);
   }
 
