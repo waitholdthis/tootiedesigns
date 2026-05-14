@@ -59,7 +59,7 @@ export const capabilities = [
 
 export const websiteShowcase = [
   {
-    title: "Parker Tootill Authority Site",
+    title: "Authority Site",
     type: "Professional Website",
     description:
       "A credibility-focused personal website for a senior CBRN Warrant Officer, positioning defense, CWMD, homeland security, and emergency management expertise.",
