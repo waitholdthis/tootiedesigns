@@ -73,6 +73,13 @@ export const websiteShowcase = [
     highlights: ["Luxury service design", "Gallery experience", "Booking-ready UX"],
   },
   {
+    title: "The Digital Threshold",
+    type: "Conversion Landing Page",
+    description:
+      "A high-impact landing page about revenue, first impressions, conversion science, and audit-driven action for modern service offers.",
+    highlights: ["Conversion narrative", "Animated sections", "Audit CTA flow"],
+  },
+  {
     title: "Studio Portfolio Systems",
     type: "Brand Website",
     description:
@@ -263,6 +270,30 @@ export const projects = [
       deliverables: ["Luxury service website", "Responsive salon layout", "Gallery and lightbox UX", "Booking/contact pathways"],
       stats: ["Live website", "North Carolina salon", "Gallery-rich UX"],
       url: "https://waitholdthis.github.io/peachie_test/",
+    },
+  },
+  {
+    slug: "the-digital-threshold",
+    title: "The Digital Threshold",
+    category: "Website Design",
+    filter: "digital",
+    size: "medium",
+    meta: "Landing page / conversion copy / animated UX",
+    description:
+      "A cinematic conversion landing page framing the homepage as a revenue-critical threshold with a clear audit call to action.",
+    caseStudy: {
+      eyebrow: "Digital Lab / Conversion Landing Page",
+      summary:
+        "A focused landing page experience built to make the value of better conversion design feel immediate, measurable, and urgent.",
+      challenge:
+        "The page needed to explain why landing page performance matters without becoming a generic marketing article. It had to establish stakes, teach the conversion logic, and drive visitors toward a simple audit request.",
+      approach:
+        "The design uses a dark cinematic interface, sharp headline hierarchy, animated proof sections, conversion metrics, checklist framing, and repeated CTA moments to keep attention moving toward one clear action.",
+      outcome:
+        "The finished page gives the offer a premium launch surface with strong first-screen impact, persuasive structure, and a direct path from curiosity to audit request.",
+      deliverables: ["Conversion landing page", "Revenue-focused copy", "Animated interface sections", "Audit request flow"],
+      stats: ["Live website", "Conversion-focused", "Single-page build"],
+      url: "https://waitholdthis.github.io/landingpage/",
     },
   },
   {
