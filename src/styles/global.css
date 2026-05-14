@@ -767,6 +767,27 @@ h3 {
   background-size: auto, 32px 32px, 32px 32px, auto;
 }
 
+.website-frame.has-image {
+  background: #080d14;
+}
+
+.website-frame.has-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 12rem;
+  object-fit: cover;
+  object-position: top center;
+  opacity: 0.92;
+  transition:
+    opacity 180ms ease,
+    transform 320ms ease;
+}
+
+.website-card:hover .website-frame.has-image img {
+  opacity: 1;
+  transform: scale(1.025);
+}
+
 .website-frame span {
   position: absolute;
   display: block;

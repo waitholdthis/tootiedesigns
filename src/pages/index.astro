@@ -2,11 +2,19 @@
 import "../styles/global.css";
 import LaserIntro from "../components/LaserIntro";
 import { capabilities, process as processSteps, projectNotes, projects, tech, websiteShowcase } from "../data/site";
+import conversionLandingPageImage from "../../photos/Conversion_Landing_Page.png";
+import luxuryServiceWebsiteImage from "../../photos/Luxury_Service_Website.png";
+import professionalWebsiteImage from "../../photos/Professional_Website.png";
 
 const base = import.meta.env.BASE_URL;
 const basePath = base.endsWith("/") ? base : `${base}/`;
 const deploymentOrigin = Astro.site?.toString().replace(/\/$/, "") ?? "https://tootiedesigns.com";
 const deploymentBase = `${deploymentOrigin}${base === "/" ? "" : base.replace(/\/$/, "")}`;
+const websiteImages = new Map([
+  ["Parker Tootill Authority Site", professionalWebsiteImage],
+  ["Diverse Hair Designs by Peachie", luxuryServiceWebsiteImage],
+  ["The Digital Threshold", conversionLandingPageImage],
+]);
 const filters = [
   { value: "all", label: "All" },
   { value: "digital", label: "Digital Systems" },
@@ -154,21 +162,31 @@ const filters = [
         </div>
         <div class="website-grid">
           {
-            websiteShowcase.map((item) => (
-              <article class="website-card">
-                <div class="website-frame" aria-hidden="true">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </div>
-                <p class="eyebrow">{item.type}</p>
-                <h3>{item.title}</h3>
-                <p>{item.description}</p>
-                <div>
-                  {item.highlights.map((highlight) => <span>{highlight}</span>)}
-                </div>
-              </article>
-            ))
+            websiteShowcase.map((item) => {
+              const image = websiteImages.get(item.title);
+
+              return (
+                <article class="website-card">
+                  <div class:list={["website-frame", image && "has-image"]} aria-hidden="true">
+                    {image ? (
+                      <img src={image.src} alt="" loading="lazy" />
+                    ) : (
+                      <>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                      </>
+                    )}
+                  </div>
+                  <p class="eyebrow">{item.type}</p>
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
+                  <div>
+                    {item.highlights.map((highlight) => <span>{highlight}</span>)}
+                  </div>
+                </article>
+              );
+            })
           }
         </div>
       </section>
