@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import DecryptedHeroTitle from "../components/DecryptedHeroTitle";
 import LaserIntro from "../components/LaserIntro";
 import { capabilities, process as processSteps, projectNotes, projects, tech, websiteShowcase } from "../data/site";
 import conversionLandingPageImage from "../../photos/Conversion_Landing_Page.png";
@@ -57,7 +58,12 @@ const filters = [
         </div>
         <div class="hero-content">
           <p class="eyebrow">Fayetteville, NC / Digital Workshop</p>
-          <h1 id="hero-title">Precision-built systems. Hand-finished creations.</h1>
+          <DecryptedHeroTitle
+            id="hero-title"
+            text="Precision-built systems. Hand-finished creations."
+            revealDirection="start"
+            client:load
+          />
           <p class="hero-copy">
             Tootie Designs bridges defense-grade problem solving, full-stack software,
             laser fabrication, woodworking, and material craft into one multidisciplinary studio.

@@ -430,6 +430,20 @@ h1 {
   font-size: clamp(3rem, 6.8vw, 5.85rem);
 }
 
+.decrypted-title {
+  cursor: default;
+}
+
+.decrypted-char {
+  display: inline-block;
+  min-width: 0.48em;
+}
+
+.decrypted-char.encrypted {
+  color: var(--bronze-2);
+  text-shadow: 0 0 18px rgba(210, 173, 116, 0.42);
+}
+
 h2 {
   max-width: 13ch;
   margin-bottom: 0;
