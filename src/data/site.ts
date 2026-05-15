@@ -202,6 +202,30 @@ export const projects = [
     },
   },
   {
+    slug: "foundry-baseball-app",
+    title: "Foundry Baseball App",
+    category: "Digital Systems",
+    filter: "digital",
+    size: "medium",
+    meta: "Sports app / scorebook UX / game-day workflow",
+    description:
+      "A dugout command center concept that unifies lineup building, digital scorekeeping, and walk-up music control for baseball and softball.",
+    caseStudy: {
+      eyebrow: "Digital Lab / Sports Product",
+      summary:
+        "A baseball and softball app experience designed to bring the scorebook, lineup board, and Ballpark DJ into one game-day command center.",
+      challenge:
+        "Coaches often juggle separate tools for lineups, scoring, stats, and music. The product needed to show how those workflows could live together without slowing down the pace of a real dugout.",
+      approach:
+        "The interface direction centers one-tap scoring, a clear at-bat state, lineup flow, live game feedback, and music automation that responds when the next batter steps in.",
+      outcome:
+        "The finished landing experience communicates a polished sports product concept with clear operational value: fewer app switches, faster game management, and a stronger ballpark atmosphere.",
+      deliverables: ["Sports app landing page", "Game-day UX framing", "Scorebook workflow design", "Product positioning"],
+      stats: ["Live website", "Baseball and softball", "Dugout command center"],
+      url: "https://waitholdthis.github.io/foundry_baseball_app/",
+    },
+  },
+  {
     slug: "website-design-portfolio",
     title: "Website Design Portfolio",
     category: "Website Design",
