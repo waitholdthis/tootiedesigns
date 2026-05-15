@@ -80,6 +80,13 @@ export const websiteShowcase = [
     highlights: ["Conversion narrative", "Animated sections", "Audit CTA flow"],
   },
   {
+    title: "Foundry Baseball App",
+    type: "Product Website",
+    description:
+      "A sports-app landing experience for a dugout command center, presenting lineup tools, digital scorekeeping, and Ballpark DJ automation.",
+    highlights: ["Product positioning", "Sports app UX", "Launch-ready site"],
+  },
+  {
     title: "Studio Portfolio Systems",
     type: "Brand Website",
     description:
