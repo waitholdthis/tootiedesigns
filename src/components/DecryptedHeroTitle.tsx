@@ -98,14 +98,28 @@ export default function DecryptedHeroTitle({
   return (
     <h1 id={id} ref={headingRef} className="decrypted-title" aria-label={text} onMouseEnter={play}>
       <span aria-hidden="true">
-        {displayText.split("").map((char, index) => (
-          <span
-            key={`${char}-${index}`}
-            className={scramblingIndices.has(index) && char !== " " ? "decrypted-char encrypted" : "decrypted-char"}
-          >
-            {char}
-          </span>
-        ))}
+        {displayText.split(/(\s+)/).map((part, partIndex, parts) => {
+          const startIndex = parts.slice(0, partIndex).join("").length;
+
+          if (/^\s+$/.test(part)) return part;
+
+          return (
+            <span className="decrypted-word" key={`${part}-${partIndex}`}>
+              {part.split("").map((char, index) => {
+                const textIndex = startIndex + index;
+
+                return (
+                  <span
+                    key={`${char}-${textIndex}`}
+                    className={scramblingIndices.has(textIndex) ? "decrypted-char encrypted" : "decrypted-char"}
+                  >
+                    {char}
+                  </span>
+                );
+              })}
+            </span>
+          );
+        })}
       </span>
     </h1>
   );

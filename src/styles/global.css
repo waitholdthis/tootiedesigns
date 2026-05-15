@@ -431,12 +431,18 @@ h1 {
 }
 
 .decrypted-title {
+  max-width: min(100%, 12.5ch);
   cursor: default;
+  font-size: clamp(2.75rem, 6.1vw, 5.35rem);
+}
+
+.decrypted-word {
+  display: inline-block;
+  white-space: nowrap;
 }
 
 .decrypted-char {
   display: inline-block;
-  min-width: 0.48em;
 }
 
 .decrypted-char.encrypted {
