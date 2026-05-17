@@ -1479,69 +1479,57 @@ h3 {
   justify-content: flex-end;
 }
 
-.project-notes {
-  padding-bottom: clamp(3rem, 6vw, 5rem);
-}
-
-.notes-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1px;
-  border: 1px solid var(--line);
-  background: var(--line);
-}
-
-.notes-grid figure {
-  display: grid;
-  align-content: space-between;
-  gap: 1.5rem;
-  min-height: 18rem;
-  margin: 0;
-  padding: 1.15rem;
-  background:
-    linear-gradient(145deg, rgba(182, 138, 85, 0.08), transparent),
-    rgba(16, 20, 24, 0.94);
-}
-
-.notes-grid blockquote {
-  margin: 0 0 1.25rem;
-  color: #e7dfd4;
-  font-size: clamp(1.2rem, 2vw, 1.55rem);
-  line-height: 1.25;
-}
-
-.notes-grid figcaption {
-  display: grid;
-  gap: 0.35rem;
-  border-top: 1px solid rgba(210, 173, 116, 0.14);
-  padding-top: 1rem;
-  font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
-  font-size: 0.74rem;
-  text-transform: uppercase;
-}
-
-.notes-grid figcaption strong {
-  color: var(--bronze-2);
-  font-size: 0.78rem;
-}
-
-.notes-grid figcaption span {
-  color: var(--muted);
-  font-size: 0.75rem;
-}
-
 .about {
   padding-bottom: clamp(3rem, 6vw, 5rem);
 }
 
-.about h2 {
-  max-width: 16ch;
-  margin-bottom: clamp(1.25rem, 3vw, 2rem);
+.about-grid {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: start;
 }
 
-.about p {
-  max-width: 62rem;
-  font-size: 1.15rem;
+.about-headshot {
+  display: block;
+  width: 100%;
+  border: 1px solid var(--line);
+  filter: grayscale(18%);
+}
+
+.about-copy-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.about-copy-col .eyebrow {
+  margin-bottom: 0.5rem;
+}
+
+.about-copy-col h2 {
+  font-size: clamp(1.75rem, 3.5vw, 2.4rem);
+  margin-bottom: 0.6rem;
+}
+
+.about-role {
+  font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--bronze-2);
+  margin-bottom: 1.75rem;
+}
+
+.about-copy-col p {
+  max-width: 58ch;
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--bone);
+}
+
+.about-copy-col p + p {
+  margin-top: 1rem;
 }
 
 .contact {
@@ -3143,7 +3131,6 @@ textarea:focus-visible {
   .proof-band,
   .website-grid,
   .case-body,
-  .notes-grid,
   .related-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -3303,17 +3290,23 @@ textarea:focus-visible {
   .proof-band,
   .website-grid,
   .case-body,
-  .notes-grid,
   .related-grid,
   .site-footer {
     grid-template-columns: 1fr;
   }
 
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-headshot {
+    max-width: 220px;
+  }
+
   .capability-card,
   .process-card,
   .proof-band div,
-  .website-card,
-  .notes-grid figure {
+  .website-card {
     min-height: 13rem;
     padding: 1rem;
   }
