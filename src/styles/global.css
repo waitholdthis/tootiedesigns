@@ -1245,12 +1245,14 @@ h3 {
 
 .vector-card {
   position: absolute;
-  inset: 12% 12% auto auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 1;
-  width: 58%;
+  width: 78%;
   aspect-ratio: 1.4;
   border: 1px solid rgba(210, 173, 116, 0.44);
-  background: rgba(11, 22, 38, 0.64);
+  background: rgba(11, 22, 38, 0.32);
 }
 
 .vector-card span {
@@ -1278,19 +1280,6 @@ h3 {
   border-radius: 50%;
 }
 
-.material-card {
-  position: absolute;
-  left: 8%;
-  bottom: 10%;
-  z-index: 1;
-  width: 52%;
-  aspect-ratio: 1.16;
-  border: 1px solid rgba(255, 255, 255, 0.11);
-  background:
-    linear-gradient(135deg, rgba(5, 8, 12, 0.24), rgba(5, 8, 12, 0.64)),
-    repeating-linear-gradient(94deg, #8f5f2f 0 6px, #c9904e 6px 13px, #5c371b 13px 16px);
-  box-shadow: var(--shadow);
-}
 
 .blueprint-copy p {
   max-width: 40rem;
@@ -3449,15 +3438,9 @@ textarea:focus-visible {
   }
 
   .vector-card {
-    inset: 12% 8% auto auto;
-    width: 68%;
+    width: 88%;
   }
 
-  .material-card {
-    left: 8%;
-    bottom: 12%;
-    width: 62%;
-  }
 
   .perspective-grid {
     transform: perspective(520px) rotateX(66deg) translateY(8%);
