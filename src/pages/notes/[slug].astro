@@ -1,0 +1,122 @@
+---
+import "../../styles/global.css";
+import { fieldNotes } from "../../data/site";
+
+export function getStaticPaths() {
+  return fieldNotes.map((note) => ({
+    params: { slug: note.slug },
+    props: { note },
+  }));
+}
+
+const { note } = Astro.props;
+const related = fieldNotes.filter((n) => n.slug !== note.slug).slice(0, 3);
+
+const base = import.meta.env.BASE_URL;
+const basePath = base.endsWith("/") ? base : `${base}/`;
+const currentYear = new Date().getFullYear();
+
+const formattedDate = new Date(note.date).toLocaleDateString("en-US", {
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+  timeZone: "UTC",
+});
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={note.summary} />
+    <title>{note.title} | Tootie Designs Field Notes</title>
+  </head>
+  <body>
+    <header class="site-header" aria-label="Primary navigation">
+      <a class="brand" href={basePath} aria-label="Tootie Designs home">
+        <span class="brand-mark"><img src={`${basePath}tootie-logo-transparent.png`} alt="" width="37" height="37" /></span>
+        <span>Tootie Designs and Strategic Advisor</span>
+      </a>
+      <nav>
+        <a href={`${basePath}#work`}>Work</a>
+        <a href={`${basePath}#capabilities`}>Capabilities</a>
+        <a href={`${basePath}#process`}>Process</a>
+        <a href={`${basePath}notes/`}>Notes</a>
+        <a href={`${basePath}#contact`}>Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="case-hero section-shell" aria-labelledby="note-title">
+        <a class="back-link" href={`${basePath}notes/`}>Back to Field Notes</a>
+        <div class="note-hero-grid">
+          <div>
+            <p class="eyebrow">{note.eyebrow}</p>
+            <h1 id="note-title">{note.title}</h1>
+            <p class="hero-copy">{note.summary}</p>
+          </div>
+          <aside class="case-meta">
+            <span>Field Note</span>
+            <strong>{formattedDate}</strong>
+            <p>{note.eyebrow} / Tootie Designs Studio</p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section-shell note-body" aria-label="Note content">
+        <article class="note-article">
+          {note.body.map((paragraph) => <p>{paragraph}</p>)}
+        </article>
+      </section>
+
+      {
+        related.length > 0 && (
+          <section class="section-shell related-work" aria-labelledby="related-notes-title">
+            <div class="section-heading">
+              <p class="eyebrow">More Notes</p>
+              <h2 id="related-notes-title">Other studio thinking.</h2>
+            </div>
+            <div class="related-grid">
+              {related.map((item) => (
+                <a class="related-card" href={`${basePath}notes/${item.slug}/`}>
+                  <span>{item.eyebrow}</span>
+                  <strong>{item.title}</strong>
+                  <p>{item.summary}</p>
+                </a>
+              ))}
+            </div>
+          </section>
+        )
+      }
+
+      <section class="section-shell contact case-contact" id="contact" aria-labelledby="note-contact-title">
+        <div>
+          <p class="eyebrow">Start a Project</p>
+          <h2 id="note-contact-title">Ready to put this thinking to work?</h2>
+          <p>
+            Bring the goal, audience, and constraints. Tootie Designs can shape the
+            system, site, or engagement from there.
+          </p>
+        </div>
+        <a class="button primary" href={`${basePath}#contact`}>Open the Project Brief</a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>Tootie Designs</strong>
+        <span>Fayetteville, NC</span>
+      </div>
+      <div>
+        <span>Website Design / Software / Tactical Advising / Fabrication</span>
+        <span>Precision / Texture / Innovation</span>
+        <span>© {currentYear} Tootie Designs.</span>
+        <div class="footer-links">
+          <a href="https://www.facebook.com/profile.php?id=100063801085109" target="_blank" rel="noreferrer">Facebook</a>
+          <a href={`${basePath}privacy/`}>Privacy Policy</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

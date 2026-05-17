@@ -419,3 +419,98 @@ export const tech = [
   "CAD",
   "Laser",
 ];
+
+export const email = "tootiedesigns18@gmail.com";
+
+export const techCategories = [
+  {
+    label: "Digital Systems",
+    tools: ["Astro", "React", "TypeScript", "Python", "React Native", "Docker", "Nginx", "PostgreSQL", "CesiumJS", "Git / GitHub"],
+  },
+  {
+    label: "Physical Fabrication",
+    tools: ["Laser Cutting", "DXF / SVG", "CAD", "Vector Prep", "Material Testing", "Woodwork", "Engraving", "Component Finishing"],
+  },
+  {
+    label: "Design & Strategy",
+    tools: ["Interface Design", "UX Systems", "Brand Identity", "Copy Strategy", "Mission Analysis", "Conversion Design", "Responsive Layout", "Accessibility"],
+  },
+];
+
+export const fieldNotes = [
+  {
+    slug: "why-every-service-business-needs-an-authority-website",
+    title: "Why Every Service Business Needs an Authority Website",
+    date: "2026-01-15",
+    eyebrow: "Website Design",
+    category: "digital",
+    summary:
+      "A polished web presence is no longer optional. Here is why your authority site is the most important first impression your business makes — and what it takes to build one that earns trust on arrival.",
+    body: [
+      "Your website is the first thing a potential client looks at before they pick up the phone. For service businesses — consultants, contractors, coaches, tradespeople — that first impression either builds trust immediately or raises questions that never get answered.",
+      "An authority website is not the same as a marketing website. A marketing website sells. An authority website positions: it tells a visitor who you are, what you have done, who you have served, and why that history matters. The difference is felt in the first ten seconds of a visit.",
+      "Tootie Designs builds authority websites from a simple structure: clear professional identity in the header, a positioning statement that speaks to a specific audience, a short proof section with real credentials or outcomes, a handful of services organized around client needs, and a contact path that does not require multiple clicks to reach. That structure works for defense consultants, salon owners, coaches, and technical specialists equally — because the underlying logic is the same: establish credibility, reduce friction, make the next step obvious.",
+      "If your website still uses a generic template, has outdated content, or does not quickly answer who is this for and why should I trust them, an authority site rebuild is probably the most direct investment your business can make right now.",
+    ],
+  },
+  {
+    slug: "the-conversion-problem-why-your-homepage-is-losing-you-business",
+    title: "The Conversion Problem: Why Your Homepage Is Losing You Business",
+    date: "2026-02-08",
+    eyebrow: "Website Design",
+    category: "digital",
+    summary:
+      "Most homepages are built backwards. They lead with the company story and bury the offer. Here is how to identify the structural problem — and what a focused homepage audit reveals every time.",
+    body: [
+      "Most homepages are built backwards. They lead with the company's story, the founder's biography, or a carousel of stock photography — and bury the actual offer three scrolls down. By the time a visitor reaches the relevant information, they have already left.",
+      "Conversion is about reducing the gap between a visitor arriving and a visitor taking action. Every element of a homepage — headline, hero image, CTA position, scroll depth, section order — either shortens or lengthens that gap. Generic design choices almost always lengthen it.",
+      "The most common problem Tootie Designs identifies when auditing existing websites is a mismatch between what the page says and what the visitor needs to hear. A plumber's homepage should answer: are you licensed, do you serve my area, and can I reach you right now? A consultant's homepage should answer: what problem do you solve, who have you solved it for, and why are you different? If the page does not answer those questions in the first screen, it is leaving business on the table.",
+      "A focused homepage audit takes less than an hour to run but regularly identifies five to ten high-impact changes. If your bounce rate is high and your conversion rate is low, the issue is almost always structural — not aesthetic.",
+    ],
+  },
+  {
+    slug: "defense-informed-design-military-planning-and-software-architecture",
+    title: "Defense-Informed Design: What Military Planning Taught Me About Software Architecture",
+    date: "2026-02-28",
+    eyebrow: "Digital Systems",
+    category: "digital",
+    summary:
+      "The discipline required to produce a clear operations order is directly applicable to producing a clear technical specification. Here is how military planning logic maps to software architecture — and why it produces better systems.",
+    body: [
+      "Military planning is structured around clarity under pressure. Before any course of action is briefed, the planning team has defined the mission, identified the key decision points, mapped the terrain, and established the measures of success. Nothing moves until the problem is understood.",
+      "Good software architecture works the same way. The interfaces, data models, and workflows that hold up under real-world use are almost always the ones built from a clear problem statement rather than a list of features. The planning phase — what military doctrine calls mission analysis — is what separates systems that scale from systems that require constant firefighting.",
+      "This is not a metaphor. The discipline required to produce a clear operations order is directly applicable to producing a clear technical specification. Define the audience. Map the constraints. Identify the decision points. Choose the minimal viable action that solves the problem without creating new ones. Military planners call this the decisive point; software engineers call it the MVP. The label changes, but the logic does not.",
+      "Tootie Designs brings this planning discipline to every digital build. The result is fewer scope changes mid-project, better-defined interfaces, and systems that behave predictably under conditions they were designed for — because those conditions were identified before a single line of code was written.",
+    ],
+  },
+  {
+    slug: "material-thinking-laser-tolerances-and-clean-code",
+    title: "Material Thinking: What Laser Tolerances Have in Common with Clean Code",
+    date: "2026-03-20",
+    eyebrow: "Physical Fabrication",
+    category: "fabrication",
+    summary:
+      "A vector path that is slightly off burns through material it was not supposed to. A function that does too much behaves unpredictably under conditions that were never anticipated. The precision standard is the same.",
+    body: [
+      "Laser engraving requires precision at the millimeter level. A vector path that is slightly off closes a corner wrong, burns through material it was not supposed to, or leaves a ragged edge where a crisp line was planned. The machine has no patience for ambiguity — it executes exactly what the file tells it to.",
+      "Writing clean code works on the same principle. A function with a single, well-defined responsibility will always behave predictably. A function that does too much, or accepts too many inputs, will behave unpredictably — especially under conditions that were not anticipated in the original design. The file you hand to the laser cutter is the spec. The code you deploy is the spec. Both should be precise enough that the system has no need to guess.",
+      "The fabrication workflow at Tootie Designs and the development workflow follow the same preparation logic: test the material before committing to the final cut, prototype the interaction before building the full system, verify the path before running the job. This is not caution for its own sake — it is how you avoid expensive mistakes that require starting over.",
+      "Multidisciplinary work builds tolerance for precision across every medium. The same eye that catches a burn inconsistency in a finished panel catches an off-by-one logic error in a production API. The domain is different. The standard is the same.",
+    ],
+  },
+  {
+    slug: "from-dugout-to-dashboard-ux-lessons-from-a-baseball-command-center",
+    title: "From Dugout to Dashboard: UX Lessons from Building a Baseball Command Center",
+    date: "2026-04-10",
+    eyebrow: "Digital Systems",
+    category: "digital",
+    summary:
+      "The most important feature on a dashboard is not the one that is hardest to build. It is the one the user reaches for first under pressure. Building the Foundry Baseball App made that principle concrete.",
+    body: [
+      "Building the Foundry Baseball App surface taught a lesson that applies to every dashboard product: the most important feature is not the one that is hardest to build. It is the one the user reaches for first under pressure.",
+      "In a real dugout, a coach needs one thing in the first thirty seconds: the current lineup and the next batter. Not season stats, not historical scoring trends, not notification banners — the lineup, now. Every UX decision that follows should protect that first interaction. Secondary features — walk-up music, digital scorebook, pitch count — earn their place in the interface by staying out of the way until they are needed.",
+      "This is the central challenge of dashboard design: the product has to be simple to use in the specific moment it is used, not just when reviewing it in a prototype. Sports software fails when it treats every feature as equally important. Professional tools fail the same way — too many equally weighted options, not enough hierarchy, no clear primary action.",
+      "The Foundry experience reinforced that good UX is not about feature count. It is about understanding the exact sequence of decisions a user makes and designing the interface to support that sequence without friction. Lineup. At-bat. Score. Music. In that order. Every screen should know what comes next.",
+    ],
+  },
+];

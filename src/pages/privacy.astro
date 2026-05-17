@@ -1,0 +1,114 @@
+---
+import "../styles/global.css";
+
+const base = import.meta.env.BASE_URL;
+const basePath = base.endsWith("/") ? base : `${base}/`;
+const currentYear = new Date().getFullYear();
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Privacy Policy for Tootie Designs." />
+    <title>Privacy Policy | Tootie Designs</title>
+  </head>
+  <body>
+    <header class="site-header" aria-label="Primary navigation">
+      <a class="brand" href={basePath} aria-label="Tootie Designs home">
+        <span class="brand-mark"><img src={`${basePath}tootie-logo-transparent.png`} alt="" width="37" height="37" /></span>
+        <span>Tootie Designs and Strategic Advisor</span>
+      </a>
+      <nav>
+        <a href={`${basePath}#work`}>Work</a>
+        <a href={`${basePath}#capabilities`}>Capabilities</a>
+        <a href={`${basePath}#process`}>Process</a>
+        <a href={`${basePath}notes/`}>Notes</a>
+        <a href={`${basePath}#contact`}>Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="privacy-page section-shell" aria-labelledby="privacy-title">
+        <a class="back-link" href={basePath}>Back to Home</a>
+        <p class="eyebrow">Legal</p>
+        <h1 id="privacy-title">Privacy Policy</h1>
+        <p class="privacy-effective">Effective: May 17, 2026</p>
+
+        <div class="privacy-body">
+          <section aria-labelledby="collect-title">
+            <h2 id="collect-title">What We Collect</h2>
+            <p>
+              When you submit the contact form on this website, we collect the information you
+              provide — typically your name, email address, project type, timeline preferences,
+              and a brief description of your project. We do not collect this information
+              automatically or without your direct action.
+            </p>
+          </section>
+
+          <section aria-labelledby="use-title">
+            <h2 id="use-title">How We Use It</h2>
+            <p>
+              The information you submit is used solely to respond to your inquiry and discuss
+              a potential project. We do not sell, rent, or share your information with third
+              parties for marketing purposes.
+            </p>
+          </section>
+
+          <section aria-labelledby="third-party-title">
+            <h2 id="third-party-title">Third-Party Form Processing</h2>
+            <p>
+              Contact form submissions are processed by FormSubmit.co, a third-party service.
+              Their handling of form data is governed by their own privacy policy. Tootie Designs
+              does not store form submissions on its own servers.
+            </p>
+          </section>
+
+          <section aria-labelledby="cookies-title">
+            <h2 id="cookies-title">Cookies and Tracking</h2>
+            <p>
+              This website does not use tracking cookies, analytics scripts, or advertising
+              pixels. A single session storage item is used locally in your browser to control
+              the intro animation — it is never sent to any server and is cleared when you
+              close your browser session.
+            </p>
+          </section>
+
+          <section aria-labelledby="links-title">
+            <h2 id="links-title">External Links</h2>
+            <p>
+              This site contains links to external websites, including Facebook and client
+              project sites. Tootie Designs is not responsible for the content or privacy
+              practices of those external sites. We recommend reviewing their policies directly.
+            </p>
+          </section>
+
+          <section aria-labelledby="contact-privacy-title">
+            <h2 id="contact-privacy-title">Questions</h2>
+            <p>
+              For any privacy-related questions, contact us directly at{" "}
+              <a href="mailto:tootiedesigns18@gmail.com">tootiedesigns18@gmail.com</a>.
+            </p>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>Tootie Designs</strong>
+        <span>Fayetteville, NC</span>
+      </div>
+      <div>
+        <span>Website Design / Software / Tactical Advising / Fabrication</span>
+        <span>Precision / Texture / Innovation</span>
+        <span>© {currentYear} Tootie Designs.</span>
+        <div class="footer-links">
+          <a href="https://www.facebook.com/profile.php?id=100063801085109" target="_blank" rel="noreferrer">Facebook</a>
+          <a href={`${basePath}privacy/`} aria-current="page">Privacy Policy</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

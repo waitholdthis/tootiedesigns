@@ -1255,6 +1255,230 @@ h3 {
   text-transform: uppercase;
 }
 
+/* ── Tools & Technologies ──────────────────────────────────────────── */
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.tools-category {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.5rem;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.tools-category > strong {
+  font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--bronze);
+}
+
+.tools-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tools-pills span {
+  padding: 0.3rem 0.7rem;
+  border: 1px solid var(--line);
+  color: var(--bone);
+  font-size: 0.8rem;
+  background: rgba(255, 255, 255, 0.04);
+  transition: border-color 180ms ease, background 180ms ease;
+}
+
+/* ── Field Notes preview ───────────────────────────────────────────── */
+
+.field-notes-preview {
+  padding-bottom: clamp(3rem, 6vw, 5rem);
+}
+
+.notes-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+.note-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  padding: 1.5rem;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.02);
+  text-decoration: none;
+  color: inherit;
+  transition: background 200ms ease, border-color 200ms ease;
+}
+
+.note-card:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(210, 173, 116, 0.35);
+}
+
+.note-card:focus-visible {
+  outline: 2px solid var(--bronze);
+  outline-offset: 2px;
+}
+
+.note-eyebrow {
+  font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--bronze-2);
+}
+
+.note-card > strong {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--bone);
+  line-height: 1.35;
+}
+
+.note-card > p {
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.6;
+  flex: 1;
+}
+
+.note-date {
+  font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.7rem;
+  color: var(--muted);
+  margin-top: 0.5rem;
+}
+
+/* ── Notes listing page ────────────────────────────────────────────── */
+
+.notes-index-hero {
+  padding-top: clamp(8rem, 12vw, 11rem);
+  padding-bottom: clamp(2rem, 5vw, 3rem);
+}
+
+.notes-index-grid-section {
+  padding-bottom: clamp(4rem, 8vw, 7rem);
+}
+
+.notes-list-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 0;
+}
+
+/* ── Notes post page ───────────────────────────────────────────────── */
+
+.note-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr minmax(14rem, 0.38fr);
+  gap: 2rem;
+  align-items: start;
+  margin-top: 2rem;
+}
+
+.note-body {
+  padding-bottom: clamp(3rem, 6vw, 5rem);
+}
+
+.note-article {
+  max-width: 68ch;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.note-article p {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--bone);
+}
+
+/* ── Privacy page ──────────────────────────────────────────────────── */
+
+.privacy-page {
+  padding-top: clamp(8rem, 12vw, 11rem);
+  padding-bottom: clamp(4rem, 8vw, 7rem);
+  max-width: 72ch;
+}
+
+.privacy-effective {
+  font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-top: 0.5rem;
+  margin-bottom: 3rem;
+}
+
+.privacy-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.privacy-body h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--bronze);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.75rem;
+}
+
+.privacy-body p {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: var(--bone);
+}
+
+.privacy-body a {
+  color: var(--bronze-2);
+  text-decoration: underline;
+}
+
+.privacy-body a:hover {
+  color: var(--bone);
+}
+
+/* ── Contact direct email ──────────────────────────────────────────── */
+
+.contact-direct-email {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.contact-direct-email a {
+  color: var(--bronze-2);
+  text-decoration: underline;
+  font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.85rem;
+}
+
+.contact-direct-email a:hover {
+  color: var(--bone);
+}
+
+/* ── Footer links row ──────────────────────────────────────────────── */
+
+.footer-links {
+  display: flex;
+  gap: 1.25rem;
+  justify-content: flex-end;
+}
+
 .project-notes {
   padding-bottom: clamp(3rem, 6vw, 5rem);
 }
@@ -2996,6 +3220,19 @@ textarea:focus-visible {
         transparent 54%
       );
   }
+
+  .tools-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .notes-preview-grid,
+  .notes-list-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .note-hero-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 620px) {
@@ -3346,6 +3583,15 @@ textarea:focus-visible {
   .site-footer div:last-child {
     justify-items: start;
     text-align: left;
+  }
+
+  .footer-links {
+    justify-content: flex-start;
+  }
+
+  .notes-preview-grid,
+  .notes-list-grid {
+    grid-template-columns: 1fr;
   }
 }
 

@@ -1,6 +1,7 @@
 ---
 import "../../styles/global.css";
 import { projects, tech } from "../../data/site";
+const currentYear = new Date().getFullYear();
 import foundryMainImage from "../../../photos/Dig_Lab_Main.png";
 import foundryImage1 from "../../../photos/Dig_Lab_Foundry.png";
 import foundryImage2 from "../../../photos/Dig_Lab_Foundry_1.png";
@@ -37,6 +38,7 @@ const basePath = base.endsWith("/") ? base : `${base}/`;
         <a href={`${basePath}#work`}>Work</a>
         <a href={`${basePath}#capabilities`}>Capabilities</a>
         <a href={`${basePath}#process`}>Process</a>
+        <a href={`${basePath}notes/`}>Notes</a>
         <a href={`${basePath}#contact`}>Contact</a>
       </nav>
     </header>
@@ -333,7 +335,11 @@ const basePath = base.endsWith("/") ? base : `${base}/`;
       <div>
         <span>Website Design / Software / Tactical Advising / Fabrication</span>
         <span>Precision / Texture / Innovation</span>
-        <a href="https://www.facebook.com/profile.php?id=100063801085109" target="_blank" rel="noreferrer">Facebook</a>
+        <span>© {currentYear} Tootie Designs.</span>
+        <div class="footer-links">
+          <a href="https://www.facebook.com/profile.php?id=100063801085109" target="_blank" rel="noreferrer">Facebook</a>
+          <a href={`${basePath}privacy/`}>Privacy Policy</a>
+        </div>
       </div>
     </footer>
   </body>

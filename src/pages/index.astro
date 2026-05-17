@@ -2,7 +2,7 @@
 import "../styles/global.css";
 import DecryptedHeroTitle from "../components/DecryptedHeroTitle";
 import LaserIntro from "../components/LaserIntro";
-import { capabilities, process as processSteps, projectNotes, projects, tech, websiteShowcase } from "../data/site";
+import { capabilities, email, fieldNotes, process as processSteps, projectNotes, projects, tech, techCategories, websiteShowcase } from "../data/site";
 import conversionLandingPageImage from "../../photos/Conversion_Landing_Page.png";
 import dugoutCommandCenterImage from "../../photos/The_Dugout_Command_Center.png";
 import luxuryServiceWebsiteImage from "../../photos/Luxury_Service_Website.png";
@@ -18,6 +18,7 @@ const websiteImages = new Map([
   ["The Digital Threshold", conversionLandingPageImage],
   ["Foundry Baseball App", dugoutCommandCenterImage],
 ]);
+const currentYear = new Date().getFullYear();
 const filters = [
   { value: "all", label: "All" },
   { value: "digital", label: "Digital Systems" },
@@ -66,6 +67,7 @@ const filters = [
         <a href="#work">Work</a>
         <a href="#capabilities">Capabilities</a>
         <a href="#process">Process</a>
+        <a href={`${basePath}notes/`}>Notes</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
@@ -305,6 +307,25 @@ const filters = [
         </div>
       </section>
 
+      <section class="section-shell tools-section" aria-labelledby="tools-title">
+        <div class="section-heading">
+          <p class="eyebrow">Stack</p>
+          <h2 id="tools-title">Tools &amp; Technologies</h2>
+        </div>
+        <div class="tools-grid">
+          {
+            techCategories.map((cat) => (
+              <div class="tools-category">
+                <strong>{cat.label}</strong>
+                <div class="tools-pills">
+                  {cat.tools.map((tool) => <span>{tool}</span>)}
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </section>
+
       <section class="tech-ticker" aria-label="Technology and materials">
         <div>
           {[...tech, ...tech].map((item) => <span>{item}</span>)}
@@ -342,6 +363,27 @@ const filters = [
         </p>
       </section>
 
+      <section class="section-shell field-notes-preview" aria-labelledby="field-notes-title">
+        <div class="section-heading split">
+          <div>
+            <p class="eyebrow">Field Notes</p>
+            <h2 id="field-notes-title">Thinking from the studio.</h2>
+          </div>
+          <a class="button secondary" href={`${basePath}notes/`}>Read All Notes</a>
+        </div>
+        <div class="notes-preview-grid">
+          {
+            fieldNotes.slice(0, 3).map((note) => (
+              <a class="note-card" href={`${basePath}notes/${note.slug}/`}>
+                <span class="note-eyebrow">{note.eyebrow}</span>
+                <strong>{note.title}</strong>
+                <p>{note.summary}</p>
+              </a>
+            ))
+          }
+        </div>
+      </section>
+
       <section class="section-shell contact" id="contact" aria-labelledby="contact-title">
         <div>
           <p class="eyebrow">Start a Project</p>
@@ -349,6 +391,9 @@ const filters = [
           <p>
             Whether the need is a planning tool, a polished web system, a fabricated
             component, or a crafted commission, the first step is a clear brief.
+          </p>
+          <p class="contact-direct-email">
+            Or reach out directly: <a href={`mailto:${email}`}>{email}</a>
           </p>
         </div>
         <form name="contact" method="post" action="https://formsubmit.co/tootiedesigns18@gmail.com">
@@ -416,7 +461,11 @@ const filters = [
       <div>
         <span>Website Design / Software / Tactical Advising / Fabrication</span>
         <span>Precision / Texture / Innovation</span>
-        <a href="https://www.facebook.com/profile.php?id=100063801085109" target="_blank" rel="noreferrer">Facebook</a>
+        <span>© {currentYear} Tootie Designs.</span>
+        <div class="footer-links">
+          <a href="https://www.facebook.com/profile.php?id=100063801085109" target="_blank" rel="noreferrer">Facebook</a>
+          <a href={`${basePath}privacy/`}>Privacy Policy</a>
+        </div>
       </div>
     </footer>
     <script is:inline>
