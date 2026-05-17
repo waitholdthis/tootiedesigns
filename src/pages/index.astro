@@ -38,13 +38,31 @@ const filters = [
     <title>Tootie Designs | Multidisciplinary Creation</title>
   </head>
   <body>
+    <a class="skip-link" href="#top">Skip to main content</a>
     <LaserIntro client:load />
     <header class="site-header" aria-label="Primary navigation">
       <a class="brand" href="#top" aria-label="Tootie Designs home">
-        <span class="brand-mark"><img src={`${basePath}tootie-logo-transparent.png`} alt="" /></span>
+        <span class="brand-mark"><img src={`${basePath}tootie-logo-transparent.png`} alt="" width="37" height="37" /></span>
         <span>Tootie Designs and Strategic Advisor</span>
       </a>
-      <nav>
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-label="Open navigation"
+        aria-expanded="false"
+        aria-controls="primary-nav"
+      >
+        <svg class="icon-open" width="18" height="14" viewBox="0 0 18 14" fill="none" aria-hidden="true">
+          <rect width="18" height="2" rx="1" fill="currentColor"/>
+          <rect y="6" width="18" height="2" rx="1" fill="currentColor"/>
+          <rect y="12" width="18" height="2" rx="1" fill="currentColor"/>
+        </svg>
+        <svg class="icon-close" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+          <line x1="1" y1="1" x2="13" y2="13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <line x1="13" y1="1" x2="1" y2="13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <nav id="primary-nav">
         <a href="#work">Work</a>
         <a href="#capabilities">Capabilities</a>
         <a href="#process">Process</a>
@@ -52,7 +70,7 @@ const filters = [
       </nav>
     </header>
 
-    <main id="top">
+    <main id="top" tabindex="-1">
       <section class="hero section-shell" aria-labelledby="hero-title">
         <div class="hero-media" aria-hidden="true">
           <img src={`${basePath}hero-workshop.png`} alt="" />
@@ -210,7 +228,12 @@ const filters = [
         <div class="filter-bar" aria-label="Project filters">
           {
             filters.map((filter, index) => (
-              <button class={index === 0 ? "filter-button active" : "filter-button"} type="button" data-filter={filter.value}>
+              <button
+                class={index === 0 ? "filter-button active" : "filter-button"}
+                type="button"
+                data-filter={filter.value}
+                aria-pressed={index === 0 ? "true" : "false"}
+              >
                 {filter.label}
               </button>
             ))
@@ -335,11 +358,11 @@ const filters = [
           <input type="hidden" name="_next" value={`${deploymentBase}/thanks/`} />
           <input type="text" name="_honey" class="form-honey" tabindex="-1" autocomplete="off" />
           <label>
-            Name
+            Name<span class="required-mark" aria-hidden="true">*</span>
             <input name="name" autocomplete="name" required />
           </label>
           <label>
-            Email
+            Email<span class="required-mark" aria-hidden="true">*</span>
             <input name="email" type="email" autocomplete="email" required />
           </label>
           <label>
@@ -377,7 +400,7 @@ const filters = [
             <input name="reference" type="url" placeholder="https://" />
           </label>
           <label>
-            Brief
+            Brief<span class="required-mark" aria-hidden="true">*</span>
             <textarea name="brief" rows="4" required></textarea>
           </label>
           <button class="button primary" type="submit">Send Inquiry</button>
@@ -397,19 +420,24 @@ const filters = [
       </div>
     </footer>
     <script is:inline>
+      // Filter buttons
       const filterButtons = document.querySelectorAll("[data-filter]");
       const projectCards = document.querySelectorAll(".project-card[data-category]");
 
       filterButtons.forEach((button) => {
         button.addEventListener("click", () => {
           const activeFilter = button.dataset.filter;
-          filterButtons.forEach((item) => item.classList.toggle("active", item === button));
+          filterButtons.forEach((item) => {
+            item.classList.toggle("active", item === button);
+            item.setAttribute("aria-pressed", String(item === button));
+          });
           projectCards.forEach((card) => {
             card.classList.toggle("is-hidden", activeFilter !== "all" && card.dataset.category !== activeFilter);
           });
         });
       });
 
+      // Project card spotlight effect
       projectCards.forEach((card) => {
         card.addEventListener("pointermove", (event) => {
           const rect = card.getBoundingClientRect();
@@ -427,6 +455,46 @@ const filters = [
           card.style.setProperty("--tilt-x", "0deg");
           card.style.setProperty("--tilt-y", "0deg");
         });
+      });
+
+      // Mobile nav toggle
+      const navToggle = document.querySelector(".nav-toggle");
+      const primaryNav = document.getElementById("primary-nav");
+
+      if (navToggle && primaryNav) {
+        navToggle.addEventListener("click", () => {
+          const expanded = navToggle.getAttribute("aria-expanded") === "true";
+          navToggle.setAttribute("aria-expanded", String(!expanded));
+          navToggle.setAttribute("aria-label", !expanded ? "Close navigation" : "Open navigation");
+          primaryNav.classList.toggle("is-open", !expanded);
+        });
+
+        primaryNav.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", () => {
+            navToggle.setAttribute("aria-expanded", "false");
+            navToggle.setAttribute("aria-label", "Open navigation");
+            primaryNav.classList.remove("is-open");
+          });
+        });
+
+        document.addEventListener("click", (e) => {
+          if (!e.target.closest(".site-header")) {
+            navToggle.setAttribute("aria-expanded", "false");
+            navToggle.setAttribute("aria-label", "Open navigation");
+            primaryNav.classList.remove("is-open");
+          }
+        });
+      }
+
+      // Contact form submit loading state
+      const contactForm = document.querySelector("form[name='contact']");
+      const submitBtn = contactForm?.querySelector("button[type='submit']");
+
+      contactForm?.addEventListener("submit", () => {
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.textContent = "Sending…";
+        }
       });
     </script>
   </body>

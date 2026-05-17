@@ -17,11 +17,11 @@ export default function LaserIntro() {
     setIsVisible(true);
     window.sessionStorage.setItem("tootie-laser-intro-played", "true");
 
-    const closingTimer = window.setTimeout(() => setIsClosing(true), 4500);
+    const closingTimer = window.setTimeout(() => setIsClosing(true), 2800);
     const hiddenTimer = window.setTimeout(() => {
       setIsVisible(false);
       document.body.style.overflow = originalOverflow;
-    }, 5200);
+    }, 3300);
 
     return () => {
       window.clearTimeout(closingTimer);

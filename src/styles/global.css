@@ -51,6 +51,25 @@ a {
   text-decoration: none;
 }
 
+.skip-link {
+  position: absolute;
+  left: 0.5rem;
+  top: 0.5rem;
+  z-index: 99999;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--bronze);
+  background: var(--charcoal);
+  color: var(--bone);
+  font-size: 0.9rem;
+  font-weight: 700;
+  transform: translateY(-200%);
+  transition: transform 120ms ease;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -197,6 +216,45 @@ textarea {
   display: none;
 }
 
+.nav-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 2.4rem;
+  height: 2.4rem;
+  border: 1px solid rgba(210, 173, 116, 0.22);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.035);
+  color: var(--bone);
+  cursor: pointer;
+  transition:
+    background 180ms ease,
+    border-color 180ms ease;
+}
+
+.nav-toggle:hover {
+  background: rgba(210, 173, 116, 0.08);
+  border-color: rgba(210, 173, 116, 0.42);
+}
+
+.nav-toggle:focus-visible {
+  outline: 2px solid var(--bronze-2);
+  outline-offset: 2px;
+}
+
+.nav-toggle .icon-close {
+  display: none;
+}
+
+.nav-toggle[aria-expanded="true"] .icon-open {
+  display: none;
+}
+
+.nav-toggle[aria-expanded="true"] .icon-close {
+  display: block;
+}
+
 .laser-intro {
   position: fixed;
   inset: 0;
@@ -207,7 +265,7 @@ textarea {
   background:
     radial-gradient(circle at 50% 50%, rgba(158, 220, 255, 0.12), transparent 20rem),
     linear-gradient(135deg, rgba(8, 12, 18, 0.98), rgba(2, 6, 12, 0.98));
-  animation: laser-intro-hold 5.2s ease forwards;
+  animation: laser-intro-hold 3.5s ease forwards;
 }
 
 .laser-intro.closing {
@@ -483,6 +541,12 @@ h3 {
   cursor: pointer;
 }
 
+.button:focus-visible,
+.filter-button:focus-visible {
+  outline: 2px solid var(--bronze-2);
+  outline-offset: 2px;
+}
+
 .button {
   display: inline-flex;
   align-items: center;
@@ -499,6 +563,18 @@ h3 {
 .secondary {
   background: rgba(255, 255, 255, 0.04);
   color: var(--bone);
+}
+
+.primary:hover,
+.primary:focus-visible {
+  background: linear-gradient(135deg, var(--bronze-2), var(--oak));
+  color: #0e0a06;
+}
+
+.secondary:hover,
+.secondary:focus-visible {
+  border-color: rgba(210, 173, 116, 0.52);
+  background: rgba(210, 173, 116, 0.1);
 }
 
 .hero-panel {
@@ -855,7 +931,7 @@ h3 {
   padding: 0.35rem 0.5rem;
   color: var(--bronze-2);
   font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   text-transform: uppercase;
 }
 
@@ -947,6 +1023,12 @@ h3 {
 
 .spotlight-card:hover::after {
   opacity: 1;
+}
+
+.project-card:focus-visible {
+  outline: 2px solid var(--bronze-2);
+  outline-offset: 2px;
+  border-color: rgba(210, 173, 116, 0.6);
 }
 
 .project-card.is-hidden {
@@ -1221,7 +1303,7 @@ h3 {
 
 .notes-grid figcaption span {
   color: var(--muted);
-  font-size: 0.68rem;
+  font-size: 0.75rem;
 }
 
 .about {
@@ -1265,6 +1347,12 @@ label {
   font-size: 0.85rem;
 }
 
+.required-mark {
+  color: var(--bronze-2);
+  font-size: 0.75rem;
+  margin-left: 0.15rem;
+}
+
 input,
 select,
 textarea {
@@ -1278,6 +1366,14 @@ textarea {
 
 textarea {
   resize: vertical;
+}
+
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--bronze-2);
+  outline-offset: 0;
+  border-color: rgba(210, 173, 116, 0.52);
 }
 
 .form-honey {
@@ -2699,6 +2795,37 @@ textarea {
     display: none;
   }
 
+  .site-header nav.is-open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    inset: calc(100% + 0.5rem) 0 auto;
+    z-index: 200;
+    padding: 0.5rem;
+    border: 1px solid rgba(210, 173, 116, 0.22);
+    border-radius: 1.2rem;
+    background: rgba(8, 11, 14, 0.96);
+    backdrop-filter: blur(22px) saturate(1.18);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.55);
+  }
+
+  .site-header nav.is-open a {
+    width: 100%;
+    min-height: 3rem;
+    justify-content: flex-start;
+    border-radius: 0.85rem;
+    padding: 0 1rem;
+  }
+
+  .site-header nav.is-open a:last-child {
+    justify-content: center;
+    margin-top: 0.25rem;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
   .hero,
   .blueprint,
   .contact,
@@ -2828,9 +2955,8 @@ textarea {
 
   .brand {
     gap: 0.75rem;
-    width: 100%;
-    justify-content: center;
-    padding-right: 0.55rem;
+    flex: 1;
+    justify-content: flex-start;
     font-size: 0.95rem;
   }
 
