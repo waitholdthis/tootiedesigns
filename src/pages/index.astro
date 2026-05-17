@@ -282,6 +282,9 @@ const filters = [
 
       <section class="section-shell blueprint" aria-labelledby="blueprint-title">
         <div class="blueprint-visual perspective-visual" aria-hidden="true">
+          <video class="blueprint-video" autoplay muted loop playsinline>
+            <source src={`${basePath}videos/blueprint.mp4`} type="video/mp4" />
+          </video>
           <div class="perspective-grid">
             {Array.from({ length: 18 }).map((_, index) => <span class="grid-line horizontal" style={`--i:${index}`}></span>)}
             {Array.from({ length: 15 }).map((_, index) => <span class="grid-line vertical" style={`--i:${index}`}></span>)}
