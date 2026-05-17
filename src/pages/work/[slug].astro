@@ -1,6 +1,10 @@
 ---
 import "../../styles/global.css";
 import { projects, tech } from "../../data/site";
+import foundryMainImage from "../../../photos/Dig_Lab_Main.png";
+import foundryImage1 from "../../../photos/Dig_Lab_Foundry.png";
+import foundryImage2 from "../../../photos/Dig_Lab_Foundry_1.png";
+import foundryImage3 from "../../../photos/Dig_Lab_Foundry_2.png";
 
 export function getStaticPaths() {
   return projects.map((project) => ({
@@ -210,6 +214,30 @@ const basePath = base.endsWith("/") ? base : `${base}/`;
                     <p>2 hr 30 min <b>$190+</b></p>
                   </article>
                 </section>
+              </div>
+            ) : project.slug === "foundry-baseball-app" ? (
+              <div class="device-screen">
+                <div class="device-nav">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <div class="device-hero-block">
+                  <img class="foundry-hero-img" src={foundryMainImage.src} alt="" loading="eager" />
+                  <strong>Digital Systems</strong>
+                  <p>Foundry Baseball App</p>
+                </div>
+                <div class="device-card-list">
+                  <img src={foundryImage1.src} alt="" loading="lazy" />
+                  <img src={foundryImage2.src} alt="" loading="lazy" />
+                  <img src={foundryImage3.src} alt="" loading="lazy" />
+                </div>
+                <div class="device-gallery">
+                  <img src={foundryMainImage.src} alt="" loading="lazy" />
+                  <img src={foundryImage1.src} alt="" loading="lazy" />
+                  <img src={foundryImage2.src} alt="" loading="lazy" />
+                  <img src={foundryImage3.src} alt="" loading="lazy" />
+                </div>
               </div>
             ) : (
               <div class:list={["device-screen", project.slug === "diverse-hair-designs-peachie" && "salon-preview"]}>
