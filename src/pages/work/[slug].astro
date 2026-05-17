@@ -81,11 +81,13 @@ const basePath = base.endsWith("/") ? base : `${base}/`;
             project.slug === "diverse-hair-designs-peachie" && "peachie-case-device",
           ]}
         >
-          <div class="device-bar">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
+          {project.slug !== "foundry-baseball-app" && (
+            <div class="device-bar">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          )}
           {
             project.slug === "mdpt-cuas-framework" ? (
               <div class="mdpt-screen">
@@ -216,27 +218,14 @@ const basePath = base.endsWith("/") ? base : `${base}/`;
                 </section>
               </div>
             ) : project.slug === "foundry-baseball-app" ? (
-              <div class="device-screen">
-                <div class="device-nav">
-                  <span></span>
-                  <span></span>
-                  <span></span>
+              <div class="foundry-screen">
+                <div class="foundry-main-panel">
+                  <img src={foundryImage1.src} alt="" loading="eager" />
                 </div>
-                <div class="device-hero-block">
-                  <img class="foundry-hero-img" src={foundryMainImage.src} alt="" loading="eager" />
-                  <strong>Digital Systems</strong>
-                  <p>Foundry Baseball App</p>
-                </div>
-                <div class="device-card-list">
-                  <img src={foundryImage1.src} alt="" loading="lazy" />
-                  <img src={foundryImage2.src} alt="" loading="lazy" />
-                  <img src={foundryImage3.src} alt="" loading="lazy" />
-                </div>
-                <div class="device-gallery">
-                  <img src={foundryMainImage.src} alt="" loading="lazy" />
-                  <img src={foundryImage1.src} alt="" loading="lazy" />
-                  <img src={foundryImage2.src} alt="" loading="lazy" />
-                  <img src={foundryImage3.src} alt="" loading="lazy" />
+                <div class="foundry-panel-stack">
+                  <div><img src={foundryMainImage.src} alt="" loading="lazy" /></div>
+                  <div><img src={foundryImage3.src} alt="" loading="lazy" /></div>
+                  <div><img src={foundryImage2.src} alt="" loading="lazy" /></div>
                 </div>
               </div>
             ) : (
