@@ -1,59 +1,50 @@
-export const capabilities = [
-  {
-    title: "Full-Stack Systems",
-    kicker: "Digital Lab",
-    description:
-      "Mission-aware web and application architecture for dashboards, workflows, and operational tools.",
-    services: ["Dashboards and admin tools", "Workflow applications", "API-connected interfaces", "Deployment planning"],
-  },
+export const primaryCapabilities = [
   {
     title: "Website Design & Creation",
     kicker: "Digital Lab",
     description:
-      "Cinematic brand websites, landing pages, and portfolio systems designed, written, built, and deployed with a premium digital workshop feel.",
+      "Cinematic brand websites, landing pages, and portfolio systems — designed, written, built, and deployed end to end.",
     services: ["Website strategy", "Responsive design", "Copy structure", "Astro front-end builds"],
   },
   {
-    title: "Tactical Advising",
-    kicker: "Tactical Desk",
+    title: "Full-Stack Systems",
+    kicker: "Digital Lab",
     description:
-      "Defense-informed planning support, Defensive Fires thinking, and structured decision products for complex environments.",
-    services: ["Mission analysis", "Planning artifacts", "Decision frameworks", "Readiness documentation"],
+      "Mission-aware web and application architecture for dashboards, workflows, and operational tools that need to perform.",
+    services: ["Dashboards and admin tools", "Workflow applications", "API-connected interfaces", "Deployment planning"],
   },
-  {
-    title: "Digital Fabrication",
-    kicker: "Physical Forge",
-    description:
-      "Laser engraving, vector preparation, material testing, and clean finished components with tight tolerances.",
-    services: ["Laser engraving", "SVG/DXF prep", "Material testing", "Component finishing"],
-  },
-  {
-    title: "Material Craft",
-    kicker: "Pattern Room",
-    description:
-      "Woodwork and tactile goods framed through pattern logic, structure, and hand-finished detail.",
-    services: ["Woodwork studies", "Pattern logic", "Texture exploration", "Material studies"],
-  },
+];
+
+export const depthCapabilities = [
   {
     title: "Brand & Identity Systems",
     kicker: "Identity Bench",
-    description:
-      "Logos, visual systems, service positioning, and launch-ready brand direction for polished public presence.",
-    services: ["Logo direction", "Brand language", "Visual systems", "Launch assets"],
-  },
-  {
-    title: "Product Prototyping",
-    kicker: "Prototype Bay",
-    description:
-      "Fast concepts for tools, products, interfaces, and physical ideas before full buildout.",
-    services: ["Concept sketches", "Interface prototypes", "Material tests", "Build planning"],
+    description: "Logos, visual systems, service positioning, and launch-ready brand direction for polished public presence.",
   },
   {
     title: "Content & Copy Strategy",
     kicker: "Signal Desk",
-    description:
-      "Clear words for websites, case studies, service pages, and professional positioning.",
-    services: ["Website copy", "Case study writing", "Offer clarity", "SEO structure"],
+    description: "Clear words for websites, case studies, service pages, and professional positioning.",
+  },
+  {
+    title: "Digital Fabrication",
+    kicker: "Physical Forge",
+    description: "Laser engraving, vector preparation, material testing, and clean finished components with tight tolerances.",
+  },
+  {
+    title: "Tactical Advising",
+    kicker: "Tactical Desk",
+    description: "Defense-informed planning support, Defensive Fires thinking, and structured decision products.",
+  },
+  {
+    title: "Material Craft",
+    kicker: "Pattern Room",
+    description: "Woodwork and tactile goods framed through pattern logic, structure, and hand-finished detail.",
+  },
+  {
+    title: "Product Prototyping",
+    kicker: "Prototype Bay",
+    description: "Fast concepts for tools, products, interfaces, and physical ideas before full buildout.",
   },
 ];
 

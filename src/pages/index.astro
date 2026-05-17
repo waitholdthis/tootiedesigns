@@ -2,7 +2,7 @@
 import "../styles/global.css";
 import DecryptedHeroTitle from "../components/DecryptedHeroTitle";
 import LaserIntro from "../components/LaserIntro";
-import { capabilities, email, fieldNotes, process as processSteps, projects, tech, techCategories, websiteShowcase } from "../data/site";
+import { primaryCapabilities, depthCapabilities, email, fieldNotes, process as processSteps, projects, tech, techCategories, websiteShowcase } from "../data/site";
 import parkerHeadshot from "../../photos/headshot.jpg";
 import conversionLandingPageImage from "../../photos/Conversion_Landing_Page.png";
 import dugoutCommandCenterImage from "../../photos/The_Dugout_Command_Center.png";
@@ -141,8 +141,8 @@ const filters = [
         </div>
         <div>
           <span>03</span>
-          <strong>Digital and physical craft</strong>
-          <p>Software, websites, fabrication, wood, and material work under one disciplined studio.</p>
+          <strong>Backed by real depth</strong>
+          <p>Fabrication, tactical advising, and material craft complement the core digital work.</p>
         </div>
       </section>
 
@@ -153,20 +153,20 @@ const filters = [
           <h2>Design that can brief, build, and finish.</h2>
         </div>
         <p>
-          Tootie Designs combines strategic web creation, defense-informed systems thinking,
-          and tactile fabrication under a single visual language: industrial elegance,
-          disciplined grids, dark materials, and precise finish.
+          Tootie Designs leads with strategic web creation and software systems — backed by
+          defense-informed planning, digital fabrication, and material craft when the project
+          calls for it. One visual language: industrial elegance, disciplined grids, and precise finish.
         </p>
       </section>
 
       <section class="section-shell" id="capabilities" aria-labelledby="capabilities-title">
         <div class="section-heading">
           <p class="eyebrow">Capabilities</p>
-          <h2 id="capabilities-title">Built like a system. Finished like an object.</h2>
+          <h2 id="capabilities-title">Web and software, front and center.</h2>
         </div>
         <div class="capability-grid">
           {
-            capabilities.map((capability) => (
+            primaryCapabilities.map((capability) => (
               <article class="capability-card">
                 <p>{capability.kicker}</p>
                 <h3>{capability.title}</h3>
@@ -178,6 +178,20 @@ const filters = [
               </article>
             ))
           }
+        </div>
+        <div class="depth-strip">
+          <p class="eyebrow">Studio Depth</p>
+          <div class="depth-capability-grid">
+            {
+              depthCapabilities.map((cap) => (
+                <article class="depth-capability-card">
+                  <p>{cap.kicker}</p>
+                  <h3>{cap.title}</h3>
+                  <p>{cap.description}</p>
+                </article>
+              ))
+            }
+          </div>
         </div>
       </section>
 

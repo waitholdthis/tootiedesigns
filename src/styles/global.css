@@ -767,7 +767,14 @@ h3 {
   align-items: end;
 }
 
-.capability-grid,
+.capability-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  border: 1px solid var(--line);
+  background: var(--line);
+}
+
 .process-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -825,6 +832,62 @@ h3 {
 .capability-card li::before {
   color: var(--bronze-2);
   content: "+ ";
+}
+
+.capability-card {
+  min-height: 22rem;
+}
+
+.depth-strip {
+  margin-top: clamp(2rem, 4vw, 3rem);
+  padding-top: clamp(1.5rem, 3vw, 2rem);
+  border-top: 1px solid var(--line);
+}
+
+.depth-strip > .eyebrow {
+  margin-bottom: 1.25rem;
+}
+
+.depth-capability-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  border: 1px solid var(--line);
+  background: var(--line);
+}
+
+.depth-capability-card {
+  padding: 1.25rem;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.02), transparent),
+    rgba(16, 20, 24, 0.94);
+  transition:
+    background 180ms ease;
+}
+
+.depth-capability-card:hover {
+  background: rgba(20, 26, 31, 0.98);
+}
+
+.depth-capability-card > p:first-child {
+  color: var(--muted);
+  font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.depth-capability-card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0.5rem 0 0.6rem;
+  color: var(--bone);
+}
+
+.depth-capability-card > p:last-child {
+  color: var(--muted);
+  font-size: 0.86rem;
+  line-height: 1.5;
 }
 
 .website-showcase {
@@ -3126,12 +3189,15 @@ textarea:focus-visible {
     grid-template-columns: 1fr;
   }
 
-  .capability-grid,
   .process-grid,
   .proof-band,
   .website-grid,
   .case-body,
   .related-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .depth-capability-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -3291,6 +3357,7 @@ textarea:focus-visible {
   .website-grid,
   .case-body,
   .related-grid,
+  .depth-capability-grid,
   .site-footer {
     grid-template-columns: 1fr;
   }
