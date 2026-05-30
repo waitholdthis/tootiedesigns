@@ -32,7 +32,7 @@ const servicePackages = [
   {
     name: "Website Cleanup Sprint",
     price: "$500 - $750",
-    href: `${basePath}website-audit/`,
+    href: `${basePath}website-cleanup-sprint/`,
     description: "A focused cleanup for businesses that do not need a full rebuild yet but need the first impression, CTA, and mobile trust tightened fast.",
     deliverables: ["Homepage first-screen cleanup", "CTA and lead path fixes", "Mobile readability pass", "Trust/proof placement", "Quick-turn launch support"],
   },
@@ -108,7 +108,7 @@ const servicePackages = [
         },
         priceRange: "$750+",
         description: "Premium website design, conversion landing pages, website redesigns, and digital systems for better business leads.",
-        makesOffer: ["Website Design", "Website Redesign", "Landing Page Design", "Digital System Build"].map((name) => ({
+        makesOffer: ["Website Cleanup Sprint", "Website Design", "Website Redesign", "Landing Page Design", "Digital System Build"].map((name) => ({
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
@@ -302,18 +302,21 @@ const servicePackages = [
             <h3>Website Cleanup Sprint</h3>
             <strong>$500 - $750</strong>
             <p>For businesses that need a sharper hero, CTA, mobile pass, trust signals, and fast credibility improvements without rebuilding everything.</p>
+            <a class="project-link" href={`${basePath}website-cleanup-sprint/`} data-event="service_page_click" data-label="offer ladder cleanup sprint">Explore cleanup sprint</a>
           </article>
           <article>
             <span>02</span>
             <h3>Conversion Landing Page</h3>
             <strong>Starting at $750</strong>
             <p>For one focused service, offer, booking path, campaign, or local lead push that needs a dedicated conversion page.</p>
+            <a class="project-link" href={`${basePath}landing-page-design/`} data-event="service_page_click" data-label="offer ladder landing page">Explore landing pages</a>
           </article>
           <article>
             <span>03</span>
             <h3>Website Launch / Redesign</h3>
             <strong>Starting at $1,500</strong>
             <p>For businesses ready to replace a weak first impression with a premium site built around message clarity, proof, and inquiry.</p>
+            <a class="project-link" href={`${basePath}website-redesign/`} data-event="service_page_click" data-label="offer ladder redesign">Explore redesigns</a>
           </article>
           <article>
             <span>04</span>

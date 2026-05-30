@@ -1,6 +1,68 @@
 export const freeAuditHref = "/#audit";
 
 export const servicePages = {
+  websiteCleanupSprint: {
+    slug: "website-cleanup-sprint",
+    eyebrow: "Website Cleanup Sprint",
+    title: "A focused website cleanup for businesses that need better trust fast — without a full rebuild.",
+    description:
+      "Tootie Designs tightens the first screen, CTA flow, mobile readability, proof placement, and lead path for small businesses whose existing website is close, but not converting enough trust into inquiries.",
+    seoTitle: "Website Cleanup Sprint | Tootie Designs",
+    seoDescription:
+      "Website cleanup sprint for businesses that need a sharper homepage, clearer CTAs, better mobile trust, proof placement, and lead-path fixes without a full rebuild.",
+    serviceName: "Website Cleanup Sprint",
+    primaryCta: "Request a Cleanup Sprint Audit",
+    secondaryCta: "Preview Sample Audit",
+    price: "Cleanup sprints start at $500",
+    problemTitle: "Not every weak website needs a full rebuild. Some need the expensive friction removed first.",
+    problems: [
+      "The homepage exists, but the first screen does not explain the offer or next step fast enough.",
+      "Buttons, forms, and contact paths are present but scattered, vague, or too hard to use on mobile.",
+      "Proof, testimonials, service details, photos, or trust cues are buried below sections that do not sell.",
+      "The business is not ready for a full redesign yet, but the current site is too weak to keep sending traffic to.",
+    ],
+    outcomes: [
+      "A sharper above-the-fold message with one obvious primary action",
+      "Cleaner CTA hierarchy across the homepage or core landing page",
+      "Mobile readability and spacing improvements for the highest-value sections",
+      "Proof and trust cues moved closer to the buyer's first decision",
+      "A clear recommendation for whether to keep optimizing, build a landing page, or move into a full redesign",
+    ],
+    deliverables: [
+      "First-impression audit",
+      "Homepage message and CTA cleanup",
+      "Mobile readability pass",
+      "Proof/trust placement recommendations or implementation",
+      "Launch-ready polish pass with next-step roadmap",
+    ],
+    fit: ["local businesses", "service brands", "referral-driven companies", "early-stage sites", "businesses testing demand", "owners not ready for a full rebuild"],
+    pathLinks: {
+      eyebrow: "Next best path",
+      title: "A lower-friction bridge between audit and rebuild.",
+      intro: "The sprint gives a business a practical first win, then makes the larger website decision clearer.",
+      links: [
+        ["Full website redesign", "/website-redesign/"],
+        ["Conversion landing page", "/landing-page-design/"],
+        ["Local business websites", "/local-business-websites/"],
+        ["Sample website audit", "/sample-website-audit/"],
+      ],
+    },
+    faq: [
+      {
+        question: "What is a website cleanup sprint?",
+        answer: "A cleanup sprint is a focused improvement pass for an existing website. It targets the first impression, CTA hierarchy, mobile readability, proof placement, and obvious lead-path friction before recommending a bigger rebuild.",
+      },
+      {
+        question: "How is this different from a full website redesign?",
+        answer: "A redesign rebuilds the site structure and visual system more deeply. A cleanup sprint is faster and narrower: it fixes the highest-leverage trust and conversion issues on the existing page or a small set of core pages.",
+      },
+      {
+        question: "Who is this best for?",
+        answer: "It is best for businesses with a working website that feels close but unclear, outdated in places, hard to use on mobile, or weak at turning referrals and search visitors into inquiries.",
+      },
+    ],
+  },
+
   websiteDesign: {
     slug: "website-design",
     eyebrow: "Website Design Services",
