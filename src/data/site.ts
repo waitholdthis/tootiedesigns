@@ -448,6 +448,22 @@ export const techCategories = [
 
 export const fieldNotes = [
   {
+    slug: "custom-business-software-vs-saas",
+    title: "Custom Business Software vs More SaaS: When a Company Needs Its Own Digital System",
+    date: "2026-05-30",
+    eyebrow: "Digital System Strategy",
+    category: "digital",
+    summary:
+      "A practical guide for founders and operators deciding whether to keep stacking subscriptions or build a focused internal tool, dashboard, portal, or automation system around the way the business actually works.",
+    body: [
+      "Most growing businesses do not hit an operations wall because they lack software. They hit it because every tool solves one slice of the workflow while the real work lives between tools: spreadsheets, inboxes, text threads, screenshots, shared drives, manual reports, and repeat follow-up.",
+      "More SaaS helps when the problem is standard. Custom business software starts to make sense when the workflow is specific, repeated, valuable, and painful enough that the team keeps building workarounds. If the same information is being copied between platforms every week, if leads disappear after a form submit, or if reporting depends on one person stitching things together by hand, the business probably needs a cleaner system.",
+      "The right first build is rarely a giant platform. It is usually a focused dashboard, client portal, intake workflow, admin screen, booking handoff, report generator, or automation layer that removes the most expensive manual friction first. A small internal tool can create more leverage than another public-facing page if the business already has attention but struggles to process it cleanly.",
+      "For service businesses, the highest-value systems often begin where the website ends: lead qualification, quote requests, client onboarding, file collection, status updates, sales follow-up, or owner visibility. The website creates demand; the system makes the demand easier to handle, measure, and convert.",
+      "Tootie Designs uses the audit-first path to identify whether the next move should be a better website, a landing page, or a custom digital system. Review the Digital System Build path at https://tootiedesigns.com/digital-system-build/ or start with the website audit at https://tootiedesigns.com/website-audit/.",
+    ],
+  },
+  {
     slug: "founder-authority-website",
     title: "Founder Authority Website: Why Serious Buyers Check the Leader Before They Trust the Company",
     date: "2026-05-30",

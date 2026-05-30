@@ -253,6 +253,69 @@ export const servicePages = {
     ],
   },
 
+  digitalSystemBuild: {
+    slug: "digital-system-build",
+    eyebrow: "Digital System Build",
+    title: "Custom business software for teams whose operations have outgrown spreadsheets, inboxes, and disconnected SaaS tools.",
+    description:
+      "Tootie Designs designs and builds internal tools, dashboards, portals, automation systems, and workflow software for businesses that need the website, data, and day-to-day operations to work like one serious system.",
+    seoTitle: "Custom Business Software & Digital Systems | Tootie Designs",
+    seoDescription:
+      "Custom business software, dashboards, portals, internal tools, automations, and digital systems by Tootie Designs for companies that need cleaner workflows and operational clarity.",
+    serviceName: "Custom Business Software and Digital Systems",
+    primaryCta: "Request a Digital System Audit",
+    secondaryCta: "See System Work",
+    price: "Digital systems are custom quoted",
+    problemTitle: "A better website brings attention. A better system helps the business handle what comes next.",
+    problems: [
+      "The team is running critical work through spreadsheets, email threads, text messages, manual copy-paste, or disconnected tools.",
+      "Leads, bookings, clients, files, reports, invoices, or operational steps are scattered across platforms with no clean source of truth.",
+      "The business keeps paying for SaaS tools that almost fit, but still require workarounds, duplicate entry, and manual follow-up.",
+      "The public website looks serious, but the behind-the-scenes workflow still slows down fulfillment, handoff, reporting, or decision-making.",
+    ],
+    outcomes: [
+      "A practical system blueprint that maps what needs to be tracked, automated, surfaced, and handed off",
+      "Custom dashboards, portals, forms, admin screens, or workflow tools built around the real operation",
+      "Cleaner lead intake, client handoff, reporting, file collection, booking, or internal review paths",
+      "API-connected automations where they create leverage instead of fragile complexity",
+      "A deployable full-stack foundation that can grow from focused MVP to more advanced business software",
+    ],
+    deliverables: [
+      "Workflow and requirements audit",
+      "System architecture and data model planning",
+      "Dashboard, portal, or internal-tool interface design",
+      "Full-stack build planning and implementation",
+      "Launch, documentation, and refinement roadmap",
+    ],
+    fit: ["service businesses", "founder-led teams", "local operators", "consultants", "sports programs", "defense-adjacent teams", "companies with manual workflows"],
+    pathLinks: {
+      eyebrow: "System paths",
+      title: "When the website is only one part of the business machine.",
+      intro: "Start with the audit, then decide whether the strongest move is a website, landing page, dashboard, portal, automation, or custom operational tool.",
+      links: [
+        ["Website audit", "/website-audit/"],
+        ["Global website redesign", "/global-website-redesign/"],
+        ["Enterprise landing page design", "/enterprise-landing-page-design/"],
+        ["Foundry Baseball App proof", "/work/foundry-baseball-app/"],
+        ["MDPT digital systems proof", "/work/mdpt-cuas-framework/"],
+      ],
+    },
+    faq: [
+      {
+        question: "What kind of custom business software can Tootie Designs build?",
+        answer: "Tootie Designs can plan and build focused dashboards, admin tools, portals, intake systems, internal workflow apps, reporting interfaces, automation-connected tools, and product MVPs when the business needs something more specific than a generic website.",
+      },
+      {
+        question: "Do I need a full app or just a better workflow?",
+        answer: "Usually the first move is not a giant app. The audit identifies the smallest useful system: a better intake path, dashboard, portal, automation, report, or admin workflow that removes the most expensive manual friction first.",
+      },
+      {
+        question: "Can this connect to an existing website or lead funnel?",
+        answer: "Yes. The highest-leverage systems often start where the website ends: lead intake, qualification, booking, client handoff, report generation, file collection, dashboards, or operational follow-up.",
+      },
+    ],
+  },
+
   websiteDesign: {
     slug: "website-design",
     eyebrow: "Website Design Services",
