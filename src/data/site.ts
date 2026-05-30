@@ -541,4 +541,23 @@ export const fieldNotes = [
       "Tootie Designs built the Free Website First-Impression Audit around these exact issues. It reviews first-screen clarity, mobile experience, trust signals, message clarity, and the lead capture path so a business can see what is helping, what is hurting, and what should change next. Start at https://tootiedesigns.com/#audit or review the redesign path at https://tootiedesigns.com/website-redesign/.",
     ],
   },
+  {
+    slug: "fayetteville-business-website-checklist",
+    title: "Fayetteville Business Website Checklist: What Local Buyers Need Before They Call",
+    date: "2026-05-30",
+    eyebrow: "Local Website Design",
+    category: "digital",
+    summary:
+      "A practical website checklist for Fayetteville, Fort Liberty, Hope Mills, Raeford, and Spring Lake businesses that need stronger trust, clearer service pages, and better inquiry paths.",
+    body: [
+      "A Fayetteville business website has one job before anything else: help a real person decide whether the business looks trustworthy enough to contact. Local buyers rarely study a website like a brochure. They skim from a phone, compare a few options, and look for fast proof that the business is legitimate, nearby, and easy to reach.",
+      "The first checkpoint is local clarity. The page should quickly explain what the business does, who it serves, and where it works. Fayetteville, Fort Liberty, Hope Mills, Raeford, and Spring Lake service-area language should feel natural, not stuffed into a paragraph for search engines. A buyer should know within seconds whether they are in the right place.",
+      "The second checkpoint is mobile trust. Most local traffic arrives from referrals, social profiles, Google Business Profiles, or quick searches. That means phone visitors need readable headings, tap-friendly buttons, visible contact paths, and short sections that do not bury the next step. If the mobile page feels like a squeezed desktop site, the business loses confidence before the call.",
+      "The third checkpoint is service proof. A local website should not only say what the business offers. It should show why the visitor should believe it: project photos, testimonials, process notes, credentials, service examples, location cues, FAQs, and simple explanations of what happens after someone submits a form or requests a quote.",
+      "The fourth checkpoint is a low-friction lead path. Some visitors are ready to call, but many are not. A quote form, booking path, free website audit, cleanup sprint, or short project brief gives people a safer first step than a vague contact page. The stronger the first step, the more likely a hesitant visitor becomes a real conversation.",
+      "The fifth checkpoint is a page structure that can grow. A strong local website should support service pages, city pages, industry pages, case studies, and helpful articles over time. That structure gives search engines clearer context and gives buyers more ways to find the exact path that matches their problem.",
+      "For Tootie Designs, the starting point is the free website first-impression audit. It reviews the first screen, mobile experience, proof signals, local clarity, and lead path before recommending whether the next move should be a cleanup sprint, landing page, redesign, or full website build. Start at https://tootiedesigns.com/website-audit/ or explore the Fayetteville website design path at https://tootiedesigns.com/fayetteville-nc-website-design/.",
+    ],
+  },
+
 ];

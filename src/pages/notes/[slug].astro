@@ -14,6 +14,9 @@ const related = fieldNotes.filter((n) => n.slug !== note.slug).slice(0, 3);
 
 const base = import.meta.env.BASE_URL;
 const basePath = base.endsWith("/") ? base : `${base}/`;
+const deploymentOrigin = Astro.site?.toString().replace(/\/$/, "") ?? "https://tootiedesigns.com";
+const deploymentBase = `${deploymentOrigin}${base === "/" ? "" : base.replace(/\/$/, "")}`;
+const canonical = `${deploymentBase}/notes/${note.slug}/`;
 const currentYear = new Date().getFullYear();
 
 const formattedDate = new Date(note.date).toLocaleDateString("en-US", {
@@ -22,6 +25,28 @@ const formattedDate = new Date(note.date).toLocaleDateString("en-US", {
   day: "numeric",
   timeZone: "UTC",
 });
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: note.title,
+  description: note.summary,
+  datePublished: note.date,
+  author: {
+    "@type": "Organization",
+    name: "Tootie Designs",
+    url: deploymentOrigin,
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Tootie Designs",
+    logo: {
+      "@type": "ImageObject",
+      url: `${deploymentOrigin}${basePath}tootie-logo-transparent.png`,
+    },
+  },
+  mainEntityOfPage: canonical,
+};
 ---
 
 <!doctype html>
@@ -30,7 +55,15 @@ const formattedDate = new Date(note.date).toLocaleDateString("en-US", {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={note.summary} />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:title" content={`${note.title} | Tootie Designs`} />
+    <meta property="og:description" content={note.summary} />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={`${deploymentOrigin}${basePath}tootie-logo-transparent.png`} />
+    <meta name="twitter:card" content="summary_large_image" />
     <title>{note.title} | Tootie Designs Field Notes</title>
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
   </head>
   <body>
     <header class="site-header" aria-label="Primary navigation">
@@ -71,8 +104,8 @@ const formattedDate = new Date(note.date).toLocaleDateString("en-US", {
             <strong>Want the same read on your business?</strong>
             <p>Start with the free first-impression audit, then choose the website, redesign, or landing page path that fits the problem.</p>
             <div class="hero-actions">
-              <a class="button primary" href={`${basePath}website-audit/`}>Request a Free Website Audit</a>
-              <a class="button secondary" href={`${basePath}website-redesign/`}>Explore Website Redesign</a>
+              <a class="button primary" href={`${basePath}website-audit/`} data-event="audit_cta_click" data-label={`${note.slug} inline audit`}>Request a Free Website Audit</a>
+              <a class="button secondary" href={`${basePath}website-redesign/`} data-event="service_page_click" data-label={`${note.slug} inline redesign`}>Explore Website Redesign</a>
             </div>
           </div>
         </article>
@@ -107,7 +140,7 @@ const formattedDate = new Date(note.date).toLocaleDateString("en-US", {
             what is hurting, and what should change next.
           </p>
         </div>
-        <a class="button primary" href={`${basePath}website-audit/`}>Request a Free Website Audit</a>
+        <a class="button primary" href={`${basePath}website-audit/`} data-event="audit_cta_click" data-label={`${note.slug} final audit`}>Request a Free Website Audit</a>
       </section>
     </main>
 

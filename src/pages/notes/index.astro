@@ -4,6 +4,8 @@ import { fieldNotes } from "../../data/site";
 
 const base = import.meta.env.BASE_URL;
 const basePath = base.endsWith("/") ? base : `${base}/`;
+const deploymentOrigin = Astro.site?.toString().replace(/\/$/, "") ?? "https://tootiedesigns.com";
+const deploymentBase = `${deploymentOrigin}${base === "/" ? "" : base.replace(/\/$/, "")}`;
 const currentYear = new Date().getFullYear();
 
 function formatDate(dateStr: string) {
@@ -25,6 +27,13 @@ function formatDate(dateStr: string) {
       name="description"
       content="Field notes from Tootie Designs — thinking on web design, software architecture, defense systems, and material craft."
     />
+    <link rel="canonical" href={`${deploymentBase}/notes/`} />
+    <meta property="og:title" content="Field Notes | Tootie Designs" />
+    <meta property="og:description" content="Field notes from Tootie Designs on web design, local business websites, software architecture, and conversion strategy." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={`${deploymentBase}/notes/`} />
+    <meta property="og:image" content={`${deploymentOrigin}${basePath}tootie-logo-transparent.png`} />
+    <meta name="twitter:card" content="summary_large_image" />
     <title>Field Notes | Tootie Designs</title>
   </head>
   <body>
