@@ -430,6 +430,51 @@ consultantWebsites: {
     },
   ],
 },
+
+fayettevilleWebsiteDesign: {
+  slug: "fayetteville-nc-website-design",
+  eyebrow: "Fayetteville NC Website Design",
+  title: "Website design for Fayetteville businesses that need to look trusted before the first call.",
+  description:
+    "Tootie Designs builds premium websites, redesigns, and landing pages for Fayetteville, Fort Liberty, Hope Mills, Raeford, Spring Lake, and North Carolina service businesses that need stronger first impressions and better lead paths.",
+  seoTitle: "Fayetteville NC Website Design | Tootie Designs",
+  seoDescription:
+    "Fayetteville NC website design for local businesses, contractors, salons, restaurants, gyms, and consultants that need premium websites, redesigns, and stronger lead capture.",
+  serviceName: "Fayetteville NC Website Design",
+  primaryCta: "Request a Fayetteville Website Audit",
+  secondaryCta: "Preview Sample Audit",
+  price: "Fayetteville website builds start at $1,500",
+  problemTitle: "Fayetteville buyers check the website before they call. If the first impression feels weak, they keep searching.",
+  problems: [
+    "Local referrals look up the business and judge the website before starting a conversation.",
+    "Service areas, offers, proof, booking links, and contact options are scattered or unclear.",
+    "The business may be strong in person, but the website does not look as credible as the work.",
+    "Mobile visitors from Fayetteville, Fort Liberty, Hope Mills, Raeford, and Spring Lake need a faster path to trust and action.",
+  ],
+  outcomes: [
+    "A Fayetteville-focused homepage that explains the business, service area, and next step fast",
+    "Mobile-first CTA paths for quote requests, bookings, audits, calls, or inquiries",
+    "Trust sections for reviews, work examples, process, local credibility, and proof",
+    "SEO-ready structure for future city, industry, and service pages",
+    "A premium visual system that makes the business feel serious before the visitor scrolls",
+  ],
+  deliverables: ["Local website strategy", "Homepage and service structure", "Mobile responsive design", "Proof and trust sections", "Audit, quote, booking, or contact flow"],
+  fit: ["Fayetteville businesses", "Fort Liberty service providers", "Hope Mills operators", "Raeford companies", "Spring Lake businesses", "North Carolina local brands"],
+  faq: [
+    {
+      question: "Do Fayetteville businesses need a local website design page?",
+      answer: "Yes. A local page helps buyers and search engines understand that Tootie Designs serves Fayetteville, Fort Liberty, Hope Mills, Raeford, Spring Lake, and nearby North Carolina businesses.",
+    },
+    {
+      question: "What types of local businesses can Tootie Designs build for?",
+      answer: "The structure works for contractors, salons, barbers, restaurants, gyms, consultants, creators, home-service businesses, and other local operators that need a sharper first impression and clearer lead path.",
+    },
+    {
+      question: "Can this help my business get more local leads?",
+      answer: "A better website cannot replace the whole sales process, but it can make referrals, search visitors, and social traffic more likely to trust the business, understand the offer, and take the next step.",
+    },
+  ],
+},
 };
 
 export const proofSignals = [

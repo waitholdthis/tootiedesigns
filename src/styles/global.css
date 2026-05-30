@@ -3821,6 +3821,18 @@ textarea:focus-visible {
   }
 }
 
+.trust-link-row {
+  display: grid;
+  gap: 0.65rem;
+  justify-items: end;
+}
+
+@media (max-width: 900px) {
+  .trust-link-row {
+    justify-items: start;
+  }
+}
+
 /* Proof engine */
 .proof-engine {
   position: relative;
