@@ -151,7 +151,57 @@ export const servicePages = {
       },
     ],
   },
-};
+
+  localBusinessWebsites: {
+    slug: "local-business-websites",
+    eyebrow: "Local Business Websites",
+    title: "Websites for local businesses that need to look trusted before the first call.",
+    description:
+      "Tootie Designs builds premium websites for local service businesses, shops, creators, and operators that need a stronger first impression, clearer services, and a lead path that turns visits into inquiries.",
+    seoTitle: "Local Business Website Design | Tootie Designs",
+    seoDescription:
+      "Local business website design for service companies, shops, creators, and small businesses that need a credible first impression, mobile-ready pages, and better lead capture.",
+    serviceName: "Local Business Website Design",
+    primaryCta: "Request a Free Local Website Audit",
+    secondaryCta: "View Recent Builds",
+    price: "Local business websites start at $1,500",
+    problemTitle: "Local buyers decide fast. If the site feels unclear, outdated, or hard to trust, they call someone else.",
+    problems: [
+      "Referrals search your business before they reach out and judge the website first.",
+      "Service areas, offers, pricing signals, proof, and contact options are hard to find.",
+      "The site does not look as serious as the quality of the work behind the business.",
+      "Mobile visitors have to pinch, hunt, or scroll too long before they know what to do next.",
+    ],
+    outcomes: [
+      "A local-first homepage that explains who you help and how to contact you",
+      "Service sections that make offers easy to understand",
+      "Trust signals for reviews, work examples, location, experience, and professionalism",
+      "Mobile-first CTAs for calls, forms, booking links, or audit requests",
+      "SEO-ready structure for local search and future city/service pages",
+    ],
+    deliverables: [
+      "Local website strategy",
+      "Homepage and service-page structure",
+      "Mobile responsive design",
+      "Trust/proof section planning",
+      "Contact, quote, booking, or audit flow",
+    ],
+    fit: ["contractors", "salons", "barbers", "restaurants", "gyms", "consultants", "home-service businesses", "local creators"],
+    faq: [
+      {
+        question: "What should a local business website include?",
+        answer: "A strong local business website should quickly explain what the business does, where it serves, why buyers should trust it, what services are available, and how to call, book, or request a quote without friction.",
+      },
+      {
+        question: "Can Tootie Designs build websites for specific industries?",
+        answer: "Yes. The structure can be adapted for contractors, salons, barbers, restaurants, gyms, creators, consultants, and other local service businesses that need a sharper digital first impression.",
+      },
+      {
+        question: "Does a local business website help with Google search?",
+        answer: "Yes, especially when the page structure, service language, location signals, metadata, internal links, and Google Business Profile all work together. The website becomes the base that local search can understand.",
+      },
+    ],
+  },};
 
 export const proofSignals = [
   {

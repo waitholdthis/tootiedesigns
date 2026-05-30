@@ -1,11 +1,14 @@
 import type { APIRoute } from "astro";
+import { fieldNotes } from "../data/site";
 
 const pages = [
   "",
   "website-design/",
   "website-redesign/",
   "landing-page-design/",
+  "local-business-websites/",
   "notes/",
+  ...fieldNotes.map((note) => `notes/${note.slug}/`),
   "privacy/",
   "thanks/",
 ];

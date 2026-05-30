@@ -504,4 +504,23 @@ export const fieldNotes = [
       "The Foundry experience reinforced that good UX is not about feature count. It is about understanding the exact sequence of decisions a user makes and designing the interface to support that sequence without friction. Lineup. At-bat. Score. Music. In that order. Every screen should know what comes next.",
     ],
   },
+
+  {
+    slug: "five-signs-your-website-is-costing-you-leads",
+    title: "5 Signs Your Website Is Costing You Leads",
+    date: "2026-05-30",
+    eyebrow: "Website Audit",
+    category: "digital",
+    summary:
+      "A business website can look fine and still lose money. These five signs show when your first impression, mobile experience, message clarity, proof, or lead path needs a sharper rebuild.",
+    body: [
+      "A website does not have to be broken to cost a business leads. Most underperforming sites load, display information, and look acceptable at a glance. The problem is quieter: the page does not create enough confidence for a visitor to take the next step.",
+      "The first sign is weak first-screen clarity. If someone cannot tell what you do, who you help, where you serve, and what action to take within the first few seconds, the page is forcing them to work too hard. Confused visitors rarely become leads.",
+      "The second sign is a mobile experience that feels compressed instead of designed. Local buyers, referrals, and social traffic often arrive on a phone. If the headline is hard to read, buttons are buried, or the form feels annoying, the business is losing the exact people who were closest to contacting it.",
+      "The third sign is missing trust. A visitor needs proof before they call: examples, testimonials, clear services, credentials, photos, location signals, process, or even a simple explanation of what happens after they submit the form. Without proof, the site asks for trust it has not earned.",
+      "The fourth sign is vague copy. Words like quality, professional, reliable, and full service do not mean much by themselves. Strong website copy names the buyer, the problem, the outcome, and the reason the business is different. The goal is not more words. The goal is sharper words.",
+      "The fifth sign is a weak lead path. If the only option is a generic contact page, many visitors will hesitate. A free website audit, quote request, booking path, or focused landing page gives people a safer first step and creates more conversations.",
+      "Tootie Designs built the Free Website First-Impression Audit around these exact issues. It reviews first-screen clarity, mobile experience, trust signals, message clarity, and the lead capture path so a business can see what is helping, what is hurting, and what should change next. Start at https://tootiedesigns.com/#audit or review the redesign path at https://tootiedesigns.com/website-redesign/.",
+    ],
+  },
 ];
