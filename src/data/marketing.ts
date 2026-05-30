@@ -41,6 +41,7 @@ export const servicePages = {
       title: "A lower-friction bridge between audit and rebuild.",
       intro: "The sprint gives a business a practical first win, then makes the larger website decision clearer.",
       links: [
+        ["Cleanup vs redesign guide", "/notes/website-cleanup-sprint-vs-full-redesign/"],
         ["Full website redesign", "/website-redesign/"],
         ["Conversion landing page", "/landing-page-design/"],
         ["Local business websites", "/local-business-websites/"],

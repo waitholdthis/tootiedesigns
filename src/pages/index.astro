@@ -21,6 +21,7 @@ const websiteImages = new Map([
   ["Foundry Baseball App", dugoutCommandCenterImage],
 ]);
 const currentYear = new Date().getFullYear();
+const latestFieldNotes = [...fieldNotes].sort((a, b) => Date.parse(b.date) - Date.parse(a.date));
 const filters = [
   { value: "all", label: "All" },
   { value: "digital", label: "Digital Systems" },
@@ -665,7 +666,7 @@ const servicePackages = [
         </div>
         <div class="notes-preview-grid">
           {
-            fieldNotes.slice(0, 3).map((note) => (
+            latestFieldNotes.slice(0, 3).map((note) => (
               <a class="note-card" href={`${basePath}notes/${note.slug}/`}>
                 <span class="note-eyebrow">{note.eyebrow}</span>
                 <strong>{note.title}</strong>

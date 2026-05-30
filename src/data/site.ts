@@ -448,6 +448,22 @@ export const techCategories = [
 
 export const fieldNotes = [
   {
+    slug: "website-cleanup-sprint-vs-full-redesign",
+    title: "Website Cleanup Sprint vs Full Redesign: Which One Do You Need?",
+    date: "2026-05-30",
+    eyebrow: "Website Strategy",
+    category: "digital",
+    summary:
+      "A practical decision guide for business owners choosing between a focused website cleanup sprint and a full redesign, based on trust gaps, mobile friction, offer clarity, and lead-path problems.",
+    body: [
+      "Not every weak website needs a full rebuild immediately. Some businesses have a decent foundation but a messy first impression: unclear headline, buried call to action, cramped mobile sections, thin proof, or a contact path that asks visitors to work too hard. In that situation, a focused cleanup sprint can create a visible improvement fast without turning the project into a full redesign.",
+      "A website cleanup sprint is the right first move when the brand is mostly usable, the page structure is close, and the business needs sharper trust signals quickly. The sprint tightens the first screen, clarifies the offer, improves mobile readability, strengthens CTA placement, and moves proof closer to the moments where visitors decide whether to keep going.",
+      "A full redesign is the better move when the site has deeper structural problems: outdated visuals, confusing navigation, weak service pages, missing local SEO, no clear audit or quote path, or a layout that cannot support the business anymore. If every important change requires fighting the existing site, rebuilding the system is usually cleaner and more valuable than patching around it.",
+      "The practical test is simple: if the business can explain the offer clearly and only needs a sharper path to action, start with the cleanup sprint. If the website does not match the business, does not support the services, or does not create trust at all, move toward a redesign. The wrong choice is staying stuck because the full rebuild feels too big and the current site keeps leaking confidence.",
+      "Tootie Designs uses the free website first-impression audit to make that decision before scope gets expensive. The audit reviews the first screen, mobile experience, message clarity, proof, and lead path, then recommends whether the next move should be the Website Cleanup Sprint, a conversion landing page, a full redesign, or a new website build. Start at https://tootiedesigns.com/website-audit/ or review the cleanup offer at https://tootiedesigns.com/website-cleanup-sprint/.",
+    ],
+  },
+  {
     slug: "why-every-service-business-needs-an-authority-website",
     title: "Why Every Service Business Needs an Authority Website",
     date: "2026-01-15",

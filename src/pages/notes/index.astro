@@ -7,6 +7,7 @@ const basePath = base.endsWith("/") ? base : `${base}/`;
 const deploymentOrigin = Astro.site?.toString().replace(/\/$/, "") ?? "https://tootiedesigns.com";
 const deploymentBase = `${deploymentOrigin}${base === "/" ? "" : base.replace(/\/$/, "")}`;
 const currentYear = new Date().getFullYear();
+const sortedFieldNotes = [...fieldNotes].sort((a, b) => Date.parse(b.date) - Date.parse(a.date));
 
 function formatDate(dateStr: string) {
   return new Date(dateStr).toLocaleDateString("en-US", {
@@ -66,7 +67,7 @@ function formatDate(dateStr: string) {
         <h2 id="all-notes-title" class="sr-only">All Field Notes</h2>
         <div class="notes-list-grid">
           {
-            fieldNotes.map((note) => (
+            sortedFieldNotes.map((note) => (
               <a class="note-card" href={`${basePath}notes/${note.slug}/`}>
                 <span class="note-eyebrow">{note.eyebrow}</span>
                 <strong>{note.title}</strong>

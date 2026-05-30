@@ -10,7 +10,10 @@ export function getStaticPaths() {
 }
 
 const { note } = Astro.props;
-const related = fieldNotes.filter((n) => n.slug !== note.slug).slice(0, 3);
+const related = [...fieldNotes]
+  .filter((n) => n.slug !== note.slug)
+  .sort((a, b) => Date.parse(b.date) - Date.parse(a.date))
+  .slice(0, 3);
 
 const base = import.meta.env.BASE_URL;
 const basePath = base.endsWith("/") ? base : `${base}/`;
