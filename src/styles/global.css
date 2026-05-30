@@ -4912,3 +4912,276 @@ textarea:focus-visible {
     min-height: 18rem;
   }
 }
+
+/* ── Dedicated website audit landing page ───────────────────────────── */
+
+.audit-landing-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(20rem, 0.45fr);
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: stretch;
+  min-height: min(760px, calc(100vh - 5.5rem));
+  padding-top: clamp(6.75rem, 10vw, 10rem);
+  padding-bottom: clamp(3rem, 7vw, 6rem);
+  position: relative;
+  isolation: isolate;
+}
+
+.audit-landing-hero::before {
+  content: "";
+  position: absolute;
+  inset: 4rem 0 auto 16%;
+  z-index: -1;
+  width: min(58rem, 78vw);
+  height: min(58rem, 78vw);
+  background:
+    radial-gradient(circle at 50% 50%, rgba(210, 173, 116, 0.18), transparent 28%),
+    radial-gradient(circle at 50% 50%, rgba(86, 124, 171, 0.14), transparent 48%);
+  filter: blur(22px);
+  opacity: 0.9;
+  transform: translateY(-24%);
+}
+
+.audit-landing-copy {
+  display: grid;
+  align-content: center;
+  max-width: 66rem;
+}
+
+.audit-landing-copy h1 {
+  max-width: 14ch;
+  margin: 0 0 1.1rem;
+  font-size: clamp(3.25rem, 6.85vw, 7.4rem);
+  line-height: 0.94;
+  letter-spacing: -0.065em;
+}
+
+.audit-landing-copy > p:not(.eyebrow):not(.hero-reassurance) {
+  max-width: 53rem;
+  color: #d8d1c8;
+  font-size: clamp(1.05rem, 1.65vw, 1.28rem);
+  line-height: 1.68;
+}
+
+.audit-diagnostic-panel {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  align-content: end;
+  gap: 1rem;
+  min-height: 30rem;
+  padding: clamp(1.2rem, 2.2vw, 1.65rem);
+  border: 1px solid rgba(210, 173, 116, 0.28);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.045), transparent 38%),
+    radial-gradient(circle at 20% 20%, rgba(210, 173, 116, 0.18), transparent 18rem),
+    rgba(7, 10, 13, 0.78);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(18px);
+}
+
+.audit-diagnostic-panel::before {
+  content: "";
+  position: absolute;
+  inset: 1.2rem;
+  opacity: 0.58;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.055) 1px, transparent 1px);
+  background-size: 38px 38px;
+  mask-image: linear-gradient(180deg, #000 0%, transparent 70%);
+}
+
+.audit-diagnostic-panel::after {
+  content: "FIRST IMPRESSION / MOBILE / PROOF / CTA";
+  position: absolute;
+  top: 1.35rem;
+  left: 1.35rem;
+  right: 1.35rem;
+  border: 1px solid rgba(210, 173, 116, 0.18);
+  padding: 0.75rem 0.85rem;
+  background: rgba(5, 8, 11, 0.44);
+  color: rgba(238, 209, 161, 0.68);
+  font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.audit-diagnostic-panel > * {
+  position: relative;
+  z-index: 1;
+}
+
+.audit-diagnostic-panel > span {
+  color: var(--bronze-2);
+  font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.audit-diagnostic-panel strong {
+  color: var(--bone);
+  font-size: clamp(2.25rem, 4vw, 4.5rem);
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+}
+
+.audit-diagnostic-panel p {
+  max-width: 29rem;
+  color: #d1c9be;
+  line-height: 1.65;
+}
+
+.diagnostic-meter {
+  display: grid;
+  gap: 0.65rem;
+  margin-top: 0.5rem;
+}
+
+.diagnostic-meter span {
+  position: relative;
+  display: block;
+  height: 0.54rem;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  background: rgba(255, 255, 255, 0.045);
+}
+
+.diagnostic-meter span::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: var(--meter);
+  background: linear-gradient(90deg, rgba(210, 173, 116, 0.42), rgba(238, 209, 161, 0.88));
+  box-shadow: 0 0 24px rgba(210, 173, 116, 0.28);
+}
+
+.audit-landing-proof {
+  padding-top: clamp(2.5rem, 6vw, 5rem);
+  padding-bottom: clamp(2.5rem, 6vw, 5rem);
+}
+
+.audit-check-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  border: 1px solid var(--line);
+  background: var(--line);
+}
+
+.audit-check-grid article {
+  display: grid;
+  align-content: start;
+  gap: 0.8rem;
+  min-height: 18rem;
+  padding: clamp(1rem, 2vw, 1.45rem);
+  background:
+    radial-gradient(circle at 20% 10%, rgba(210, 173, 116, 0.11), transparent 12rem),
+    rgba(12, 16, 20, 0.96);
+}
+
+.audit-check-grid span {
+  color: var(--bronze-2);
+  font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+}
+
+.audit-check-grid h3 {
+  max-width: 14ch;
+  margin: 0;
+  color: var(--bone);
+  font-size: clamp(1.35rem, 2vw, 1.85rem);
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+}
+
+.audit-check-grid p {
+  color: #c9c0b3;
+  line-height: 1.62;
+}
+
+.audit-deliverable-band {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(20rem, 0.8fr);
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: start;
+  padding: clamp(1.5rem, 4vw, 3rem);
+  border: 1px solid rgba(210, 173, 116, 0.24);
+  background:
+    linear-gradient(135deg, rgba(182, 138, 85, 0.12), rgba(11, 22, 38, 0.46)),
+    rgba(8, 12, 16, 0.7);
+}
+
+.audit-deliverable-band h2 {
+  max-width: 14ch;
+  margin-bottom: 0.8rem;
+}
+
+.audit-deliverable-band p {
+  max-width: 48rem;
+  color: #d8d1c8;
+  line-height: 1.68;
+}
+
+.audit-deliverable-band ul {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.audit-deliverable-band li {
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--bone);
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.audit-deliverable-band li::before {
+  margin-right: 0.6rem;
+  color: var(--bronze-2);
+  content: "+";
+}
+
+.audit-landing-form {
+  scroll-margin-top: 6rem;
+}
+
+@media (max-width: 980px) {
+  .audit-landing-hero,
+  .audit-deliverable-band {
+    grid-template-columns: 1fr;
+  }
+
+  .audit-diagnostic-panel {
+    min-height: auto;
+  }
+
+  .audit-check-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 680px) {
+  .audit-landing-copy h1 {
+    max-width: 12ch;
+    font-size: clamp(2.8rem, 15vw, 4.4rem);
+    line-height: 0.96;
+  }
+
+  .audit-check-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .audit-check-grid article {
+    min-height: auto;
+  }
+}

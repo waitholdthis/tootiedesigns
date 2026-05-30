@@ -1,0 +1,258 @@
+---
+import "../../styles/global.css";
+
+const base = import.meta.env.BASE_URL;
+const basePath = base.endsWith("/") ? base : `${base}/`;
+const deploymentOrigin = Astro.site?.toString().replace(/\/$/, "") ?? "https://tootiedesigns.com";
+const deploymentBase = `${deploymentOrigin}${base === "/" ? "" : base.replace(/\/$/, "")}`;
+const canonical = `${deploymentBase}/website-audit/`;
+const currentYear = new Date().getFullYear();
+
+const auditChecks = [
+  ["01", "First-screen clarity", "Can a cold visitor understand what you sell, who it is for, and why it matters in the first few seconds?"],
+  ["02", "Mobile trust", "Does the page still feel premium, readable, and easy to act on from a phone?"],
+  ["03", "Proof signals", "Are examples, outcomes, testimonials, credentials, or visual proof strong enough to reduce doubt?"],
+  ["04", "Lead path", "Is the next step obvious, low-friction, and matched to how ready the buyer actually is?"],
+  ["05", "Offer clarity", "Can the visitor tell what they can buy, what it costs to start, and what happens after they reach out?"],
+  ["06", "Search foundation", "Are titles, headings, internal links, sitemap, and local/service intent signals working for discoverability?"],
+];
+
+const deliverables = [
+  "A blunt first-impression read on what helps or hurts trust",
+  "A prioritized fix list for clarity, mobile, proof, and conversion flow",
+  "Recommended next step: cleanup sprint, landing page, redesign, or custom system",
+  "No-pressure direction before you spend money on a full build",
+];
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Free Website First-Impression Audit",
+    serviceType: "Website audit and conversion review",
+    provider: {
+      "@type": "ProfessionalService",
+      name: "Tootie Designs",
+      url: deploymentOrigin,
+      areaServed: ["Fayetteville NC", "North Carolina", "United States"],
+    },
+    description: "A free website first-impression audit reviewing clarity, mobile trust, proof signals, offer positioning, lead path, and search foundation.",
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "USD",
+      availability: "https://schema.org/InStock",
+    },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      ["Is the website audit really free?", "Yes. The audit is a free first step so you can see what is helping or hurting the website before committing to a build."],
+      ["What kinds of websites can be reviewed?", "Business websites, landing pages, service pages, portfolios, booking pages, local business sites, and early ideas can all be reviewed."],
+      ["What happens after I submit the form?", "Tootie Designs reviews the first impression, mobile experience, proof, offer clarity, and lead path, then recommends the next best move."],
+    ].map(([question, answer]) => ({
+      "@type": "Question",
+      name: question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: answer,
+      },
+    })),
+  },
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Request a free Tootie Designs website first-impression audit. Get a focused review of clarity, mobile trust, proof signals, lead path, offer positioning, and SEO basics."
+    />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:title" content="Free Website Audit | Tootie Designs" />
+    <meta property="og:description" content="See what is costing your website trust, leads, and clarity before you commit to a redesign or landing page build." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={`${deploymentOrigin}${basePath}tootie-logo-transparent.png`} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>Free Website Audit | Tootie Designs</title>
+    <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  </head>
+  <body>
+    <a class="skip-link" href="#top">Skip to main content</a>
+    <header class="site-header" aria-label="Primary navigation">
+      <a class="brand" href={basePath} aria-label="Tootie Designs home">
+        <span class="brand-mark"><img src={`${basePath}tootie-logo-transparent.png`} alt="" width="37" height="37" /></span>
+        <span>Tootie Designs</span>
+      </a>
+      <nav>
+        <a href={`${basePath}website-design/`}>Websites</a>
+        <a href={`${basePath}website-redesign/`}>Redesigns</a>
+        <a href={`${basePath}landing-page-design/`}>Landing Pages</a>
+        <a href={`${basePath}local-business-websites/`}>Local</a>
+        <a href={`${basePath}#work`}>Work</a>
+        <a href={`${basePath}website-audit/`}>Request Audit</a>
+      </nav>
+    </header>
+
+    <main id="top" tabindex="-1">
+      <section class="audit-landing-hero section-shell" aria-labelledby="audit-landing-title">
+        <div class="audit-landing-copy">
+          <p class="eyebrow">Free Website First-Impression Audit</p>
+          <h1 id="audit-landing-title">Find where your website is losing trust, leads, and money.</h1>
+          <p>
+            Send the current website, business page, or launch idea. Tootie Designs will review the first impression, mobile experience, proof signals, offer clarity, search foundation, and lead path — then recommend the cleanest next move.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#audit-form" data-event="audit_cta_click" data-label="audit landing hero form">Get My Free Website Audit</a>
+            <a class="button secondary" href={`${basePath}sample-website-audit/`} data-event="sample_audit_click" data-label="audit landing sample">Preview Sample Audit</a>
+          </div>
+          <p class="hero-reassurance">Free first-impression review. No pressure, no obligation.</p>
+        </div>
+        <aside class="audit-diagnostic-panel" aria-label="Audit diagnostic summary">
+          <span>Audit Signal</span>
+          <strong>6 checkpoints</strong>
+          <p>Clarity, mobile trust, proof, lead path, offer clarity, and search foundation — ranked by what should be fixed first.</p>
+          <div class="diagnostic-meter" aria-hidden="true">
+            <span style="--meter: 84%"></span>
+            <span style="--meter: 62%"></span>
+            <span style="--meter: 41%"></span>
+          </div>
+        </aside>
+      </section>
+
+      <section class="audit-landing-proof section-shell" aria-labelledby="audit-proof-title">
+        <div class="section-heading split">
+          <div>
+            <p class="eyebrow">What gets reviewed</p>
+            <h2 id="audit-proof-title">The audit turns vague website opinions into a prioritized fix list.</h2>
+          </div>
+          <p>Most websites do not need random tweaks. They need a clear diagnosis of what a buyer sees, believes, doubts, and does next.</p>
+        </div>
+        <div class="audit-check-grid">
+          {auditChecks.map(([num, title, text]) => (
+            <article>
+              <span>{num}</span>
+              <h3>{title}</h3>
+              <p>{text}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section class="audit-deliverable-band section-shell" aria-labelledby="audit-deliverable-title">
+        <div>
+          <p class="eyebrow">What you get back</p>
+          <h2 id="audit-deliverable-title">A useful next move, not a generic sales call.</h2>
+          <p>The goal is to tell you where the website is leaking confidence and what should be fixed first — even if the answer is a smaller cleanup sprint instead of a full rebuild.</p>
+        </div>
+        <ul>
+          {deliverables.map((item) => <li>{item}</li>)}
+        </ul>
+      </section>
+
+      <section class="audit-funnel audit-landing-form section-shell" id="audit-form" aria-labelledby="audit-form-title">
+        <div class="audit-copy">
+          <p class="eyebrow">Request the audit</p>
+          <h2 id="audit-form-title">Send the site. I’ll find the friction.</h2>
+          <p>
+            Rough notes are fine. If you do not have a live website yet, send the business page, offer, or idea you want turned into a credible lead path.
+          </p>
+          <ul class="audit-checklist" aria-label="Website audit review points">
+            <li>First impression</li>
+            <li>Mobile trust</li>
+            <li>Proof gaps</li>
+            <li>Lead path</li>
+          </ul>
+        </div>
+        <form class="audit-form" name="website-audit" method="post" action="https://formsubmit.co/tootiedesigns18@gmail.com" data-event="audit_form_submit">
+          <input type="hidden" name="_subject" value="New Website Audit Landing Page Request" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_next" value={`${deploymentBase}/thanks/`} />
+          <input type="hidden" name="lead_type" value="Website first-impression audit" />
+          <input type="hidden" name="source_page" value="Dedicated website audit landing page" />
+          <input type="hidden" name="referrer" value="Direct / unknown" />
+          <input type="text" name="_honey" class="form-honey" tabindex="-1" autocomplete="off" />
+          <label>
+            <span class="field-label-text">Name<span class="required-mark" aria-hidden="true">*</span></span>
+            <input name="name" autocomplete="name" required />
+          </label>
+          <label>
+            <span class="field-label-text">Email<span class="required-mark" aria-hidden="true">*</span></span>
+            <input name="email" type="email" autocomplete="email" required />
+          </label>
+          <label class="full-field">
+            Current website or business page
+            <input name="website-or-page" type="url" placeholder="https://" />
+          </label>
+          <label>
+            What do you want more of?
+            <select name="goal">
+              <option>More leads</option>
+              <option>More bookings</option>
+              <option>More sales</option>
+              <option>More credibility</option>
+              <option>Launch help</option>
+            </select>
+          </label>
+          <label>
+            Timeline
+            <select name="timeline">
+              <option>Just want the audit first</option>
+              <option>Ready to improve this month</option>
+              <option>Need a fast launch</option>
+              <option>Planning for later</option>
+            </select>
+          </label>
+          <label>
+            Possible next step
+            <select name="possible-next-step">
+              <option>Audit first — show me what is broken</option>
+              <option>Website cleanup sprint</option>
+              <option>Landing page</option>
+              <option>Full website launch or redesign</option>
+              <option>Custom software / digital system</option>
+            </select>
+          </label>
+          <label>
+            Budget comfort
+            <select name="budget-comfort">
+              <option>Not sure yet — recommend a path</option>
+              <option>$500 - $750 cleanup sprint</option>
+              <option>$750 - $1,500 landing page</option>
+              <option>$1,500 - $3,500 website build</option>
+              <option>$3,500+ larger system</option>
+            </select>
+          </label>
+          <label class="full-field">
+            What feels broken, outdated, or unclear?
+            <textarea name="message" rows="4" placeholder="Tell us what you want the site to do better."></textarea>
+          </label>
+          <button class="button primary" type="submit" data-event="audit_form_submit" data-label="dedicated audit page form">Get My Free Website Audit</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>Tootie Designs</strong>
+        <span>Fayetteville, NC</span>
+      </div>
+      <div>
+        <span>Website Design / Software / Tactical Advising / Fabrication</span>
+        <span>Precision / Texture / Innovation</span>
+        <span>© {currentYear} Tootie Designs.</span>
+        <div class="footer-links">
+          <a href="https://www.facebook.com/profile.php?id=100063801085109" target="_blank" rel="noreferrer">Facebook</a>
+          <a href={`${basePath}privacy/`}>Privacy Policy</a>
+        </div>
+      </div>
+    </footer>
+    <script src={`${basePath}analytics-events.js`} defer></script>
+  </body>
+</html>

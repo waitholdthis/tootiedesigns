@@ -7,6 +7,7 @@ const servicePagePaths = Object.values(servicePages).map((page) => `${page.slug}
 const pages = [
   "",
   ...servicePagePaths,
+  "website-audit/",
   "sample-website-audit/",
   "notes/",
   ...fieldNotes.map((note) => `notes/${note.slug}/`),

@@ -8,7 +8,7 @@
     const text = normalize(element.textContent);
     const href = element.getAttribute("href") || "";
 
-    if (text.includes("free_website_audit") || text.includes("my_free_audit") || text.includes("fayetteville_website_audit") || href.includes("#audit")) return "audit_cta_click";
+    if (text.includes("free_website_audit") || text.includes("my_free_audit") || text.includes("fayetteville_website_audit") || href.includes("#audit") || href.includes("website-audit")) return "audit_cta_click";
     if (href.includes("sample-website-audit")) return "sample_audit_click";
     if (href.includes("/work/")) return "case_study_click";
     if (href.includes("website-design") || href.includes("website-redesign") || href.includes("landing-page-design") || href.includes("local-business") || href.includes("fayetteville")) return "service_page_click";

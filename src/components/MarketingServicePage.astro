@@ -8,7 +8,7 @@ const basePath = base.endsWith("/") ? base : `${base}/`;
 const deploymentOrigin = Astro.site?.toString().replace(/\/$/, "") ?? "https://tootiedesigns.com";
 const canonical = `${deploymentOrigin}${base === "/" ? "" : base.replace(/\/$/, "")}/${page.slug}/`;
 const currentYear = new Date().getFullYear();
-const auditHref = `${basePath}#audit`;
+const auditHref = `${basePath}website-audit/`;
 const workHref = `${basePath}#work`;
 const schema = [
   {

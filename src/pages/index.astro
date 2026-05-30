@@ -32,7 +32,7 @@ const servicePackages = [
   {
     name: "Website Cleanup Sprint",
     price: "$500 - $750",
-    href: `${basePath}#audit`,
+    href: `${basePath}website-audit/`,
     description: "A focused cleanup for businesses that do not need a full rebuild yet but need the first impression, CTA, and mobile trust tightened fast.",
     deliverables: ["Homepage first-screen cleanup", "CTA and lead path fixes", "Mobile readability pass", "Trust/proof placement", "Quick-turn launch support"],
   },
@@ -67,7 +67,7 @@ const servicePackages = [
   {
     name: "Start With the Audit",
     price: "Free first step",
-    href: `${basePath}#audit`,
+    href: `${basePath}website-audit/`,
     description: "Not sure which path fits? Send the current site first. The audit identifies the lowest-friction move before anyone commits to a build.",
     deliverables: ["First impression review", "Mobile trust check", "Proof gap notes", "Lead path diagnosis", "Recommended next step"],
   },
@@ -149,7 +149,7 @@ const servicePackages = [
         <a href={`${basePath}landing-page-design/`}>Landing Pages</a>
         <a href={`${basePath}local-business-websites/`}>Local</a>
         <a href="#work">Work</a>
-        <a href="#audit">Request Audit</a>
+        <a href={`${basePath}website-audit/`}>Request Audit</a>
       </nav>
     </header>
 
@@ -171,7 +171,7 @@ const servicePackages = [
             Tootie Designs creates cinematic websites, conversion landing pages, and full-stack business tools for brands that need a stronger first impression and a cleaner path to revenue.
           </p>
           <div class="hero-actions">
-            <a class="button primary" href="#audit" data-event="audit_cta_click" data-label="home hero audit">Request a Free Website Audit</a>
+            <a class="button primary" href={`${basePath}website-audit/`} data-event="audit_cta_click" data-label="home hero audit">Request a Free Website Audit</a>
             <a class="button secondary" href="#work" data-event="case_study_click" data-label="home hero work">View Recent Builds</a>
           </div>
           <p class="hero-reassurance">Free first-impression review. No pressure, no obligation.</p>
@@ -230,11 +230,11 @@ const servicePackages = [
           <input type="hidden" name="referrer" value="Direct / unknown" />
           <input type="text" name="_honey" class="form-honey" tabindex="-1" autocomplete="off" />
           <label>
-            Name<span class="required-mark" aria-hidden="true">*</span>
+            <span class="field-label-text">Name<span class="required-mark" aria-hidden="true">*</span></span>
             <input name="name" autocomplete="name" required />
           </label>
           <label>
-            Email<span class="required-mark" aria-hidden="true">*</span>
+            <span class="field-label-text">Email<span class="required-mark" aria-hidden="true">*</span></span>
             <input name="email" type="email" autocomplete="email" required />
           </label>
           <label class="full-field">
@@ -694,11 +694,11 @@ const servicePackages = [
           <input type="hidden" name="referrer" value="Direct / unknown" />
           <input type="text" name="_honey" class="form-honey" tabindex="-1" autocomplete="off" />
           <label>
-            Name<span class="required-mark" aria-hidden="true">*</span>
+            <span class="field-label-text">Name<span class="required-mark" aria-hidden="true">*</span></span>
             <input name="name" autocomplete="name" required />
           </label>
           <label>
-            Email<span class="required-mark" aria-hidden="true">*</span>
+            <span class="field-label-text">Email<span class="required-mark" aria-hidden="true">*</span></span>
             <input name="email" type="email" autocomplete="email" required />
           </label>
           <label>
@@ -737,7 +737,7 @@ const servicePackages = [
             <input name="reference" type="url" placeholder="https://" />
           </label>
           <label>
-            Brief<span class="required-mark" aria-hidden="true">*</span>
+            <span class="field-label-text">Brief<span class="required-mark" aria-hidden="true">*</span></span>
             <textarea name="brief" rows="4" required></textarea>
           </label>
           <button class="button primary" type="submit">Send Project Brief</button>
