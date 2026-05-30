@@ -1,12 +1,12 @@
 import type { APIRoute } from "astro";
+import { servicePages } from "../data/marketing";
 import { fieldNotes } from "../data/site";
+
+const servicePagePaths = Object.values(servicePages).map((page) => `${page.slug}/`);
 
 const pages = [
   "",
-  "website-design/",
-  "website-redesign/",
-  "landing-page-design/",
-  "local-business-websites/",
+  ...servicePagePaths,
   "notes/",
   ...fieldNotes.map((note) => `notes/${note.slug}/`),
   "privacy/",
