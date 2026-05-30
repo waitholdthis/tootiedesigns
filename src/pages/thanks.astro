@@ -33,16 +33,26 @@ const currentYear = new Date().getFullYear();
 
     <main>
       <section class="thanks-page section-shell" aria-labelledby="thanks-title">
-        <p class="eyebrow">Audit Request Received</p>
-        <h1 id="thanks-title">Your website audit request is in.</h1>
-        <p class="hero-copy">
-          Tootie Designs will review your first impression, mobile experience, message clarity,
-          trust signals, and lead path — then follow up with the clearest next move.
-        </p>
-        <div class="hero-actions">
-          <a class="button primary" href={`${basePath}website-redesign/`}>See What a Redesign Fixes</a>
-          <a class="button secondary" href={`${basePath}#work`}>View Recent Builds</a>
+        <div class="thanks-copy">
+          <p class="eyebrow">Audit Request Received</p>
+          <h1 id="thanks-title">Your website audit request is in.</h1>
+          <p class="hero-copy">
+            Tootie Designs will review your first impression, mobile experience, message clarity, trust signals, and lead path — then follow up with the clearest next move.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href={`${basePath}sample-website-audit/`} data-event="sample_audit_click" data-label="thanks sample audit">Review the Sample Audit</a>
+            <a class="button secondary" href={`${basePath}website-redesign/`} data-event="service_page_click" data-label="thanks redesign">See What a Redesign Fixes</a>
+          </div>
         </div>
+
+        <aside class="thanks-next-card" aria-label="What happens next">
+          <span>What happens next</span>
+          <ol>
+            <li><strong>First impression review</strong><p>We check whether the site explains the business clearly in the first few seconds.</p></li>
+            <li><strong>Mobile trust pass</strong><p>We look for friction on phone screens, CTA access, spacing, and readability.</p></li>
+            <li><strong>Proof + lead path check</strong><p>We identify missing trust signals and the fastest path to more confident inquiries.</p></li>
+          </ol>
+        </aside>
       </section>
     </main>
 
@@ -61,5 +71,6 @@ const currentYear = new Date().getFullYear();
         </div>
       </div>
     </footer>
+    <script src={`${basePath}analytics-events.js`} defer></script>
   </body>
 </html>

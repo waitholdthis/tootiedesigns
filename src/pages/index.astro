@@ -157,8 +157,8 @@ const servicePackages = [
             Tootie Designs creates cinematic websites, conversion landing pages, and full-stack business tools for brands that need a stronger first impression and a cleaner path to revenue.
           </p>
           <div class="hero-actions">
-            <a class="button primary" href="#audit">Request a Free Website Audit</a>
-            <a class="button secondary" href="#work">View Recent Builds</a>
+            <a class="button primary" href="#audit" data-event="audit_cta_click" data-label="home hero audit">Request a Free Website Audit</a>
+            <a class="button secondary" href="#work" data-event="case_study_click" data-label="home hero work">View Recent Builds</a>
           </div>
           <p class="hero-reassurance">Free first-impression review. No pressure, no obligation.</p>
         </div>
@@ -204,13 +204,16 @@ const servicePackages = [
             <li>Trust and proof signals</li>
             <li>Lead capture path</li>
           </ul>
-          <a class="project-link audit-sample-link" href={`${basePath}sample-website-audit/`}>Preview a sample audit report</a>
+          <a class="project-link audit-sample-link" href={`${basePath}sample-website-audit/`} data-event="sample_audit_click" data-label="audit section sample preview">Preview a sample audit report</a>
         </div>
-        <form class="audit-form" name="website-audit" method="post" action="https://formsubmit.co/tootiedesigns18@gmail.com">
+        <form class="audit-form" name="website-audit" method="post" action="https://formsubmit.co/tootiedesigns18@gmail.com" data-event="audit_form_submit">
           <input type="hidden" name="_subject" value="New Website First-Impression Audit Request" />
           <input type="hidden" name="_template" value="table" />
           <input type="hidden" name="_captcha" value="false" />
           <input type="hidden" name="_next" value={`${deploymentBase}/thanks/`} />
+          <input type="hidden" name="lead_type" value="Website first-impression audit" />
+          <input type="hidden" name="source_page" value="Homepage audit funnel" />
+          <input type="hidden" name="referrer" value="Direct / unknown" />
           <input type="text" name="_honey" class="form-honey" tabindex="-1" autocomplete="off" />
           <label>
             Name<span class="required-mark" aria-hidden="true">*</span>
@@ -247,7 +250,7 @@ const servicePackages = [
             What feels broken, outdated, or unclear?
             <textarea name="message" rows="4" placeholder="Tell us what you want the site to do better."></textarea>
           </label>
-          <button class="button primary" type="submit">Get My Website Audit</button>
+          <button class="button primary" type="submit" data-event="audit_form_submit" data-label="homepage audit form">Get My Website Audit</button>
         </form>
       </section>
 
@@ -611,11 +614,14 @@ const servicePackages = [
             Or reach out directly: <a href={`mailto:${email}`}>{email}</a>
           </p>
         </div>
-        <form name="contact" method="post" action="https://formsubmit.co/tootiedesigns18@gmail.com">
+        <form name="contact" method="post" action="https://formsubmit.co/tootiedesigns18@gmail.com" data-event="contact_form_submit">
           <input type="hidden" name="_subject" value="New Tootie Designs Inquiry" />
           <input type="hidden" name="_template" value="table" />
           <input type="hidden" name="_captcha" value="false" />
           <input type="hidden" name="_next" value={`${deploymentBase}/thanks/`} />
+          <input type="hidden" name="lead_type" value="General project inquiry" />
+          <input type="hidden" name="source_page" value="Homepage project form" />
+          <input type="hidden" name="referrer" value="Direct / unknown" />
           <input type="text" name="_honey" class="form-honey" tabindex="-1" autocomplete="off" />
           <label>
             Name<span class="required-mark" aria-hidden="true">*</span>
@@ -762,5 +768,6 @@ const servicePackages = [
         }
       });
     </script>
+    <script src={`${basePath}analytics-events.js`} defer></script>
   </body>
 </html>

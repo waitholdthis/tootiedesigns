@@ -90,8 +90,8 @@ const schema = [
           <h1 id="service-title">{page.title}</h1>
           <p>{page.description}</p>
           <div class="hero-actions">
-            <a class="button primary" href={auditHref}>{page.primaryCta}</a>
-            <a class="button secondary" href={workHref}>{page.secondaryCta}</a>
+            <a class="button primary" href={auditHref} data-event="audit_cta_click" data-label={`${page.slug} hero audit`}>{page.primaryCta}</a>
+            <a class="button secondary" href={workHref} data-event="case_study_click" data-label={`${page.slug} hero work`}>{page.secondaryCta}</a>
           </div>
           <p class="hero-reassurance">Free first-impression review. No pressure, no obligation.</p>
         </div>
@@ -161,7 +161,7 @@ const schema = [
             <p class="eyebrow">Proof system</p>
             <h2 id="proof-title">Why people should trust Tootie Designs with the first impression.</h2>
           </div>
-          <a class="button secondary" href={auditHref}>Start with the audit</a>
+          <a class="button secondary" href={auditHref} data-event="audit_cta_click" data-label={`${page.slug} proof audit`}>Start with the audit</a>
         </div>
         <div class="proof-signal-grid">
           {proofSignals.map((signal) => (
@@ -251,8 +251,8 @@ const schema = [
         <h2 id="final-cta-title">Find out what your website is costing you before another lead disappears.</h2>
         <p>Send the current site, business page, or idea. Tootie Designs will review the first impression, mobile experience, trust signals, and lead path.</p>
         <div class="hero-actions">
-          <a class="button primary" href={auditHref}>Request a Free Website Audit</a>
-          <a class="button secondary" href={`${basePath}sample-website-audit/`}>Preview Sample Audit</a>
+          <a class="button primary" href={auditHref} data-event="audit_cta_click" data-label={`${page.slug} final audit`}>Request a Free Website Audit</a>
+          <a class="button secondary" href={`${basePath}sample-website-audit/`} data-event="sample_audit_click" data-label={`${page.slug} sample audit`}>Preview Sample Audit</a>
         </div>
       </section>
     </main>
@@ -272,5 +272,6 @@ const schema = [
         </div>
       </div>
     </footer>
+    <script src={`${basePath}analytics-events.js`} defer></script>
   </body>
 </html>
