@@ -1312,6 +1312,72 @@ h3 {
   min-height: 15rem;
 }
 
+.case-proof-engine {
+  padding-top: clamp(4rem, 8vw, 7rem);
+  padding-bottom: clamp(4rem, 8vw, 7rem);
+  border-top: 1px solid var(--line);
+}
+
+.case-proof-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.case-proof-grid article {
+  min-height: 15rem;
+  border: 1px solid rgba(210, 173, 116, 0.2);
+  border-radius: 1.4rem;
+  padding: clamp(1.1rem, 2vw, 1.45rem);
+  background:
+    linear-gradient(135deg, rgba(210, 173, 116, 0.09), transparent 46%),
+    rgba(255, 255, 255, 0.045);
+}
+
+.case-proof-grid span,
+.case-signal-strip span {
+  display: inline-flex;
+  color: var(--bronze-2);
+  font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.case-proof-grid p {
+  margin: 0.75rem 0 0;
+  color: rgba(243, 238, 229, 0.78);
+  font-size: 1.02rem;
+  line-height: 1.65;
+}
+
+.case-signal-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-top: 1rem;
+}
+
+.case-signal-strip span {
+  border: 1px solid rgba(210, 173, 116, 0.22);
+  border-radius: 999px;
+  padding: 0.62rem 0.8rem;
+  background: rgba(210, 173, 116, 0.075);
+  color: rgba(243, 238, 229, 0.82);
+}
+
+@media (max-width: 900px) {
+  .case-proof-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .case-proof-grid article {
+    min-height: auto;
+  }
+}
+
 .tech-ticker {
   width: 100%;
   margin: clamp(4rem, 9vw, 7rem) 0;

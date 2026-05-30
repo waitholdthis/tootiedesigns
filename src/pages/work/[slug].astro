@@ -18,6 +18,9 @@ const { project } = Astro.props;
 const related = projects.filter((item) => item.slug !== project.slug).slice(0, 3);
 const base = import.meta.env.BASE_URL;
 const basePath = base.endsWith("/") ? base : `${base}/`;
+const deploymentOrigin = Astro.site?.toString().replace(/\/$/, "") ?? "https://tootiedesigns.com";
+const canonical = `${deploymentOrigin}${base === "/" ? "" : base.replace(/\/$/, "")}/work/${project.slug}/`;
+const caseDescription = `${project.title} case study by Tootie Designs: ${project.caseStudy.summary}`;
 ---
 
 <!doctype html>
@@ -25,7 +28,14 @@ const basePath = base.endsWith("/") ? base : `${base}/`;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content={`${project.title} case study by Tootie Designs.`} />
+    <meta name="description" content={caseDescription} />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:title" content={`${project.title} | Tootie Designs Case Study`} />
+    <meta property="og:description" content={caseDescription} />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={`${deploymentOrigin}${basePath}tootie-logo-transparent.png`} />
+    <meta name="twitter:card" content="summary_large_image" />
     <title>{project.title} | Tootie Designs Case Study</title>
   </head>
   <body>
@@ -39,7 +49,7 @@ const basePath = base.endsWith("/") ? base : `${base}/`;
         <a href={`${basePath}#capabilities`}>Capabilities</a>
         <a href={`${basePath}#process`}>Process</a>
         <a href={`${basePath}notes/`}>Notes</a>
-        <a href={`${basePath}#contact`}>Contact</a>
+        <a href={`${basePath}#audit`}>Free Audit</a>
       </nav>
     </header>
 
@@ -280,6 +290,38 @@ const basePath = base.endsWith("/") ? base : `${base}/`;
         </article>
       </section>
 
+
+      {
+        "proof" in project.caseStudy && project.caseStudy.proof && (
+          <section class="section-shell case-proof-engine" aria-labelledby="case-proof-title">
+            <div class="section-heading split">
+              <div>
+                <p class="eyebrow">Case Proof Engine</p>
+                <h2 id="case-proof-title">What this work proves about better first impressions.</h2>
+              </div>
+              <a class="button secondary" href={`${basePath}sample-website-audit/`}>Preview Sample Audit</a>
+            </div>
+            <div class="case-proof-grid">
+              <article>
+                <span>Problem</span>
+                <p>{project.caseStudy.proof.problem}</p>
+              </article>
+              <article>
+                <span>Strategy</span>
+                <p>{project.caseStudy.proof.strategy}</p>
+              </article>
+              <article>
+                <span>Buyer belief</span>
+                <p>{project.caseStudy.proof.buyerBelief}</p>
+              </article>
+            </div>
+            <div class="case-signal-strip" aria-label="Conversion signals demonstrated">
+              {project.caseStudy.proof.conversionSignals.map((signal) => <span>{signal}</span>)}
+            </div>
+          </section>
+        )
+      }
+
       <section class="section-shell deliverables" aria-labelledby="deliverables-title">
         <div>
           <p class="eyebrow">Deliverables</p>
@@ -317,13 +359,12 @@ const basePath = base.endsWith("/") ? base : `${base}/`;
       <section class="section-shell contact case-contact" id="contact" aria-labelledby="case-contact-title">
         <div>
           <p class="eyebrow">Start a Project</p>
-          <h2 id="case-contact-title">Need work with this level of structure?</h2>
+          <h2 id="case-contact-title">Want this kind of thinking on your website?</h2>
           <p>
-            Bring the goal, audience, and constraints. Tootie Designs can shape the
-            system, site, object, or engagement from there.
+            Start with the free first-impression audit. Tootie Designs will review the clarity, proof, mobile trust, and lead path before another visitor leaves confused.
           </p>
         </div>
-        <a class="button primary" href={`${basePath}#contact`}>Open the Project Brief</a>
+        <a class="button primary" href={`${basePath}#audit`}>Request a Free Website Audit</a>
       </section>
     </main>
 
