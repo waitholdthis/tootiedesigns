@@ -4967,45 +4967,39 @@ textarea:focus-visible {
   position: relative;
   overflow: hidden;
   display: grid;
-  align-content: end;
+  align-content: center;
   gap: 1rem;
-  min-height: 30rem;
-  padding: clamp(1.2rem, 2.2vw, 1.65rem);
-  border: 1px solid rgba(210, 173, 116, 0.28);
+  min-height: clamp(24rem, 38vw, 31rem);
+  padding: clamp(1.15rem, 2.25vw, 1.85rem);
+  border: 1px solid rgba(210, 173, 116, 0.32);
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.045), transparent 38%),
-    radial-gradient(circle at 20% 20%, rgba(210, 173, 116, 0.18), transparent 18rem),
-    rgba(7, 10, 13, 0.78);
-  box-shadow: var(--shadow);
+    linear-gradient(180deg, rgba(255, 255, 255, 0.055), transparent 34%),
+    radial-gradient(circle at 20% 18%, rgba(210, 173, 116, 0.2), transparent 15rem),
+    linear-gradient(135deg, rgba(21, 30, 37, 0.9), rgba(5, 8, 11, 0.88));
+  box-shadow: 0 28px 90px rgba(0, 0, 0, 0.42), 0 0 0 1px rgba(255, 255, 255, 0.035) inset;
   backdrop-filter: blur(18px);
 }
 
 .audit-diagnostic-panel::before {
   content: "";
   position: absolute;
-  inset: 1.2rem;
-  opacity: 0.58;
+  inset: 1rem;
+  opacity: 0.5;
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.055) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.055) 1px, transparent 1px);
-  background-size: 38px 38px;
-  mask-image: linear-gradient(180deg, #000 0%, transparent 70%);
+    linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: 34px 34px;
+  mask-image: radial-gradient(circle at 50% 18%, #000 0%, transparent 60%);
 }
 
 .audit-diagnostic-panel::after {
-  content: "FIRST IMPRESSION / MOBILE / PROOF / CTA";
+  content: "";
   position: absolute;
-  top: 1.35rem;
-  left: 1.35rem;
-  right: 1.35rem;
-  border: 1px solid rgba(210, 173, 116, 0.18);
-  padding: 0.75rem 0.85rem;
-  background: rgba(5, 8, 11, 0.44);
-  color: rgba(238, 209, 161, 0.68);
-  font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
-  font-size: 0.66rem;
-  font-weight: 800;
-  letter-spacing: 0.12em;
+  inset: auto -18% -34% 22%;
+  height: 14rem;
+  background: radial-gradient(circle, rgba(210, 173, 116, 0.26), transparent 62%);
+  filter: blur(18px);
+  opacity: 0.75;
 }
 
 .audit-diagnostic-panel > * {
@@ -5013,7 +5007,22 @@ textarea:focus-visible {
   z-index: 1;
 }
 
+.audit-signal-tag {
+  width: fit-content;
+  max-width: 100%;
+  border: 1px solid rgba(210, 173, 116, 0.22);
+  padding: 0.68rem 0.78rem;
+  background: rgba(5, 8, 11, 0.58);
+  color: rgba(238, 209, 161, 0.82);
+  font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: clamp(0.58rem, 1.2vw, 0.68rem);
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  line-height: 1.35;
+}
+
 .audit-diagnostic-panel > span {
+  margin-top: clamp(1.2rem, 5vw, 3rem);
   color: var(--bronze-2);
   font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
   font-size: 0.72rem;
@@ -5022,41 +5031,75 @@ textarea:focus-visible {
   text-transform: uppercase;
 }
 
-.audit-diagnostic-panel strong {
+.audit-diagnostic-panel > strong {
+  max-width: 10ch;
   color: var(--bone);
-  font-size: clamp(2.25rem, 4vw, 4.5rem);
+  font-size: clamp(2.25rem, 3.55vw, 3.85rem);
   line-height: 0.95;
-  letter-spacing: -0.05em;
+  letter-spacing: -0.055em;
 }
 
 .audit-diagnostic-panel p {
-  max-width: 29rem;
-  color: #d1c9be;
-  line-height: 1.65;
+  max-width: 31rem;
+  color: #ded5c9;
+  line-height: 1.62;
 }
 
 .diagnostic-meter {
   display: grid;
-  gap: 0.65rem;
-  margin-top: 0.5rem;
+  gap: 0.78rem;
+  margin-top: 0.35rem;
+  padding-top: 0.95rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.diagnostic-meter span {
-  position: relative;
-  display: block;
-  height: 0.54rem;
-  overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.09);
-  background: rgba(255, 255, 255, 0.045);
+.diagnostic-meter::before {
+  content: "Sample signal scan";
+  color: rgba(238, 209, 161, 0.58);
+  font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
-.diagnostic-meter span::before {
+.diagnostic-meter-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.6rem 1rem;
+  align-items: center;
+}
+
+.diagnostic-meter-row::before {
   content: "";
-  position: absolute;
-  inset: 0 auto 0 0;
-  width: var(--meter);
-  background: linear-gradient(90deg, rgba(210, 173, 116, 0.42), rgba(238, 209, 161, 0.88));
-  box-shadow: 0 0 24px rgba(210, 173, 116, 0.28);
+  grid-column: 1 / -1;
+  grid-row: 2;
+  height: 0.72rem;
+  overflow: hidden;
+  border: 1px solid rgba(238, 209, 161, 0.16);
+  background:
+    linear-gradient(90deg, rgba(238, 209, 161, 0.9), rgba(210, 173, 116, 0.42)) 0 0 / var(--meter) 100% no-repeat,
+    rgba(255, 255, 255, 0.055);
+  box-shadow: 0 0 24px rgba(210, 173, 116, 0.18) inset;
+}
+
+.diagnostic-meter-row span,
+.diagnostic-meter-row strong {
+  font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.diagnostic-meter-row span {
+  color: rgba(243, 238, 229, 0.72);
+}
+
+.diagnostic-meter-row strong {
+  color: var(--bronze-2);
+  line-height: 1;
+  letter-spacing: 0.05em;
 }
 
 .audit-landing-proof {
@@ -5163,6 +5206,11 @@ textarea:focus-visible {
 
   .audit-diagnostic-panel {
     min-height: auto;
+    align-content: start;
+  }
+
+  .audit-diagnostic-panel > span {
+    margin-top: 1rem;
   }
 
   .audit-check-grid {
@@ -5175,6 +5223,24 @@ textarea:focus-visible {
     max-width: 12ch;
     font-size: clamp(2.8rem, 15vw, 4.4rem);
     line-height: 0.96;
+  }
+
+  .audit-diagnostic-panel {
+    padding: 1rem;
+  }
+
+  .audit-signal-tag {
+    width: 100%;
+  }
+
+  .diagnostic-meter-row {
+    gap: 0.45rem 0.75rem;
+  }
+
+  .diagnostic-meter-row span,
+  .diagnostic-meter-row strong {
+    font-size: 0.62rem;
+    letter-spacing: 0.08em;
   }
 
   .audit-check-grid {
