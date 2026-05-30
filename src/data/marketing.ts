@@ -127,6 +127,132 @@ export const servicePages = {
     ],
   },
 
+  globalWebsiteRedesign: {
+    slug: "global-website-redesign",
+    eyebrow: "Global Website Redesign",
+    title: "Company website redesigns for brands that need to look credible beyond their local market.",
+    description:
+      "Tootie Designs rebuilds underpowered company websites into premium, conversion-aware digital assets for founders, executive teams, consultants, and service companies that need to earn trust from buyers anywhere.",
+    seoTitle: "Global Website Redesign Services | Tootie Designs",
+    seoDescription:
+      "Global website redesign services for companies, founders, executive teams, consultants, and premium service brands that need stronger authority, proof architecture, and inquiry paths.",
+    serviceName: "Global Website Redesign Services",
+    primaryCta: "Request a Global Redesign Audit",
+    secondaryCta: "Preview CEO Website Path",
+    price: "Global redesigns start at $3,500",
+    problemTitle: "A company can outgrow its website long before it outgrows its market.",
+    problems: [
+      "The company is operating at a serious level, but the website still feels local, small, outdated, or generic.",
+      "High-value visitors cannot quickly find the proof, positioning, services, leadership story, or next step they need.",
+      "The homepage speaks to everyone at once and ends up sounding like no one in particular.",
+      "The brand is trying to win larger buyers, partners, investors, or recruits with a site that was built for an earlier stage.",
+    ],
+    outcomes: [
+      "A stronger company narrative that communicates category, audience, proof, and next step quickly",
+      "Premium visual direction that makes the brand feel credible to national or global buyers",
+      "Redesigned service, proof, leadership, case-study, and inquiry paths for serious decision makers",
+      "A structure that supports future SEO content, executive pages, campaign landing pages, and case-study expansion",
+      "A faster, mobile-aware front end with clean metadata, schema, accessibility basics, and launch discipline",
+    ],
+    deliverables: [
+      "Current-site audit and redesign blueprint",
+      "Company positioning and page architecture",
+      "Homepage and core page redesign direction",
+      "Proof, case-study, and CTA sequencing",
+      "Responsive front-end build and launch-ready SEO foundation",
+    ],
+    fit: ["growing companies", "founder-led brands", "executive teams", "consultants", "premium service firms", "national operators", "global buyers"],
+    pathLinks: {
+      eyebrow: "Global growth paths",
+      title: "A redesign path for companies ready to look bigger than their old website.",
+      intro: "Start with the executive audit, then move into the level of rebuild the business actually needs: authority site, company redesign, campaign page, or full digital system.",
+      links: [
+        ["Executive website audit", "/executive-website-audit/"],
+        ["CEO website design", "/ceo-website-design/"],
+        ["Enterprise landing page design", "/enterprise-landing-page-design/"],
+        ["Website redesign services", "/website-redesign/"],
+        ["Sample website audit", "/sample-website-audit/"],
+      ],
+    },
+    faq: [
+      {
+        question: "What makes a global website redesign different from a normal redesign?",
+        answer: "A global redesign has to support higher-stakes trust checks. It must communicate authority, proof, leadership, services, and inquiry paths for buyers who may not know the company locally before they land on the site.",
+      },
+      {
+        question: "Can this work for a founder-led company or consultant?",
+        answer: "Yes. The same structure works for founder-led companies, consultants, executive teams, and premium service firms when the site needs to make the business feel serious beyond its existing network.",
+      },
+      {
+        question: "Where should we start?",
+        answer: "Start with the executive website audit. It reviews positioning, proof, mobile credibility, offer clarity, and inquiry paths before recommending whether the company needs a focused cleanup, executive authority page, landing page, or full redesign.",
+      },
+    ],
+  },
+
+  enterpriseLandingPageDesign: {
+    slug: "enterprise-landing-page-design",
+    eyebrow: "Enterprise Landing Page Design",
+    title: "Campaign and offer pages built for serious buyers, not casual clicks.",
+    description:
+      "Tootie Designs builds premium landing pages for executive offers, enterprise campaigns, advisory services, product launches, partnerships, and high-ticket services where one page has to create trust and action fast.",
+    seoTitle: "Enterprise Landing Page Design | Tootie Designs",
+    seoDescription:
+      "Enterprise landing page design for executive offers, premium services, partnerships, B2B campaigns, advisory pages, and high-ticket conversion paths.",
+    serviceName: "Enterprise Landing Page Design",
+    primaryCta: "Request an Enterprise Page Audit",
+    secondaryCta: "See Landing Page Work",
+    price: "Enterprise landing pages start at $2,500",
+    problemTitle: "High-value campaigns fail when the destination page feels like a generic website section.",
+    problems: [
+      "The offer is strong, but the page does not frame the buyer, stakes, proof, and next step with enough authority.",
+      "Traffic from outreach, ads, partnerships, email, or social is being sent to a homepage instead of a focused conversion path.",
+      "The page asks for a call before it has handled trust, relevance, objection, and proof.",
+      "The design feels modern but not executive enough for the level of buyer the offer is trying to reach.",
+    ],
+    outcomes: [
+      "One page with one buyer, one offer, one proof sequence, and one primary action",
+      "Executive-level copy hierarchy for stakes, value, proof, objections, process, and CTA repetition",
+      "A premium visual system that supports high-ticket trust without overwhelming the message",
+      "Lead capture, booking, brief, or inquiry paths matched to campaign intent",
+      "Launch-ready metadata, analytics hooks, mobile polish, and internal links back to the broader site",
+    ],
+    deliverables: [
+      "Campaign and buyer strategy",
+      "High-ticket offer page architecture",
+      "Conversion copy structure",
+      "Premium responsive landing page build",
+      "Lead capture or booking CTA integration",
+    ],
+    fit: ["enterprise campaigns", "executive offers", "B2B services", "advisory firms", "partnership pages", "premium launches", "high-ticket service offers"],
+    pathLinks: {
+      eyebrow: "Campaign paths",
+      title: "A controlled destination for serious traffic.",
+      intro: "Use an enterprise landing page when the homepage is too broad and the buyer needs a focused reason to believe, inquire, book, or request a brief.",
+      links: [
+        ["Executive website audit", "/executive-website-audit/"],
+        ["CEO website design", "/ceo-website-design/"],
+        ["Global website redesign", "/global-website-redesign/"],
+        ["Landing page design", "/landing-page-design/"],
+        ["The Digital Threshold proof", "/work/the-digital-threshold/"],
+      ],
+    },
+    faq: [
+      {
+        question: "What is an enterprise landing page?",
+        answer: "It is a focused conversion page for a serious offer, campaign, service, partnership, or product where the page needs to create enough trust for a high-value buyer to take action.",
+      },
+      {
+        question: "Is this only for large corporations?",
+        answer: "No. Enterprise-level means the buying decision has higher stakes. Founder-led companies, consultants, advisory firms, premium service providers, and B2B operators can use this structure when the offer deserves a more serious page.",
+      },
+      {
+        question: "Can the page connect to ads, outreach, or email campaigns?",
+        answer: "Yes. The page can be structured for paid traffic, outbound campaigns, email, direct links, partnerships, product launches, or high-ticket service inquiries.",
+      },
+    ],
+  },
+
   websiteDesign: {
     slug: "website-design",
     eyebrow: "Website Design Services",

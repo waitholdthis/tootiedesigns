@@ -1,0 +1,265 @@
+---
+import "../../styles/global.css";
+
+const base = import.meta.env.BASE_URL;
+const basePath = base.endsWith("/") ? base : `${base}/`;
+const deploymentOrigin = Astro.site?.toString().replace(/\/$/, "") ?? "https://tootiedesigns.com";
+const deploymentBase = `${deploymentOrigin}${base === "/" ? "" : base.replace(/\/$/, "")}`;
+const canonical = `${deploymentBase}/executive-website-audit/`;
+const currentYear = new Date().getFullYear();
+
+const executiveChecks = [
+  ["01", "Executive clarity", "Can a serious visitor understand who leads the company, what the company does, who it serves, and why it matters quickly?"],
+  ["02", "Authority signal", "Does the site communicate leadership credibility without sounding like a generic biography or resume?"],
+  ["03", "Proof architecture", "Are case studies, outcomes, credentials, partnerships, testimonials, or visible work placed before the site asks for action?"],
+  ["04", "Global credibility", "Does the visual system feel premium, disciplined, mobile-ready, and credible outside the company's existing local network?"],
+  ["05", "Serious inquiry path", "Can investors, enterprise buyers, partners, recruits, press, or premium clients find the right next step without friction?"],
+  ["06", "Growth surface", "Can the site expand into CEO authority content, company pages, campaign landing pages, case studies, and search-supporting articles?"],
+];
+
+const deliverables = [
+  "A CEO-level read on where the site gains or loses authority",
+  "A prioritized fix list for leadership signal, proof, offer clarity, mobile trust, and inquiry routing",
+  "A recommendation for CEO website, global redesign, enterprise landing page, cleanup sprint, or custom system",
+  "A clearer path before investing in a premium redesign or executive authority build",
+];
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Executive Website Audit",
+    serviceType: "Executive website audit and authority review",
+    provider: {
+      "@type": "ProfessionalService",
+      name: "Tootie Designs",
+      url: deploymentOrigin,
+      areaServed: ["Fayetteville NC", "North Carolina", "United States", "Global"],
+    },
+    description: "A website audit for CEOs, founders, executive teams, consultants, and premium companies reviewing authority, proof, positioning, mobile credibility, and serious inquiry paths.",
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "USD",
+      availability: "https://schema.org/InStock",
+    },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      ["Who is the executive website audit for?", "It is for CEOs, founders, consultants, executive teams, premium service firms, and companies that need stronger public authority before serious buyers, partners, investors, recruits, or media reach out."],
+      ["Is this different from the normal website audit?", "Yes. The standard audit focuses on first impression, mobile trust, proof, and lead path. The executive audit adds leadership positioning, global credibility, proof architecture, and inquiry routing for higher-stakes audiences."],
+      ["What happens after the audit?", "Tootie Designs recommends the cleanest next move: CEO website design, global website redesign, enterprise landing page, cleanup sprint, or custom digital system."],
+    ].map(([question, answer]) => ({
+      "@type": "Question",
+      name: question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: answer,
+      },
+    })),
+  },
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Request a free executive website audit from Tootie Designs. Built for CEOs, founders, executive teams, consultants, and premium companies that need stronger authority, proof, and inquiry paths."
+    />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:title" content="Executive Website Audit | Tootie Designs" />
+    <meta property="og:description" content="A CEO-level review of authority, proof architecture, global credibility, mobile trust, and serious inquiry paths." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={`${deploymentOrigin}${basePath}tootie-logo-transparent.png`} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>Executive Website Audit | Tootie Designs</title>
+    <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  </head>
+  <body>
+    <a class="skip-link" href="#top">Skip to main content</a>
+    <header class="site-header" aria-label="Primary navigation">
+      <a class="brand" href={basePath} aria-label="Tootie Designs home">
+        <span class="brand-mark"><img src={`${basePath}tootie-logo-transparent.png`} alt="" width="37" height="37" /></span>
+        <span>Tootie Designs</span>
+      </a>
+      <nav>
+        <a href={`${basePath}ceo-website-design/`}>CEO Websites</a>
+        <a href={`${basePath}global-website-redesign/`}>Global Redesign</a>
+        <a href={`${basePath}enterprise-landing-page-design/`}>Enterprise Pages</a>
+        <a href={`${basePath}#work`}>Work</a>
+        <a href="#executive-audit-form">Request Audit</a>
+      </nav>
+    </header>
+
+    <main id="top" tabindex="-1">
+      <section class="audit-landing-hero executive-audit-hero section-shell" aria-labelledby="executive-audit-title">
+        <div class="audit-landing-copy">
+          <p class="eyebrow">Executive Website Audit</p>
+          <h1 id="executive-audit-title">Find out if your website makes the company look as serious as the leader behind it.</h1>
+          <p>
+            Send the current website, company page, founder site, or offer. Tootie Designs will review authority signal, proof architecture, global credibility, mobile trust, offer clarity, and serious inquiry paths — then recommend the cleanest next move.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#executive-audit-form" data-event="audit_cta_click" data-label="executive audit hero form">Start Executive Website Audit</a>
+            <a class="button secondary" href={`${basePath}ceo-website-design/`} data-event="service_page_click" data-label="executive audit ceo path">Explore CEO Website Design</a>
+          </div>
+          <p class="hero-reassurance">Free first-impression review for serious executive and company websites.</p>
+        </div>
+        <aside class="audit-diagnostic-panel executive-diagnostic-panel" aria-label="Executive audit diagnostic summary">
+          <div class="audit-signal-tag" aria-hidden="true">AUTHORITY / PROOF / GLOBAL TRUST / INQUIRY PATH</div>
+          <span>Executive Signal</span>
+          <strong>6 checkpoints</strong>
+          <p>Leadership signal, company authority, proof sequence, mobile credibility, global trust, and serious buyer routing.</p>
+          <div class="diagnostic-meter" aria-label="Example executive diagnostic signal levels">
+            <div class="diagnostic-meter-row" style="--meter: 88%">
+              <span>Authority</span>
+              <strong>88%</strong>
+            </div>
+            <div class="diagnostic-meter-row" style="--meter: 54%">
+              <span>Proof depth</span>
+              <strong>54%</strong>
+            </div>
+            <div class="diagnostic-meter-row" style="--meter: 37%">
+              <span>Inquiry path</span>
+              <strong>37%</strong>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="audit-landing-proof section-shell" aria-labelledby="executive-checks-title">
+        <div class="section-heading split">
+          <div>
+            <p class="eyebrow">What gets reviewed</p>
+            <h2 id="executive-checks-title">A higher-standard audit for leaders, founders, and serious companies.</h2>
+          </div>
+          <p>The audit looks beyond aesthetics. It checks whether the website can earn belief from buyers who make bigger decisions with less patience.</p>
+        </div>
+        <div class="audit-check-grid">
+          {executiveChecks.map(([num, title, text]) => (
+            <article>
+              <span>{num}</span>
+              <h3>{title}</h3>
+              <p>{text}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section class="audit-deliverable-band section-shell" aria-labelledby="executive-deliverable-title">
+        <div>
+          <p class="eyebrow">What you get back</p>
+          <h2 id="executive-deliverable-title">A strategic next move before the premium rebuild.</h2>
+          <p>The goal is to identify where the website is weakening authority and which path creates the most leverage next.</p>
+        </div>
+        <ul>
+          {deliverables.map((item) => <li>{item}</li>)}
+        </ul>
+      </section>
+
+      <section class="audit-funnel audit-landing-form section-shell" id="executive-audit-form" aria-labelledby="executive-form-title">
+        <div class="audit-copy">
+          <p class="eyebrow">Request the executive audit</p>
+          <h2 id="executive-form-title">Send the site. ZEUS will find the authority gaps.</h2>
+          <p>Rough context is enough. Send the website, company page, founder profile, or offer you want turned into a stronger executive-grade lead path.</p>
+          <ul class="audit-checklist" aria-label="Executive website audit review points">
+            <li>Leadership signal</li>
+            <li>Proof architecture</li>
+            <li>Global credibility</li>
+            <li>Serious inquiry path</li>
+          </ul>
+        </div>
+        <form class="audit-form" name="executive-website-audit" method="post" action="https://formsubmit.co/tootiedesigns18@gmail.com" data-event="audit_form_submit">
+          <input type="hidden" name="_subject" value="New Executive Website Audit Request" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_next" value={`${deploymentBase}/thanks/`} />
+          <input type="hidden" name="lead_type" value="Executive website audit" />
+          <input type="hidden" name="source_page" value="Executive website audit landing page" />
+          <input type="hidden" name="referrer" value="Direct / unknown" />
+          <input type="text" name="_honey" class="form-honey" tabindex="-1" autocomplete="off" />
+          <label>
+            <span class="field-label-text">Name<span class="required-mark" aria-hidden="true">*</span></span>
+            <input name="name" autocomplete="name" required />
+          </label>
+          <label>
+            <span class="field-label-text">Email<span class="required-mark" aria-hidden="true">*</span></span>
+            <input name="email" type="email" autocomplete="email" required />
+          </label>
+          <label class="full-field">
+            Current website, company page, or founder profile
+            <input name="website-or-page" type="url" placeholder="https://" />
+          </label>
+          <label>
+            Who should the site impress first?
+            <select name="primary-audience">
+              <option>Premium buyers or clients</option>
+              <option>Investors or partners</option>
+              <option>Enterprise decision makers</option>
+              <option>Recruits or internal stakeholders</option>
+              <option>Press, media, or public credibility checks</option>
+            </select>
+          </label>
+          <label>
+            What path feels closest?
+            <select name="possible-next-step">
+              <option>Audit first — show me the authority gaps</option>
+              <option>CEO / founder authority website</option>
+              <option>Global company redesign</option>
+              <option>Enterprise landing page</option>
+              <option>Custom software / digital system</option>
+            </select>
+          </label>
+          <label>
+            Budget comfort
+            <select name="budget-comfort">
+              <option>Need guidance after audit</option>
+              <option>$2,500+ enterprise landing page</option>
+              <option>$3,500+ CEO website or redesign</option>
+              <option>$7,500+ larger company system</option>
+              <option>Custom executive build</option>
+            </select>
+          </label>
+          <label>
+            Timeline
+            <select name="timeline">
+              <option>Just want the audit first</option>
+              <option>Ready to improve this month</option>
+              <option>Need a fast executive launch</option>
+              <option>Planning a larger redesign</option>
+            </select>
+          </label>
+          <label class="full-field">
+            What needs to feel more credible, premium, or clear?
+            <textarea name="message" rows="4" placeholder="Tell us what the website needs to prove and who needs to believe it."></textarea>
+          </label>
+          <button class="button primary" type="submit" data-event="audit_form_submit" data-label="executive audit form">Request Executive Website Audit</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>Tootie Designs</strong>
+        <span>Fayetteville, NC / Global executive web builds</span>
+      </div>
+      <div>
+        <span>CEO Websites / Global Redesigns / Enterprise Landing Pages</span>
+        <span>Premium first impressions built for serious buyers.</span>
+        <span>© {currentYear} Tootie Designs.</span>
+        <div class="footer-links">
+          <a href="https://www.facebook.com/profile.php?id=100063801085109" target="_blank" rel="noreferrer">Facebook</a>
+          <a href={`${basePath}privacy/`}>Privacy Policy</a>
+        </div>
+      </div>
+    </footer>
+    <script src={`${basePath}analytics-events.js`} defer></script>
+  </body>
+</html>

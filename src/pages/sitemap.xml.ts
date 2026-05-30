@@ -9,6 +9,7 @@ const pages = [
   "",
   ...servicePagePaths,
   "website-audit/",
+  "executive-website-audit/",
   "sample-website-audit/",
   ...workPagePaths,
   "notes/",

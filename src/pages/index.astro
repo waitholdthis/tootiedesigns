@@ -38,6 +38,20 @@ const servicePackages = [
     deliverables: ["Executive positioning", "Authority narrative", "Proof architecture", "Premium responsive build", "Investor or enterprise inquiry path"],
   },
   {
+    name: "Global Website Redesign",
+    price: "Starting at $3,500",
+    href: `${basePath}global-website-redesign/`,
+    description: "A company redesign path for founders, executive teams, consultants, and premium brands that need to look credible outside their local market.",
+    deliverables: ["Company narrative", "Premium redesign system", "Proof sequencing", "Global inquiry path", "SEO-ready launch foundation"],
+  },
+  {
+    name: "Enterprise Landing Page",
+    price: "Starting at $2,500",
+    href: `${basePath}enterprise-landing-page-design/`,
+    description: "A focused campaign or offer page for serious buyers where the page has to create authority, proof, and action without distraction.",
+    deliverables: ["Campaign strategy", "High-ticket offer hierarchy", "Conversion copy", "Premium responsive page", "Lead capture or booking path"],
+  },
+  {
     name: "Website Cleanup Sprint",
     price: "$500 - $750",
     href: `${basePath}website-cleanup-sprint/`,
@@ -116,7 +130,7 @@ const servicePackages = [
         },
         priceRange: "$750+",
         description: "Premium website design, CEO websites, conversion landing pages, website redesigns, and digital systems for better business leads.",
-        makesOffer: ["CEO Website Design", "Website Cleanup Sprint", "Website Design", "Website Redesign", "Landing Page Design", "Digital System Build"].map((name) => ({
+        makesOffer: ["CEO Website Design", "Global Website Redesign", "Enterprise Landing Page Design", "Website Cleanup Sprint", "Website Design", "Website Redesign", "Landing Page Design", "Digital System Build"].map((name) => ({
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
@@ -209,8 +223,41 @@ const servicePackages = [
         </p>
         <div class="trust-link-row">
           <a class="project-link trust-link" href={`${basePath}ceo-website-design/`}>CEO and executive website design</a>
+          <a class="project-link trust-link" href={`${basePath}global-website-redesign/`}>Global website redesign</a>
+          <a class="project-link trust-link" href={`${basePath}enterprise-landing-page-design/`}>Enterprise landing pages</a>
           <a class="project-link trust-link" href={`${basePath}local-business-websites/`}>Explore local business website design</a>
           <a class="project-link trust-link" href={`${basePath}fayetteville-nc-website-design/`}>Fayetteville NC website design</a>
+        </div>
+      </section>
+
+      <section class="executive-proof-panel section-shell" aria-labelledby="executive-proof-title">
+        <div class="section-heading split">
+          <div>
+            <p class="eyebrow">Executive Trust Layer</p>
+            <h2 id="executive-proof-title">Built for the moment a serious buyer checks whether the company is real.</h2>
+          </div>
+          <p>CEOs, founders, investors, partners, and enterprise buyers do not only judge the design. They judge the proof sequence, leadership signal, offer clarity, mobile credibility, and seriousness of the next step.</p>
+        </div>
+        <div class="executive-proof-grid">
+          <article>
+            <span>Authority</span>
+            <h3>Founder and leadership credibility up front.</h3>
+            <p>Position the person behind the company without turning the site into a biography.</p>
+          </article>
+          <article>
+            <span>Proof</span>
+            <h3>Case studies, outcomes, credentials, and visible work before the CTA.</h3>
+            <p>High-value visitors need evidence before they request a call, proposal, or partnership conversation.</p>
+          </article>
+          <article>
+            <span>Inquiry</span>
+            <h3>Separate serious inquiries from casual contact.</h3>
+            <p>Route executive, enterprise, investor, partnership, and premium service interest into a clearer audit path.</p>
+          </article>
+        </div>
+        <div class="executive-proof-actions">
+          <a class="button primary" href={`${basePath}executive-website-audit/`} data-event="audit_cta_click" data-label="home executive audit">Start Executive Website Audit</a>
+          <a class="button secondary" href={`${basePath}global-website-redesign/`} data-event="service_page_click" data-label="home global redesign">Explore Global Redesign</a>
         </div>
       </section>
 

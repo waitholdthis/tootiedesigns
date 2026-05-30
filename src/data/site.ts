@@ -448,6 +448,22 @@ export const techCategories = [
 
 export const fieldNotes = [
   {
+    slug: "founder-authority-website",
+    title: "Founder Authority Website: Why Serious Buyers Check the Leader Before They Trust the Company",
+    date: "2026-05-30",
+    eyebrow: "Founder Website Strategy",
+    category: "digital",
+    summary:
+      "A strategic guide for founders and CEOs who need an authority website that supports company credibility, premium buyer trust, investor confidence, and serious inbound opportunities.",
+    body: [
+      "A founder authority website is not a personal vanity project. It is a trust layer for the company. When buyers, investors, partners, recruits, or journalists want to understand whether a company is serious, they often check the person behind it. If the founder's public presence is scattered across LinkedIn, old bios, social posts, and half-finished pages, the company loses authority by association.",
+      "The strongest founder websites do three things quickly: they explain who the leader is, what problem the company is built to solve, and why that leader is credible enough to solve it. The page should not read like a resume. It should act like an authority brief: positioning, proof, point of view, selected work, media or credentials, and a clear path for the right people to reach out.",
+      "Founder authority matters most when the business sells expertise, transformation, advisory, premium services, enterprise products, or high-stakes outcomes. In those categories, buyers are not only evaluating the offer. They are evaluating judgment, taste, discipline, credibility, and whether the company looks like it can handle a serious engagement.",
+      "The mistake is separating the founder story from the business story. A weak founder page talks only about background. A strong founder authority site shows how the leader's experience creates business value: the frameworks they use, the problems they understand, the proof they can show, the audiences they serve, and the next step for serious conversations.",
+      "For Tootie Designs, the founder authority path connects directly to CEO website design, global company redesign, and enterprise landing pages. The site has to make the leader feel credible, the company feel inevitable, and the inquiry path feel safe enough for a serious buyer to start. Begin with the executive website audit at https://tootiedesigns.com/executive-website-audit/ or review the CEO website path at https://tootiedesigns.com/ceo-website-design/.",
+    ],
+  },
+  {
     slug: "ceo-website-design-checklist",
     title: "CEO Website Design Checklist: What Executives Need Before Buyers Trust the Brand",
     date: "2026-05-30",
