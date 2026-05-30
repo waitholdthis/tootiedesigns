@@ -1,0 +1,217 @@
+---
+import "../styles/global.css";
+import { proofSignals } from "../data/marketing";
+
+const { page } = Astro.props;
+const base = import.meta.env.BASE_URL;
+const basePath = base.endsWith("/") ? base : `${base}/`;
+const deploymentOrigin = Astro.site?.toString().replace(/\/$/, "") ?? "https://tootiedesigns.com";
+const canonical = `${deploymentOrigin}${base === "/" ? "" : base.replace(/\/$/, "")}/${page.slug}/`;
+const currentYear = new Date().getFullYear();
+const auditHref = `${basePath}#audit`;
+const workHref = `${basePath}#work`;
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    name: "Tootie Designs",
+    url: deploymentOrigin,
+    image: `${deploymentOrigin}${basePath}tootie-logo-transparent.png`,
+    areaServed: ["Fayetteville NC", "North Carolina", "United States"],
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Fayetteville",
+      addressRegion: "NC",
+      addressCountry: "US",
+    },
+    priceRange: "$750+",
+    description: "Cinematic website design, conversion landing pages, website redesigns, and full-stack digital systems.",
+    makesOffer: {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: page.serviceName,
+        description: page.seoDescription,
+      },
+    },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: page.faq.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
+    })),
+  },
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={page.seoDescription} />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:title" content={page.seoTitle} />
+    <meta property="og:description" content={page.seoDescription} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={`${deploymentOrigin}${basePath}tootie-logo-transparent.png`} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>{page.seoTitle}</title>
+    <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  </head>
+  <body>
+    <a class="skip-link" href="#top">Skip to main content</a>
+    <header class="site-header" aria-label="Primary navigation">
+      <a class="brand" href={basePath} aria-label="Tootie Designs home">
+        <span class="brand-mark"><img src={`${basePath}tootie-logo-transparent.png`} alt="" width="37" height="37" /></span>
+        <span>Tootie Designs</span>
+      </a>
+      <nav>
+        <a href={`${basePath}website-design/`}>Websites</a>
+        <a href={`${basePath}website-redesign/`}>Redesigns</a>
+        <a href={`${basePath}landing-page-design/`}>Landing Pages</a>
+        <a href={workHref}>Work</a>
+        <a href={auditHref}>Free Audit</a>
+      </nav>
+    </header>
+
+    <main id="top" tabindex="-1">
+      <section class="service-hero section-shell" aria-labelledby="service-title">
+        <div class="service-hero-copy">
+          <p class="eyebrow">{page.eyebrow}</p>
+          <h1 id="service-title">{page.title}</h1>
+          <p>{page.description}</p>
+          <div class="hero-actions">
+            <a class="button primary" href={auditHref}>{page.primaryCta}</a>
+            <a class="button secondary" href={workHref}>{page.secondaryCta}</a>
+          </div>
+          <p class="hero-reassurance">Free first-impression review. No pressure, no obligation.</p>
+        </div>
+        <aside class="service-price-card" aria-label="Service price and fit">
+          <span>Offer Signal</span>
+          <strong>{page.price}</strong>
+          <p>Built for {page.fit.join(", ")}.</p>
+        </aside>
+      </section>
+
+      <section class="revenue-risk section-shell" aria-labelledby="risk-title">
+        <div>
+          <p class="eyebrow">Why it matters</p>
+          <h2 id="risk-title">{page.problemTitle}</h2>
+        </div>
+        <ul>
+          {page.problems.map((item) => <li>{item}</li>)}
+        </ul>
+      </section>
+
+      <section class="service-grid-section section-shell" aria-labelledby="outcome-title">
+        <div class="section-heading split">
+          <div>
+            <p class="eyebrow">What gets built</p>
+            <h2 id="outcome-title">A cleaner path from first impression to inquiry.</h2>
+          </div>
+          <p>Every page is shaped around what the visitor needs to understand, believe, and do next.</p>
+        </div>
+        <div class="service-detail-grid">
+          <article>
+            <h3>Outcomes</h3>
+            <ul>
+              {page.outcomes.map((item) => <li>{item}</li>)}
+            </ul>
+          </article>
+          <article>
+            <h3>Deliverables</h3>
+            <ul>
+              {page.deliverables.map((item) => <li>{item}</li>)}
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="proof-system section-shell" aria-labelledby="proof-title">
+        <div class="section-heading split">
+          <div>
+            <p class="eyebrow">Proof system</p>
+            <h2 id="proof-title">Why people should trust Tootie Designs with the first impression.</h2>
+          </div>
+          <a class="button secondary" href={auditHref}>Start with the audit</a>
+        </div>
+        <div class="proof-signal-grid">
+          {proofSignals.map((signal) => (
+            <article>
+              <span>{signal.label}</span>
+              <h3>{signal.title}</h3>
+              <p>{signal.text}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section class="service-process section-shell" aria-labelledby="process-title">
+        <p class="eyebrow">The Tootie Build Process</p>
+        <h2 id="process-title">Audit. Blueprint. Build. Launch. Refine.</h2>
+        <div class="process-rail">
+          {[
+            ["01", "Audit", "Find what is helping, hurting, or missing from the current first impression."],
+            ["02", "Blueprint", "Shape the offer, page structure, message, CTA flow, and visual direction."],
+            ["03", "Build", "Design and develop the page system with mobile readability and fast static delivery."],
+            ["04", "Launch", "Deploy the site, verify the lead path, and prepare the next optimization moves."],
+            ["05", "Refine", "Use feedback, analytics, and lead quality to sharpen the page after launch."],
+          ].map(([num, title, text]) => (
+            <article>
+              <span>{num}</span>
+              <h3>{title}</h3>
+              <p>{text}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section class="faq-section section-shell" aria-labelledby="faq-title">
+        <p class="eyebrow">Questions buyers ask</p>
+        <h2 id="faq-title">Answers before the audit.</h2>
+        <div class="faq-list">
+          {page.faq.map((item) => (
+            <details>
+              <summary>{item.question}</summary>
+              <p>{item.answer}</p>
+            </details>
+          ))}
+        </div>
+      </section>
+
+      <section class="service-final-cta section-shell" aria-labelledby="final-cta-title">
+        <p class="eyebrow">Free Website First-Impression Audit</p>
+        <h2 id="final-cta-title">Find out what your website is costing you before another lead disappears.</h2>
+        <p>Send the current site, business page, or idea. Tootie Designs will review the first impression, mobile experience, trust signals, and lead path.</p>
+        <div class="hero-actions">
+          <a class="button primary" href={auditHref}>Request a Free Website Audit</a>
+          <a class="button secondary" href={`${basePath}website-design/`}>Explore Website Design</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>Tootie Designs</strong>
+        <span>Fayetteville, NC</span>
+      </div>
+      <div>
+        <span>Website Design / Landing Pages / Digital Systems</span>
+        <span>Premium first impressions built to generate better leads.</span>
+        <span>© {currentYear} Tootie Designs.</span>
+        <div class="footer-links">
+          <a href="https://www.facebook.com/profile.php?id=100063801085109" target="_blank" rel="noreferrer">Facebook</a>
+          <a href={`${basePath}privacy/`}>Privacy Policy</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

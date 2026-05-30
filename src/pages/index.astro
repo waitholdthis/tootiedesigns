@@ -31,18 +31,28 @@ const servicePackages = [
   {
     name: "Website Launch",
     price: "Starting at $1,500",
+    href: `${basePath}website-design/`,
     description: "A premium web presence for new brands, outdated sites, and businesses that need to look credible fast.",
     deliverables: ["Website strategy", "Responsive page design", "Copy structure", "Contact or booking flow", "Launch-ready deployment"],
   },
   {
+    name: "Website Redesign",
+    price: "Starting at $1,500",
+    href: `${basePath}website-redesign/`,
+    description: "A sharper rebuild for businesses whose current site looks outdated, unclear, or too weak to convert referrals.",
+    deliverables: ["First-impression audit", "Message cleanup", "Visual refresh", "Lead path rebuild", "Mobile-first launch"],
+  },
+  {
     name: "Conversion Landing Page",
     price: "Starting at $750",
+    href: `${basePath}landing-page-design/`,
     description: "A focused one-page experience for one service, campaign, product, booking push, or audit funnel.",
     deliverables: ["Offer positioning", "Conversion copy", "CTA flow", "Mobile-first layout", "Analytics-ready structure"],
   },
   {
     name: "Digital System Build",
     price: "Custom quote",
+    href: `${basePath}#contact`,
     description: "Dashboards, portals, internal tools, automations, and web apps built around real operational workflows.",
     deliverables: ["System architecture", "Interface design", "Full-stack planning", "API-connected workflows", "Deployment support"],
   },
@@ -56,9 +66,42 @@ const servicePackages = [
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Tootie Designs is a Fayetteville, NC multidisciplinary creative studio building precision software, tactical systems, laser fabrication, woodworking, and material craft."
+      content="Tootie Designs builds premium websites, conversion landing pages, website redesigns, and digital systems for businesses that need a sharper first impression and better leads."
     />
-    <title>Tootie Designs | Multidisciplinary Creation</title>
+    <link rel="canonical" href={deploymentOrigin} />
+    <meta property="og:title" content="Tootie Designs | Premium Websites, Sharper Leads, Digital Systems" />
+    <meta property="og:description" content="Cinematic website design, landing pages, website redesigns, and digital systems built to help serious businesses look sharper and generate better leads." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={deploymentOrigin} />
+    <meta property="og:image" content={`${deploymentOrigin}${basePath}tootie-logo-transparent.png`} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>Tootie Designs | Premium Websites, Sharper Leads, Digital Systems</title>
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        name: "Tootie Designs",
+        url: deploymentOrigin,
+        image: `${deploymentOrigin}${basePath}tootie-logo-transparent.png`,
+        areaServed: ["Fayetteville NC", "North Carolina", "United States"],
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Fayetteville",
+          addressRegion: "NC",
+          addressCountry: "US",
+        },
+        priceRange: "$750+",
+        description: "Premium website design, conversion landing pages, website redesigns, and digital systems for better business leads.",
+        makesOffer: ["Website Design", "Website Redesign", "Landing Page Design", "Digital System Build"].map((name) => ({
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name,
+          },
+        })),
+      })}
+    />
   </head>
   <body>
     <a class="skip-link" href="#top">Skip to main content</a>
@@ -86,11 +129,11 @@ const servicePackages = [
         </svg>
       </button>
       <nav id="primary-nav">
+        <a href={`${basePath}website-design/`}>Websites</a>
+        <a href={`${basePath}website-redesign/`}>Redesigns</a>
+        <a href={`${basePath}landing-page-design/`}>Landing Pages</a>
         <a href="#work">Work</a>
-        <a href="#capabilities">Capabilities</a>
-        <a href="#process">Process</a>
-        <a href={`${basePath}notes/`}>Notes</a>
-        <a href="#contact">Contact</a>
+        <a href="#audit">Free Audit</a>
       </nav>
     </header>
 
@@ -280,7 +323,7 @@ const servicePackages = [
                   <ul>
                     {offer.deliverables.map((item) => <li>{item}</li>)}
                   </ul>
-                  <a class="project-link" href="#audit">Request this path</a>
+                  <a class="project-link" href={offer.href}>Explore this path</a>
                 </article>
               ))
             }

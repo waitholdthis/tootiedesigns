@@ -11,35 +11,36 @@ const currentYear = new Date().getFullYear();
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Thank you for contacting Tootie Designs." />
-    <title>Inquiry Received | Tootie Designs</title>
+    <meta name="robots" content="noindex, follow" />
+    <meta name="description" content="Your Tootie Designs website audit request has been received." />
+    <title>Audit Request Received | Tootie Designs</title>
   </head>
   <body>
     <header class="site-header" aria-label="Primary navigation">
       <a class="brand" href={basePath} aria-label="Tootie Designs home">
-        <span class="brand-mark"><img src={`${basePath}tootie-logo-transparent.png`} alt="" /></span>
+        <span class="brand-mark"><img src={`${basePath}tootie-logo-transparent.png`} alt="" width="37" height="37" /></span>
         <span>Tootie Designs</span>
       </a>
       <nav>
+        <a href={`${basePath}website-design/`}>Websites</a>
+        <a href={`${basePath}website-redesign/`}>Redesigns</a>
+        <a href={`${basePath}landing-page-design/`}>Landing Pages</a>
         <a href={`${basePath}#work`}>Work</a>
-        <a href={`${basePath}#capabilities`}>Capabilities</a>
-        <a href={`${basePath}#process`}>Process</a>
-        <a href={`${basePath}notes/`}>Notes</a>
-        <a href={`${basePath}#contact`}>Contact</a>
+        <a href={`${basePath}#audit`}>Free Audit</a>
       </nav>
     </header>
 
     <main>
       <section class="thanks-page section-shell" aria-labelledby="thanks-title">
-        <p class="eyebrow">Inquiry Received</p>
-        <h1 id="thanks-title">Thanks for reaching out.</h1>
+        <p class="eyebrow">Audit Request Received</p>
+        <h1 id="thanks-title">Your website audit request is in.</h1>
         <p class="hero-copy">
-          Your project brief has been sent to Tootie Designs. We will review the details
-          and follow up with a clear next step.
+          Tootie Designs will review your first impression, mobile experience, message clarity,
+          trust signals, and lead path — then follow up with the clearest next move.
         </p>
         <div class="hero-actions">
-          <a class="button primary" href={basePath}>Return Home</a>
-          <a class="button secondary" href={`${basePath}#work`}>View the Work</a>
+          <a class="button primary" href={`${basePath}website-redesign/`}>See What a Redesign Fixes</a>
+          <a class="button secondary" href={`${basePath}#work`}>View Recent Builds</a>
         </div>
       </section>
     </main>
@@ -50,8 +51,8 @@ const currentYear = new Date().getFullYear();
         <span>Fayetteville, NC</span>
       </div>
       <div>
-        <span>Website Design / Software / Tactical Advising / Fabrication</span>
-        <span>Precision / Texture / Innovation</span>
+        <span>Website Design / Landing Pages / Digital Systems</span>
+        <span>Premium first impressions built to generate better leads.</span>
         <span>© {currentYear} Tootie Designs.</span>
         <div class="footer-links">
           <a href="https://www.facebook.com/profile.php?id=100063801085109" target="_blank" rel="noreferrer">Facebook</a>
