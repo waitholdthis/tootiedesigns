@@ -498,7 +498,7 @@ fayettevilleWebsiteDesign: {
   eyebrow: "Fayetteville NC Website Design",
   title: "Website design for Fayetteville businesses that need to look trusted before the first call.",
   description:
-    "Tootie Designs builds premium websites, redesigns, and landing pages for Fayetteville, Fort Liberty, Hope Mills, Raeford, Spring Lake, and North Carolina service businesses that need stronger first impressions and better lead paths.",
+    "Tootie Designs builds premium websites, redesigns, and landing pages for Fayetteville, Fort Bragg, Hope Mills, Raeford, Spring Lake, and North Carolina service businesses that need stronger first impressions and better lead paths.",
   seoTitle: "Fayetteville NC Website Design | Tootie Designs",
   seoDescription:
     "Fayetteville NC website design for local businesses, contractors, salons, restaurants, gyms, and consultants that need premium websites, redesigns, and stronger lead capture.",
@@ -511,7 +511,7 @@ fayettevilleWebsiteDesign: {
     "Local referrals look up the business and judge the website before starting a conversation.",
     "Service areas, offers, proof, booking links, and contact options are scattered or unclear.",
     "The business may be strong in person, but the website does not look as credible as the work.",
-    "Mobile visitors from Fayetteville, Fort Liberty, Hope Mills, Raeford, and Spring Lake need a faster path to trust and action.",
+    "Mobile visitors from Fayetteville, Fort Bragg, Hope Mills, Raeford, and Spring Lake need a faster path to trust and action.",
   ],
   outcomes: [
     "A Fayetteville-focused homepage that explains the business, service area, and next step fast",
@@ -521,13 +521,13 @@ fayettevilleWebsiteDesign: {
     "A premium visual system that makes the business feel serious before the visitor scrolls",
   ],
   deliverables: ["Local website strategy", "Homepage and service structure", "Mobile responsive design", "Proof and trust sections", "Audit, quote, booking, or contact flow"],
-  fit: ["Fayetteville businesses", "Fort Liberty service providers", "Hope Mills operators", "Raeford companies", "Spring Lake businesses", "North Carolina local brands"],
+  fit: ["Fayetteville businesses", "Fort Bragg service providers", "Hope Mills operators", "Raeford companies", "Spring Lake businesses", "North Carolina local brands"],
   pathLinks: {
     eyebrow: "Nearby service areas",
     title: "Local website design paths for the Fayetteville market.",
     intro: "Each nearby city has different buyer behavior, but the same first-impression rule: the site has to create trust before the first call.",
     links: [
-      ["Fort Liberty website design", "/fort-liberty-website-design/"],
+      ["Fort Bragg website design", "/fort-bragg-website-design/"],
       ["Hope Mills website design", "/hope-mills-website-design/"],
       ["Raeford website design", "/raeford-website-design/"],
       ["Spring Lake website design", "/spring-lake-website-design/"],
@@ -536,7 +536,7 @@ fayettevilleWebsiteDesign: {
   faq: [
     {
       question: "Do Fayetteville businesses need a local website design page?",
-      answer: "Yes. A local page helps buyers and search engines understand that Tootie Designs serves Fayetteville, Fort Liberty, Hope Mills, Raeford, Spring Lake, and nearby North Carolina businesses.",
+      answer: "Yes. A local page helps buyers and search engines understand that Tootie Designs serves Fayetteville, Fort Bragg, Hope Mills, Raeford, Spring Lake, and nearby North Carolina businesses.",
     },
     {
       question: "What types of local businesses can Tootie Designs build for?",
@@ -549,20 +549,20 @@ fayettevilleWebsiteDesign: {
   ],
 },
 
-fortLibertyWebsiteDesign: {
-  slug: "fort-liberty-website-design",
-  eyebrow: "Fort Liberty Website Design",
-  title: "Website design for Fort Liberty-area businesses that need trust before the first call.",
+fortBraggWebsiteDesign: {
+  slug: "fort-bragg-website-design",
+  eyebrow: "Fort Bragg Website Design",
+  title: "Website design for Fort Bragg-area businesses that need trust before the first call.",
   description:
-    "Tootie Designs builds premium websites, redesigns, and landing pages for Fort Liberty-adjacent service businesses, veteran-owned brands, consultants, contractors, and local operators that need a serious digital first impression.",
-  seoTitle: "Fort Liberty Website Design | Tootie Designs",
+    "Tootie Designs builds premium websites, redesigns, and landing pages for Fort Bragg-adjacent service businesses, veteran-owned brands, consultants, contractors, and local operators that need a serious digital first impression.",
+  seoTitle: "Fort Bragg Website Design | Tootie Designs",
   seoDescription:
-    "Fort Liberty website design for service businesses, veteran-owned brands, contractors, consultants, and local operators that need stronger first impressions, mobile trust, and lead capture.",
-  serviceName: "Fort Liberty Website Design",
-  primaryCta: "Request a Fort Liberty Website Audit",
+    "Fort Bragg website design for service businesses, veteran-owned brands, contractors, consultants, and local operators that need stronger first impressions, mobile trust, and lead capture.",
+  serviceName: "Fort Bragg Website Design",
+  primaryCta: "Request a Fort Bragg Website Audit",
   secondaryCta: "Preview Sample Audit",
-  price: "Fort Liberty website builds start at $1,500",
-  problemTitle: "Fort Liberty-area buyers move fast. The website has to communicate credibility, service fit, and the next step without friction.",
+  price: "Fort Bragg website builds start at $1,500",
+  problemTitle: "Fort Bragg-area buyers move fast. The website has to communicate credibility, service fit, and the next step without friction.",
   problems: [
     "Military-connected referrals, local buyers, and service-area prospects check the website before making contact.",
     "Credentials, service area, booking paths, and proof can be scattered across social profiles or old pages.",
@@ -570,18 +570,18 @@ fortLibertyWebsiteDesign: {
     "Mobile visitors need direct paths to call, request a quote, book, or submit an audit request.",
   ],
   outcomes: [
-    "A clear Fort Liberty-area service message above the fold",
+    "A clear Fort Bragg-area service message above the fold",
     "Trust sections for experience, process, proof, reviews, credentials, or veteran-owned positioning when relevant",
     "Mobile-first CTAs for calls, quotes, audits, bookings, or project briefs",
-    "Local SEO structure tied back to Fayetteville, Fort Liberty, and nearby North Carolina service intent",
+    "Local SEO structure tied back to Fayetteville, Fort Bragg, and nearby North Carolina service intent",
     "A premium visual system that feels credible before the sales conversation starts",
   ],
   deliverables: ["Local website strategy", "Homepage and service-page structure", "Mobile responsive design", "Trust and proof sections", "Audit, quote, booking, or contact flow"],
-  fit: ["Fort Liberty-area businesses", "veteran-owned brands", "contractors", "consultants", "service operators", "local creators"],
+  fit: ["Fort Bragg-area businesses", "veteran-owned brands", "contractors", "consultants", "service operators", "local creators"],
   pathLinks: {
     eyebrow: "Related local paths",
     title: "Built for the broader Fayetteville service area.",
-    intro: "Fort Liberty, Fayetteville, Hope Mills, Raeford, and Spring Lake buyers all need fast trust signals and clean contact paths.",
+    intro: "Fort Bragg, Fayetteville, Hope Mills, Raeford, and Spring Lake buyers all need fast trust signals and clean contact paths.",
     links: [
       ["Fayetteville NC website design", "/fayetteville-nc-website-design/"],
       ["Hope Mills website design", "/hope-mills-website-design/"],
@@ -591,8 +591,8 @@ fortLibertyWebsiteDesign: {
   },
   faq: [
     {
-      question: "Does Tootie Designs build websites for Fort Liberty-area businesses?",
-      answer: "Yes. Tootie Designs serves Fort Liberty-adjacent local businesses, veteran-owned brands, contractors, consultants, and service operators that need a sharper website and lead path.",
+      question: "Does Tootie Designs build websites for Fort Bragg-area businesses?",
+      answer: "Yes. Tootie Designs serves Fort Bragg-adjacent local businesses, veteran-owned brands, contractors, consultants, and service operators that need a sharper website and lead path.",
     },
     {
       question: "Can the website support both local and professional audiences?",
@@ -639,7 +639,7 @@ hopeMillsWebsiteDesign: {
     intro: "The strongest local SEO path links nearby city pages together without making them thin duplicates.",
     links: [
       ["Fayetteville NC website design", "/fayetteville-nc-website-design/"],
-      ["Fort Liberty website design", "/fort-liberty-website-design/"],
+      ["Fort Bragg website design", "/fort-bragg-website-design/"],
       ["Raeford website design", "/raeford-website-design/"],
       ["Spring Lake website design", "/spring-lake-website-design/"],
     ],
@@ -683,7 +683,7 @@ raefordWebsiteDesign: {
     "A Raeford-focused service message and premium first screen",
     "Organized services, proof, and CTA sections that reduce buyer hesitation",
     "Mobile-first lead paths for quotes, audits, bookings, calls, or project briefs",
-    "Local SEO foundation connected to Fayetteville, Fort Liberty, Hope Mills, and Spring Lake",
+    "Local SEO foundation connected to Fayetteville, Fort Bragg, Hope Mills, and Spring Lake",
     "A web presence that makes the business feel serious before the first conversation",
   ],
   deliverables: ["Local website strategy", "Homepage and service flow", "Mobile responsive design", "Proof and trust section planning", "Launch-ready build"],
@@ -694,7 +694,7 @@ raefordWebsiteDesign: {
     intro: "Raeford pages work best when they connect naturally to Fayetteville-area service, industry, and audit paths.",
     links: [
       ["Fayetteville NC website design", "/fayetteville-nc-website-design/"],
-      ["Fort Liberty website design", "/fort-liberty-website-design/"],
+      ["Fort Bragg website design", "/fort-bragg-website-design/"],
       ["Hope Mills website design", "/hope-mills-website-design/"],
       ["Spring Lake website design", "/spring-lake-website-design/"],
     ],
@@ -730,7 +730,7 @@ springLakeWebsiteDesign: {
   problemTitle: "Spring Lake visitors need the essentials fast: what you do, why they should trust you, and how to take the next step.",
   problems: [
     "The site does not make services, location, proof, or contact options obvious enough on mobile.",
-    "Local traffic from search, social, referrals, or Fort Liberty-area networks arrives without a clear conversion path.",
+    "Local traffic from search, social, referrals, or Fort Bragg-area networks arrives without a clear conversion path.",
     "The business feels credible offline but the website does not carry that credibility online.",
     "The visitor has to work too hard to call, request a quote, book, or submit a form.",
   ],
@@ -738,7 +738,7 @@ springLakeWebsiteDesign: {
     "A Spring Lake-focused website structure that creates trust quickly",
     "Clear service, proof, process, and CTA sections built for mobile visitors",
     "Audit, quote, call, booking, or project brief paths matched to buyer readiness",
-    "Local SEO structure connected to Fayetteville, Fort Liberty, Hope Mills, and Raeford",
+    "Local SEO structure connected to Fayetteville, Fort Bragg, Hope Mills, and Raeford",
     "A premium visual system that makes the business feel more serious online",
   ],
   deliverables: ["Local website strategy", "Service-page structure", "Responsive design", "Proof and trust sections", "Lead-capture flow"],
@@ -749,7 +749,7 @@ springLakeWebsiteDesign: {
     intro: "Spring Lake pages should reinforce the broader Fayetteville-area footprint while staying specific to local buyer intent.",
     links: [
       ["Fayetteville NC website design", "/fayetteville-nc-website-design/"],
-      ["Fort Liberty website design", "/fort-liberty-website-design/"],
+      ["Fort Bragg website design", "/fort-bragg-website-design/"],
       ["Hope Mills website design", "/hope-mills-website-design/"],
       ["Raeford website design", "/raeford-website-design/"],
     ],

@@ -1,6 +1,16 @@
 ---
-import MarketingServicePage from "../../components/MarketingServicePage.astro";
-import { servicePages } from "../../data/marketing";
+const target = "/fort-bragg-website-design/";
 ---
 
-<MarketingServicePage page={servicePages.fortLibertyWebsiteDesign} />
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="robots" content="noindex, follow" />
+    <meta http-equiv="refresh" content={`0; url=${target}`} />
+    <link rel="canonical" href={`https://tootiedesigns.com${target}`} />
+    <title>Redirecting | Tootie Designs</title>
+  </head>
+  <body>
+    <p>Redirecting to <a href={target}>the updated website design page</a>.</p>
+  </body>
+</html>
