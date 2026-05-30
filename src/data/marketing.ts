@@ -449,3 +449,38 @@ export const proofSignals = [
     text: "Design, copy, responsive build, and deployment are treated as one system instead of disconnected tasks.",
   },
 ];
+
+
+export const proofEngine = [
+  {
+    label: "Local service brand",
+    title: "Diverse Hair Designs by Peachie",
+    before: "The business had strong real-world style, but the web presence needed a more premium service-business frame that could explain the brand, show trust, and make booking feel natural.",
+    after: "A luxury-service website path with stronger visual polish, clearer service presentation, and a more confident first impression for mobile visitors.",
+    evidence: ["Service-business positioning", "Premium visual direction", "Mobile-first booking path"],
+    href: "/work/diverse-hair-designs-peachie/",
+  },
+  {
+    label: "Authority website",
+    title: "Parker Tootill Authority Site",
+    before: "Credentials, experience, and multidisciplinary skill can feel scattered when they are not organized into a direct authority story.",
+    after: "A cleaner authority site structure that packages background, proof, capabilities, and contact flow into one professional first impression.",
+    evidence: ["Authority positioning", "Credential hierarchy", "Clearer inquiry path"],
+    href: "/work/parker-tootill-authority-site/",
+  },
+  {
+    label: "Conversion page",
+    title: "The Digital Threshold",
+    before: "A high-value web design offer can feel abstract if the page only talks about aesthetics instead of business risk and visitor behavior.",
+    after: "A focused conversion landing page that makes the cost of a weak homepage feel immediate and routes visitors toward an audit request.",
+    evidence: ["Single-offer page", "Audit-led CTA", "Conversion-first messaging"],
+    href: "/work/the-digital-threshold/",
+  },
+];
+
+export const proofMetrics = [
+  ["5-second clarity", "The first screen must explain what the business does, who it helps, and what to do next."],
+  ["Mobile trust", "The phone experience has to feel deliberate because most referrals and local buyers check there first."],
+  ["Lead path", "Every serious page needs a low-friction next step: audit, quote, booking, call, or brief."],
+  ["Proof sequence", "Examples, process, services, and trust signals must appear before the visitor is asked to commit."],
+];

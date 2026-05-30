@@ -1,6 +1,6 @@
 ---
 import "../styles/global.css";
-import { proofSignals } from "../data/marketing";
+import { proofEngine, proofMetrics, proofSignals } from "../data/marketing";
 
 const { page } = Astro.props;
 const base = import.meta.env.BASE_URL;
@@ -173,6 +173,45 @@ const schema = [
           ))}
         </div>
       </section>
+
+
+
+<section class="proof-engine service-proof-engine section-shell" aria-labelledby="service-proof-engine-title">
+  <div class="section-heading split">
+    <div>
+      <p class="eyebrow">Proof Engine</p>
+      <h2 id="service-proof-engine-title">What buyers need to believe before they send the form.</h2>
+    </div>
+    <p>Each build is judged against the same conversion checkpoints: clarity, mobile trust, proof, and a direct lead path.</p>
+  </div>
+  <div class="proof-metric-grid" aria-label="Conversion proof checkpoints">
+    {proofMetrics.map(([label, text]) => (
+      <article>
+        <strong>{label}</strong>
+        <p>{text}</p>
+      </article>
+    ))}
+  </div>
+  <div class="before-after-grid compact-proof-grid">
+    {proofEngine.map((item) => (
+      <article class="before-after-card">
+        <p class="eyebrow">{item.label}</p>
+        <h3>{item.title}</h3>
+        <div class="before-after-columns">
+          <div>
+            <span>Before</span>
+            <p>{item.before}</p>
+          </div>
+          <div>
+            <span>After</span>
+            <p>{item.after}</p>
+          </div>
+        </div>
+        <a class="project-link" href={item.href}>View proof card</a>
+      </article>
+    ))}
+  </div>
+</section>
 
       <section class="service-process section-shell" aria-labelledby="process-title">
         <p class="eyebrow">The Tootie Build Process</p>
