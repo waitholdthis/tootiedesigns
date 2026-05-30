@@ -64,6 +64,69 @@ export const servicePages = {
     ],
   },
 
+  ceoWebsiteDesign: {
+    slug: "ceo-website-design",
+    eyebrow: "CEO Website Design",
+    title: "Executive websites for CEOs who need the company to look undeniable before the first conversation.",
+    description:
+      "Tootie Designs creates premium CEO, founder, and executive website systems for leaders who need sharper authority, stronger company trust, investor-ready positioning, and a cleaner path from attention to serious inquiry.",
+    seoTitle: "CEO Website Design | Executive Websites by Tootie Designs",
+    seoDescription:
+      "CEO website design and executive website redesign for founders, leaders, consultants, and companies that need premium authority positioning, conversion strategy, and a world-class first impression.",
+    serviceName: "CEO Website Design",
+    primaryCta: "Request a CEO Website Audit",
+    secondaryCta: "See Authority Work",
+    price: "Executive website builds start at $3,500",
+    problemTitle: "CEOs do not need another pretty website. They need a public asset that makes trust, authority, and action feel inevitable.",
+    problems: [
+      "The current website makes the company look smaller, slower, or less premium than the actual operation.",
+      "Executive authority, company proof, services, case studies, and contact paths are scattered instead of sequenced.",
+      "Investors, partners, recruits, press, and high-value buyers cannot quickly understand why the leader or company matters.",
+      "The site may look modern, but it does not create enough belief for a serious buyer to take the next step.",
+    ],
+    outcomes: [
+      "A premium executive first impression built around authority, clarity, and decisive action",
+      "Founder, CEO, or leadership positioning that supports company credibility instead of competing with it",
+      "Proof architecture for case studies, outcomes, credentials, media, partnerships, testimonials, or visible work",
+      "Conversion paths for investor conversations, enterprise inquiries, advisory requests, partnerships, or premium service leads",
+      "A global-ready website structure with clean metadata, schema, speed, accessibility, and future content expansion",
+    ],
+    deliverables: [
+      "Executive positioning and narrative architecture",
+      "Premium homepage or authority-site design",
+      "Conversion-focused copy structure",
+      "Proof, case-study, and trust-section planning",
+      "Responsive Astro build with launch-ready SEO foundation",
+    ],
+    fit: ["CEOs", "founders", "consultants", "executive teams", "premium service firms", "global operators", "investor-facing companies"],
+    pathLinks: {
+      eyebrow: "Executive growth paths",
+      title: "Built for leaders who need more than a brochure.",
+      intro: "The executive site can stand alone as a CEO authority platform or connect into a broader company redesign, landing page, or digital system build.",
+      links: [
+        ["Website redesign services", "/website-redesign/"],
+        ["Website design services", "/website-design/"],
+        ["Consultant websites", "/consultant-websites/"],
+        ["Parker authority site proof", "/work/parker-tootill-authority-site/"],
+        ["Sample website audit", "/sample-website-audit/"],
+      ],
+    },
+    faq: [
+      {
+        question: "Do CEOs and founders need a separate website strategy?",
+        answer: "Yes. CEO and founder websites have to serve more audiences than a normal service site: buyers, partners, investors, recruits, media, and credibility checks. The structure has to build authority fast without becoming a generic biography.",
+      },
+      {
+        question: "Can this support a company website redesign too?",
+        answer: "Yes. The executive site can be the first authority layer or part of a full company redesign. The audit identifies whether the strongest move is a CEO authority page, a full company site, a conversion landing page, or a larger digital system.",
+      },
+      {
+        question: "Can Tootie Designs work with CEOs outside North Carolina?",
+        answer: "Yes. Tootie Designs can build remotely for CEOs, founders, consultants, and premium service companies anywhere. The work is structured around strategy, copy, design, front-end build, and launch-ready execution.",
+      },
+    ],
+  },
+
   websiteDesign: {
     slug: "website-design",
     eyebrow: "Website Design Services",

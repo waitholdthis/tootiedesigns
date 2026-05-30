@@ -448,6 +448,24 @@ export const techCategories = [
 
 export const fieldNotes = [
   {
+    slug: "ceo-website-design-checklist",
+    title: "CEO Website Design Checklist: What Executives Need Before Buyers Trust the Brand",
+    date: "2026-05-30",
+    eyebrow: "Executive Website Strategy",
+    category: "digital",
+    summary:
+      "A strategic checklist for CEOs, founders, consultants, and executive teams that need a website capable of building authority, investor confidence, enterprise trust, and serious inquiry paths.",
+    body: [
+      "A CEO website is not a vanity page. It is a public trust asset. Before a buyer, investor, recruit, partner, or journalist ever reaches out, they check whether the leader and company feel serious enough to deserve attention. If the website feels thin, dated, vague, or generic, the brand loses authority before the first conversation starts.",
+      "The first checkpoint is executive clarity. The site should explain who the leader is, what the company does, who it serves, and why the work matters in the first screen. CEOs do not need paragraphs of biography above the fold. They need a precise authority statement, a clear business outcome, and an obvious next step for the right audience.",
+      "The second checkpoint is proof architecture. High-value visitors look for evidence: case studies, measurable outcomes, partnerships, press, credentials, testimonials, product screenshots, client categories, process, or visible work. Proof should appear before the site asks for a call, proposal, investment conversation, or partnership request.",
+      "The third checkpoint is audience routing. CEO and founder sites often serve multiple audiences at once: buyers, investors, recruits, media, partners, advisors, and internal stakeholders. The page should not flatten all of them into one generic contact button. It should create clear paths for serious inquiries, enterprise conversations, advisory requests, speaking, press, or company services.",
+      "The fourth checkpoint is premium restraint. Executive websites should feel cinematic and distinctive without becoming noisy. The visual system has to communicate discipline: strong typography, deliberate motion, fast loading, elegant spacing, crisp mobile flow, and a brand mood that feels larger than a template.",
+      "The fifth checkpoint is global readiness. A serious executive website needs clean metadata, schema, accessibility basics, performance discipline, internal links, and a content structure that can expand into essays, case studies, press, services, investor materials, or campaign landing pages over time.",
+      "Tootie Designs built the CEO Website Design path around this standard: authority first, proof early, serious inquiry paths, and a premium front-end build that makes the leader and company feel undeniable. Start with the audit at https://tootiedesigns.com/website-audit/ or review the executive website path at https://tootiedesigns.com/ceo-website-design/.",
+    ],
+  },
+  {
     slug: "website-cleanup-sprint-vs-full-redesign",
     title: "Website Cleanup Sprint vs Full Redesign: Which One Do You Need?",
     date: "2026-05-30",
