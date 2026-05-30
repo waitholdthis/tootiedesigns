@@ -1810,6 +1810,79 @@ textarea:focus-visible {
   font-size: 1rem;
 }
 
+.offer-ladder {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background:
+    radial-gradient(circle at 12% 15%, rgba(210, 173, 116, 0.1), transparent 32%),
+    linear-gradient(180deg, rgba(8, 12, 16, 0.34), rgba(16, 20, 24, 0.5));
+}
+
+.ladder-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  border: 1px solid var(--line);
+  background: var(--line);
+}
+
+.ladder-grid article {
+  display: grid;
+  align-content: start;
+  gap: 0.8rem;
+  min-height: 21rem;
+  padding: clamp(1rem, 2vw, 1.35rem);
+  background:
+    linear-gradient(150deg, rgba(182, 138, 85, 0.1), transparent 48%),
+    rgba(12, 16, 20, 0.95);
+}
+
+.ladder-grid span {
+  color: var(--bronze-2);
+  font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.ladder-grid h3 {
+  max-width: 12ch;
+  margin: 0;
+  color: var(--bone);
+  font-size: clamp(1.35rem, 2.1vw, 1.85rem);
+  line-height: 0.98;
+}
+
+.ladder-grid strong {
+  color: var(--bronze-2);
+  font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.ladder-grid p {
+  margin: 0;
+  color: rgba(243, 238, 229, 0.72);
+  line-height: 1.6;
+}
+
+@media (max-width: 1100px) {
+  .ladder-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .ladder-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ladder-grid article {
+    min-height: auto;
+  }
+}
+
 .package-strip {
   margin-top: clamp(2rem, 5vw, 4rem);
 }
