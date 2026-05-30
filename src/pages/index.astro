@@ -26,6 +26,27 @@ const filters = [
   { value: "tactical", label: "Tactical Advising" },
   { value: "fabrication", label: "Physical Fabrication" },
 ];
+
+const servicePackages = [
+  {
+    name: "Website Launch",
+    price: "Starting at $1,500",
+    description: "A premium web presence for new brands, outdated sites, and businesses that need to look credible fast.",
+    deliverables: ["Website strategy", "Responsive page design", "Copy structure", "Contact or booking flow", "Launch-ready deployment"],
+  },
+  {
+    name: "Conversion Landing Page",
+    price: "Starting at $750",
+    description: "A focused one-page experience for one service, campaign, product, booking push, or audit funnel.",
+    deliverables: ["Offer positioning", "Conversion copy", "CTA flow", "Mobile-first layout", "Analytics-ready structure"],
+  },
+  {
+    name: "Digital System Build",
+    price: "Custom quote",
+    description: "Dashboards, portals, internal tools, automations, and web apps built around real operational workflows.",
+    deliverables: ["System architecture", "Interface design", "Full-stack planning", "API-connected workflows", "Deployment support"],
+  },
+];
 ---
 
 <!doctype html>
@@ -83,43 +104,101 @@ const filters = [
           <p class="eyebrow">Fayetteville, NC / Digital Workshop</p>
           <DecryptedHeroTitle
             id="hero-title"
-            text="Precision-built systems. Hand-finished creations."
+            text="Premium websites. Sharper leads. Digital systems that sell."
             revealDirection="start"
             client:load
           />
           <p class="hero-copy">
-            Tootie Designs bridges defense-grade problem solving, full-stack software,
-            laser fabrication, woodworking, and material craft into one multidisciplinary studio.
+            Tootie Designs creates cinematic websites, conversion landing pages, and full-stack business tools for brands that need a stronger first impression and a cleaner path to revenue.
           </p>
           <div class="hero-actions">
-            <a class="button primary" href="#work">View the Work</a>
-            <a class="button secondary" href="#contact">Start a Project</a>
+            <a class="button primary" href="#audit">Request a Free Website Audit</a>
+            <a class="button secondary" href="#work">View Recent Builds</a>
           </div>
+          <p class="hero-reassurance">Free first-impression review. No pressure, no obligation.</p>
         </div>
         <aside class="hero-panel" aria-label="Studio pillars">
           <div>
             <span>01</span>
-            <strong>Precision</strong>
-            <p>Software, defense planning, and operational structure.</p>
+            <strong>First impression</strong>
+            <p>Positioning, visuals, and clarity that make a business look serious fast.</p>
           </div>
           <div>
             <span>02</span>
-            <strong>Texture</strong>
-            <p>Wood grain, material pattern, engraved depth, and finish.</p>
+            <strong>Lead path</strong>
+            <p>Audit-driven pages, CTAs, and forms built to turn attention into inquiry.</p>
           </div>
           <div>
             <span>03</span>
-            <strong>Innovation</strong>
-            <p>Laser designs, interfaces, prototypes, and deployable tools.</p>
+            <strong>Systems</strong>
+            <p>Websites, dashboards, automations, and deployable tools that support the work.</p>
           </div>
         </aside>
       </section>
 
       <section class="trust-line section-shell" aria-label="Studio trust statement">
         <p>
-          Websites, software systems, and crafted goods built with defense-grade precision
-          and studio-level finish.
+          Premium websites, landing pages, and digital systems built to help serious businesses look sharper, sell clearer, and generate better leads.
         </p>
+      </section>
+
+      <section class="audit-funnel section-shell" id="audit" aria-labelledby="audit-title">
+        <div class="audit-copy">
+          <p class="eyebrow">Free Website First-Impression Audit</p>
+          <h2 id="audit-title">Not sure if your website is helping or hurting you?</h2>
+          <p>
+            Send your current website, business page, or idea. Tootie Designs will review the first impression, mobile experience, message clarity, trust signals, and conversion path — then show you what needs to change.
+          </p>
+          <ul class="audit-checklist" aria-label="Website audit review points">
+            <li>First-screen clarity</li>
+            <li>Mobile experience</li>
+            <li>Trust and proof signals</li>
+            <li>Lead capture path</li>
+          </ul>
+        </div>
+        <form class="audit-form" name="website-audit" method="post" action="https://formsubmit.co/tootiedesigns18@gmail.com">
+          <input type="hidden" name="_subject" value="New Website First-Impression Audit Request" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_next" value={`${deploymentBase}/thanks/`} />
+          <input type="text" name="_honey" class="form-honey" tabindex="-1" autocomplete="off" />
+          <label>
+            Name<span class="required-mark" aria-hidden="true">*</span>
+            <input name="name" autocomplete="name" required />
+          </label>
+          <label>
+            Email<span class="required-mark" aria-hidden="true">*</span>
+            <input name="email" type="email" autocomplete="email" required />
+          </label>
+          <label class="full-field">
+            Current website or business page
+            <input name="website-or-page" type="url" placeholder="https://" />
+          </label>
+          <label>
+            What do you want more of?
+            <select name="goal">
+              <option>More leads</option>
+              <option>More bookings</option>
+              <option>More sales</option>
+              <option>More credibility</option>
+              <option>Launch help</option>
+            </select>
+          </label>
+          <label>
+            Timeline
+            <select name="timeline">
+              <option>Just want the audit first</option>
+              <option>Ready to improve this month</option>
+              <option>Need a fast launch</option>
+              <option>Planning for later</option>
+            </select>
+          </label>
+          <label class="full-field">
+            What feels broken, outdated, or unclear?
+            <textarea name="message" rows="4" placeholder="Tell us what you want the site to do better."></textarea>
+          </label>
+          <button class="button primary" type="submit">Get My Website Audit</button>
+        </form>
       </section>
 
       <section class="statement section-shell" aria-label="Brand statement">
@@ -178,6 +257,34 @@ const filters = [
               </article>
             ))
           }
+        </div>
+        <div class="package-strip" aria-labelledby="packages-title">
+          <div class="section-heading split package-heading">
+            <div>
+              <p class="eyebrow">Ways to Work</p>
+              <h2 id="packages-title">Clear offers. Serious outcomes.</h2>
+            </div>
+            <p>
+              Start with an audit, then move into the build that matches the business objective: launch, conversion, or custom systems.
+            </p>
+          </div>
+          <div class="package-grid">
+            {
+              servicePackages.map((offer) => (
+                <article class="package-card">
+                  <div>
+                    <p class="eyebrow">{offer.name}</p>
+                    <strong>{offer.price}</strong>
+                  </div>
+                  <p>{offer.description}</p>
+                  <ul>
+                    {offer.deliverables.map((item) => <li>{item}</li>)}
+                  </ul>
+                  <a class="project-link" href="#audit">Request this path</a>
+                </article>
+              ))
+            }
+          </div>
         </div>
         <div class="depth-strip">
           <p class="eyebrow">Studio Depth</p>
@@ -402,10 +509,9 @@ const filters = [
       <section class="section-shell contact" id="contact" aria-labelledby="contact-title">
         <div>
           <p class="eyebrow">Start a Project</p>
-          <h2 id="contact-title">Bring the mission, material, or idea.</h2>
+          <h2 id="contact-title">Ready to turn the audit into a build?</h2>
           <p>
-            Whether the need is a planning tool, a polished web system, a fabricated
-            component, or a crafted commission, the first step is a clear brief.
+            If you already know the mission, use the full project form. Website launches, landing pages, digital systems, fabrication, and advisory work all start with a clear brief.
           </p>
           <p class="contact-direct-email">
             Or reach out directly: <a href={`mailto:${email}`}>{email}</a>
@@ -428,6 +534,7 @@ const filters = [
           <label>
             Project Type
             <select name="project-type">
+              <option>Free Website First-Impression Audit</option>
               <option>Website Design / Creation</option>
               <option>Software / Web App Project</option>
               <option>Defense / Advising Inquiry</option>
@@ -463,7 +570,7 @@ const filters = [
             Brief<span class="required-mark" aria-hidden="true">*</span>
             <textarea name="brief" rows="4" required></textarea>
           </label>
-          <button class="button primary" type="submit">Send Inquiry</button>
+          <button class="button primary" type="submit">Send Project Brief</button>
         </form>
       </section>
     </main>
