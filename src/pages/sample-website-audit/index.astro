@@ -96,7 +96,7 @@ const schema = {
         <a href={`${basePath}landing-page-design/`}>Landing Pages</a>
         <a href={`${basePath}local-business-websites/`}>Local</a>
         <a href={`${basePath}#work`}>Work</a>
-        <a href={`${basePath}#audit`}>Free Audit</a>
+        <a href={`${basePath}#audit`}>Request Audit</a>
       </nav>
     </header>
 
@@ -104,7 +104,7 @@ const schema = {
       <section class="sample-audit-hero section-shell" aria-labelledby="sample-audit-title">
         <div>
           <p class="eyebrow">Sample Website First-Impression Audit</p>
-          <h1 id="sample-audit-title">See exactly what Tootie Designs looks for before your website costs another lead.</h1>
+          <h1 id="sample-audit-title">See what Tootie Designs checks before your website costs another lead.</h1>
           <p>
             This sample shows the kind of review a business gets from the free audit: clarity, mobile trust, proof, lead path, and the fastest fixes that make the website feel more credible.
           </p>
@@ -117,7 +117,8 @@ const schema = {
         <aside class="audit-scorecard" aria-label="Sample website audit scorecard">
           <span>Sample scorecard</span>
           <strong>51 / 100</strong>
-          <p>A website with real potential, but too much friction before the visitor trusts the business enough to act.</p>
+          <p><b>Needs conversion fixes.</b> This sample score means the website has real potential, but too much friction before the visitor trusts the business enough to act.</p>
+          <p class="score-benchmark">Guide: 80+ strong · 60–79 refine · under 60 losing leads</p>
         </aside>
       </section>
 
@@ -128,6 +129,7 @@ const schema = {
             <h2 id="audit-score-title">The audit turns vague “make it better” feedback into specific conversion checkpoints.</h2>
           </div>
           <p>Each score is less about decoration and more about whether a real buyer can understand, trust, and act without confusion.</p>
+          <p class="score-note">Score guide: 80–100 strong, 60–79 needs refinement, 0–59 likely losing leads.</p>
         </div>
         <div class="score-grid">
           {auditScores.map(([label, score, text]) => (
@@ -169,9 +171,9 @@ const schema = {
       <section class="audit-recommendations section-shell" aria-labelledby="recommendations-title">
         <div>
           <p class="eyebrow">Recommended rebuild path</p>
-          <h2 id="recommendations-title">The deliverable is not a roast. It is a prioritized path to a sharper website.</h2>
+          <h2 id="recommendations-title">A prioritized path to a sharper website.</h2>
           <p>
-            A good audit should help the business decide what matters first: rewrite the top section, rebuild the mobile flow, add proof, clarify services, or create a stronger lead path.
+            The deliverable is not a roast. A good audit helps the business decide what matters first: rewrite the top section, rebuild the mobile flow, add proof, clarify services, or create a stronger lead path.
           </p>
         </div>
         <ol>
@@ -183,6 +185,12 @@ const schema = {
         <p class="eyebrow">Free Website First-Impression Audit</p>
         <h2 id="sample-final-title">Want this kind of read on your own website?</h2>
         <p>Send the current site, business page, or idea. Tootie Designs will review the first impression, mobile experience, trust signals, and lead path.</p>
+        <p class="service-final-note">Takes about 60 seconds. The button opens the short audit request form.</p>
+        <ol class="service-final-steps">
+          <li>Send your website or business page.</li>
+          <li>Get a plain-English read on what is helping or hurting.</li>
+          <li>Leave with the clearest next fix — no pressure.</li>
+        </ol>
         <div class="hero-actions">
           <a class="button primary" href={`${basePath}#audit`}>Request My Free Audit</a>
           <a class="button secondary" href={`${basePath}local-business-websites/`}>Explore Local Business Websites</a>
