@@ -137,17 +137,17 @@ const schema = [
       </section>
 
       {
-        page.industryLinks && (
+        (page.pathLinks || page.industryLinks) && (
           <section class="industry-paths section-shell" aria-labelledby="industry-paths-title">
             <div class="section-heading split">
               <div>
-                <p class="eyebrow">Industry paths</p>
-                <h2 id="industry-paths-title">Built around the way different businesses actually get leads.</h2>
+                <p class="eyebrow">{page.pathLinks?.eyebrow ?? "Industry paths"}</p>
+                <h2 id="industry-paths-title">{page.pathLinks?.title ?? "Built around the way different businesses actually get leads."}</h2>
               </div>
-              <p>Pick the lane closest to the business. Each path sharpens the message, proof, and CTA around that buyer's first decision.</p>
+              <p>{page.pathLinks?.intro ?? "Pick the lane closest to the business. Each path sharpens the message, proof, and CTA around that buyer's first decision."}</p>
             </div>
             <div class="industry-link-grid">
-              {page.industryLinks.map(([label, href]) => (
+              {(page.pathLinks?.links ?? page.industryLinks).map(([label, href]) => (
                 <a href={href}>{label}</a>
               ))}
             </div>

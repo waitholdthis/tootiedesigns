@@ -1,18 +1,19 @@
 import type { APIRoute } from "astro";
 import { servicePages } from "../data/marketing";
-import { fieldNotes } from "../data/site";
+import { fieldNotes, projects } from "../data/site";
 
 const servicePagePaths = Object.values(servicePages).map((page) => `${page.slug}/`);
+const workPagePaths = projects.map((project) => `work/${project.slug}/`);
 
 const pages = [
   "",
   ...servicePagePaths,
   "website-audit/",
   "sample-website-audit/",
+  ...workPagePaths,
   "notes/",
   ...fieldNotes.map((note) => `notes/${note.slug}/`),
   "privacy/",
-  "thanks/",
 ];
 
 export const GET: APIRoute = () => {
