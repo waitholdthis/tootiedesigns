@@ -1,0 +1,209 @@
+---
+import "../../styles/global.css";
+
+const base = import.meta.env.BASE_URL;
+const basePath = base.endsWith("/") ? base : `${base}/`;
+const deploymentOrigin = Astro.site?.toString().replace(/\/$/, "") ?? "https://tootiedesigns.com";
+const canonical = `${deploymentOrigin}${base === "/" ? "" : base.replace(/\/$/, "")}/sample-website-audit/`;
+const currentYear = new Date().getFullYear();
+
+const auditScores = [
+  ["First-screen clarity", "62", "Visitors can understand the business, but the offer is not sharp enough in the first five seconds."],
+  ["Mobile trust", "54", "The phone view needs stronger spacing, tap targets, readable sections, and faster access to contact options."],
+  ["Proof signals", "48", "Reviews, examples, process, guarantees, credentials, and before/after proof need to appear earlier."],
+  ["Lead path", "41", "The next step is present, but not repeated, framed, or made low-risk enough for cold visitors."],
+];
+
+const auditFindings = [
+  {
+    label: "01 / First impression",
+    title: "The hero has to make the business obvious before the visitor scrolls.",
+    issue: "Generic headlines make the visitor work too hard to understand what is offered, who it is for, and why it matters.",
+    fix: "Rewrite the top section around audience, outcome, location/service lane, and one primary action.",
+  },
+  {
+    label: "02 / Mobile path",
+    title: "Most local buyers check the website from a phone, not a desktop monitor.",
+    issue: "Small text, buried contact buttons, stacked sections with no rhythm, and unclear forms create friction before trust is built.",
+    fix: "Rebuild the mobile sequence around clarity, tap-friendly CTAs, proof, services, and contact flow.",
+  },
+  {
+    label: "03 / Proof gap",
+    title: "A visitor needs proof before they are asked to call, book, or request a quote.",
+    issue: "The site may have experience, photos, or reviews, but they are not organized into a persuasive trust sequence.",
+    fix: "Move reviews, project examples, process, credentials, and service proof into the decision path before the main CTA repeats.",
+  },
+  {
+    label: "04 / Conversion path",
+    title: "A contact page is not a lead system by itself.",
+    issue: "If the only CTA is a hard call or generic contact form, interested visitors who are not ready yet will leave silently.",
+    fix: "Create a safer first step such as a free audit, quote request, booking path, or short brief that matches buyer intent.",
+  },
+];
+
+const recommendationStack = [
+  "Sharper above-the-fold message with one clear buyer promise",
+  "Mobile-first CTA bar for audit, quote, booking, or call path",
+  "Proof engine with testimonials, examples, process, and visual trust signals",
+  "Service sections written around buyer problems instead of internal labels",
+  "SEO-ready page titles, headings, schema, internal links, and sitemap inclusion",
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "Sample Website First-Impression Audit",
+  url: canonical,
+  description:
+    "See what a Tootie Designs free website audit reviews: first-screen clarity, mobile trust, proof signals, lead path, SEO basics, and conversion recommendations.",
+  isPartOf: {
+    "@type": "WebSite",
+    name: "Tootie Designs",
+    url: deploymentOrigin,
+  },
+};
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="See a sample Tootie Designs website audit: first impression, mobile trust, proof gaps, lead path, SEO basics, and conversion recommendations."
+    />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:title" content="Sample Website Audit | Tootie Designs" />
+    <meta property="og:description" content="Preview what the free website first-impression audit reviews before you request your own." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={`${deploymentOrigin}${basePath}tootie-logo-transparent.png`} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>Sample Website Audit | Tootie Designs</title>
+    <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  </head>
+  <body>
+    <a class="skip-link" href="#top">Skip to main content</a>
+    <header class="site-header" aria-label="Primary navigation">
+      <a class="brand" href={basePath} aria-label="Tootie Designs home">
+        <span class="brand-mark"><img src={`${basePath}tootie-logo-transparent.png`} alt="" width="37" height="37" /></span>
+        <span>Tootie Designs</span>
+      </a>
+      <nav>
+        <a href={`${basePath}website-design/`}>Websites</a>
+        <a href={`${basePath}website-redesign/`}>Redesigns</a>
+        <a href={`${basePath}landing-page-design/`}>Landing Pages</a>
+        <a href={`${basePath}local-business-websites/`}>Local</a>
+        <a href={`${basePath}#work`}>Work</a>
+        <a href={`${basePath}#audit`}>Free Audit</a>
+      </nav>
+    </header>
+
+    <main id="top" tabindex="-1">
+      <section class="sample-audit-hero section-shell" aria-labelledby="sample-audit-title">
+        <div>
+          <p class="eyebrow">Sample Website First-Impression Audit</p>
+          <h1 id="sample-audit-title">See exactly what Tootie Designs looks for before your website costs another lead.</h1>
+          <p>
+            This sample shows the kind of review a business gets from the free audit: clarity, mobile trust, proof, lead path, and the fastest fixes that make the website feel more credible.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href={`${basePath}#audit`}>Request My Free Audit</a>
+            <a class="button secondary" href={`${basePath}website-redesign/`}>Explore Redesigns</a>
+          </div>
+          <p class="hero-reassurance">No pressure. No obligation. Just a clear read on what is helping, hurting, or missing.</p>
+        </div>
+        <aside class="audit-scorecard" aria-label="Sample website audit scorecard">
+          <span>Sample scorecard</span>
+          <strong>51 / 100</strong>
+          <p>A website with real potential, but too much friction before the visitor trusts the business enough to act.</p>
+        </aside>
+      </section>
+
+      <section class="audit-score-grid section-shell" aria-labelledby="audit-score-title">
+        <div class="section-heading split">
+          <div>
+            <p class="eyebrow">Audit snapshot</p>
+            <h2 id="audit-score-title">The audit turns vague “make it better” feedback into specific conversion checkpoints.</h2>
+          </div>
+          <p>Each score is less about decoration and more about whether a real buyer can understand, trust, and act without confusion.</p>
+        </div>
+        <div class="score-grid">
+          {auditScores.map(([label, score, text]) => (
+            <article>
+              <div>
+                <span>{label}</span>
+                <strong>{score}</strong>
+              </div>
+              <meter min="0" max="100" value={score}>{score}</meter>
+              <p>{text}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section class="audit-findings section-shell" aria-labelledby="audit-findings-title">
+        <p class="eyebrow">What the report calls out</p>
+        <h2 id="audit-findings-title">A useful audit does not just say “your site needs work.” It shows where the money leaks.</h2>
+        <div class="finding-stack">
+          {auditFindings.map((finding) => (
+            <article>
+              <p class="eyebrow">{finding.label}</p>
+              <h3>{finding.title}</h3>
+              <div class="finding-columns">
+                <div>
+                  <span>What hurts trust</span>
+                  <p>{finding.issue}</p>
+                </div>
+                <div>
+                  <span>What gets fixed</span>
+                  <p>{finding.fix}</p>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section class="audit-recommendations section-shell" aria-labelledby="recommendations-title">
+        <div>
+          <p class="eyebrow">Recommended rebuild path</p>
+          <h2 id="recommendations-title">The deliverable is not a roast. It is a prioritized path to a sharper website.</h2>
+          <p>
+            A good audit should help the business decide what matters first: rewrite the top section, rebuild the mobile flow, add proof, clarify services, or create a stronger lead path.
+          </p>
+        </div>
+        <ol>
+          {recommendationStack.map((item) => <li>{item}</li>)}
+        </ol>
+      </section>
+
+      <section class="service-final-cta section-shell" aria-labelledby="sample-final-title">
+        <p class="eyebrow">Free Website First-Impression Audit</p>
+        <h2 id="sample-final-title">Want this kind of read on your own website?</h2>
+        <p>Send the current site, business page, or idea. Tootie Designs will review the first impression, mobile experience, trust signals, and lead path.</p>
+        <div class="hero-actions">
+          <a class="button primary" href={`${basePath}#audit`}>Request My Free Audit</a>
+          <a class="button secondary" href={`${basePath}local-business-websites/`}>Explore Local Business Websites</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>Tootie Designs</strong>
+        <span>Fayetteville, NC</span>
+      </div>
+      <div>
+        <span>Website Design / Landing Pages / Digital Systems</span>
+        <span>Premium first impressions built to generate better leads.</span>
+        <span>© {currentYear} Tootie Designs.</span>
+        <div class="footer-links">
+          <a href="https://www.facebook.com/profile.php?id=100063801085109" target="_blank" rel="noreferrer">Facebook</a>
+          <a href={`${basePath}privacy/`}>Privacy Policy</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
