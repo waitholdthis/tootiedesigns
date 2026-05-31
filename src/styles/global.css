@@ -6676,3 +6676,236 @@ textarea:focus-visible {
     grid-template-columns: 1fr;
   }
 }
+
+.revenue-oracle-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.revenue-oracle-section::before {
+  content: "";
+  position: absolute;
+  inset: 5rem auto auto 50%;
+  width: 24rem;
+  height: 24rem;
+  border-radius: 999px;
+  transform: translateX(-50%);
+  background: radial-gradient(circle, rgba(244, 195, 107, 0.16), transparent 70%);
+  pointer-events: none;
+}
+
+.revenue-oracle {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(18rem, 0.72fr);
+  gap: clamp(1rem, 2.8vw, 1.5rem);
+  margin-top: 1.5rem;
+}
+
+.oracle-stage,
+.oracle-controls,
+.oracle-verdict {
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 30px;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.082), rgba(255, 255, 255, 0.026)),
+    rgba(8, 8, 10, 0.88);
+  box-shadow: 0 22px 80px rgba(0, 0, 0, 0.34);
+}
+
+.oracle-stage {
+  position: relative;
+  min-height: 34rem;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: minmax(12rem, 0.8fr) minmax(0, 1fr);
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.oracle-stage::before {
+  content: "";
+  position: absolute;
+  inset: 1rem;
+  border-radius: 26px;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 34px 34px;
+  mask-image: radial-gradient(circle at 50% 45%, black, transparent 76%);
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.oracle-orb {
+  position: relative;
+  z-index: 1;
+  aspect-ratio: 1;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  background:
+    conic-gradient(from 220deg, rgba(244, 195, 107, 0.95) var(--pressure, 40%), rgba(255, 255, 255, 0.08) 0),
+    radial-gradient(circle, rgba(244, 195, 107, 0.2), rgba(0, 0, 0, 0.9) 68%);
+  box-shadow: 0 0 70px rgba(244, 195, 107, 0.18), inset 0 0 44px rgba(0, 0, 0, 0.8);
+}
+
+.oracle-orb::before {
+  content: "";
+  position: absolute;
+  inset: 1.1rem;
+  border-radius: inherit;
+  background: radial-gradient(circle, #0c0c0f 0 58%, transparent 60%);
+}
+
+.oracle-orb span,
+.oracle-orb i,
+.oracle-orb b {
+  position: absolute;
+  border-radius: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.oracle-orb span { inset: 18%; }
+.oracle-orb i { inset: 31%; }
+.oracle-orb b { inset: 44%; background: #f4c36b; box-shadow: 0 0 22px rgba(244, 195, 107, 0.8); }
+
+.oracle-stage-copy {
+  position: relative;
+  z-index: 1;
+}
+
+.oracle-stage-copy h3 {
+  margin: 0.25rem 0 0.75rem;
+  font-size: clamp(2.2rem, 5.7vw, 5rem);
+  line-height: 0.9;
+  letter-spacing: -0.07em;
+}
+
+.oracle-stage-copy p {
+  color: rgba(255, 255, 255, 0.72);
+  max-width: 34rem;
+}
+
+.oracle-metrics {
+  position: relative;
+  z-index: 1;
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1.4fr repeat(2, 1fr);
+  gap: 0.8rem;
+}
+
+.oracle-metric {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 22px;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.055);
+}
+
+.oracle-metric.primary {
+  background: radial-gradient(circle at 0% 0%, rgba(244, 195, 107, 0.22), transparent 56%), rgba(255, 255, 255, 0.06);
+}
+
+.oracle-metric span,
+.oracle-verdict span,
+.oracle-controls span {
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 0.76rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.oracle-metric strong {
+  display: block;
+  margin-top: 0.4rem;
+  color: #fff;
+  font-size: clamp(1.8rem, 4vw, 3.5rem);
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+}
+
+.oracle-controls {
+  display: grid;
+  gap: 1rem;
+  padding: clamp(1.05rem, 2.2vw, 1.4rem);
+}
+
+.oracle-controls label {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.55rem 1rem;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 0.9rem;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.oracle-controls strong {
+  color: #f4c36b;
+}
+
+.oracle-controls input[type="range"] {
+  grid-column: 1 / -1;
+  width: 100%;
+  accent-color: #f4c36b;
+}
+
+.oracle-verdict {
+  grid-column: 2;
+  display: grid;
+  gap: 0.9rem;
+  padding: clamp(1.1rem, 2vw, 1.35rem);
+}
+
+.oracle-verdict p,
+.oracle-verdict li {
+  color: rgba(255, 255, 255, 0.74);
+  line-height: 1.6;
+}
+
+.oracle-verdict h4 {
+  margin: 0.35rem 0;
+  font-size: clamp(1.45rem, 3vw, 2.25rem);
+  line-height: 1;
+}
+
+.oracle-actions {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.oracle-actions .button {
+  justify-content: center;
+  text-align: center;
+}
+
+@media (max-width: 1080px) {
+  .revenue-oracle,
+  .oracle-verdict {
+    grid-template-columns: 1fr;
+    grid-column: auto;
+  }
+
+  .oracle-stage {
+    grid-template-columns: 1fr;
+  }
+
+  .oracle-orb {
+    max-width: 18rem;
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 720px) {
+  .oracle-metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .oracle-controls label {
+    grid-template-columns: 1fr;
+  }
+}

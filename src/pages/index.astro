@@ -3,6 +3,7 @@ import "../styles/global.css";
 import DecryptedHeroTitle from "../components/DecryptedHeroTitle";
 import GrowthSignalConsole from "../components/GrowthSignalConsole";
 import LaserIntro from "../components/LaserIntro";
+import RevenueLeakOracle from "../components/RevenueLeakOracle";
 import StandoutGrowthSuite from "../components/StandoutGrowthSuite";
 import WowFeatureSuite from "../components/WowFeatureSuite";
 import { proofEngine, proofMetrics } from "../data/marketing";
@@ -233,6 +234,19 @@ const servicePackages = [
           <a class="project-link trust-link" href={`${basePath}local-business-websites/`}>Explore local business website design</a>
           <a class="project-link trust-link" href={`${basePath}fayetteville-nc-website-design/`}>Fayetteville NC website design</a>
         </div>
+      </section>
+
+      <section class="revenue-oracle-section section-shell" aria-labelledby="revenue-oracle-title" data-revenue-leak-oracle-section>
+        <div class="section-heading split">
+          <div>
+            <p class="eyebrow">Revenue Leak Oracle</p>
+            <h2 id="revenue-oracle-title">Show the money disappearing before the redesign conversation starts.</h2>
+          </div>
+          <p>
+            Serious buyers do not only need a prettier site. They need to see the cost of hesitation. This calculator turns weak conversion paths into a concrete monthly and annual pressure signal — then routes them to the right Tootie move.
+          </p>
+        </div>
+        <RevenueLeakOracle basePath={basePath} client:load />
       </section>
 
       <section class="executive-proof-panel section-shell" aria-labelledby="executive-proof-title">
