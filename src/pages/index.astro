@@ -35,6 +35,13 @@ const filters = [
 
 const servicePackages = [
   {
+    name: "World-Class Website Design",
+    price: "Starting at $3,500",
+    href: `${basePath}world-class-website-design/`,
+    description: "A cinematic, conversion-aware website system for brands that want to look impossible to ignore and easier to trust from anywhere.",
+    deliverables: ["Conquest narrative", "Cinematic art direction", "Conversion copy hierarchy", "Proof architecture", "SEO-ready Astro build"],
+  },
+  {
     name: "CEO / Executive Website",
     price: "Starting at $3,500",
     href: `${basePath}ceo-website-design/`,
@@ -134,7 +141,7 @@ const servicePackages = [
         },
         priceRange: "$750+",
         description: "Premium website design, CEO websites, conversion landing pages, website redesigns, and digital systems for better business leads.",
-        makesOffer: ["CEO Website Design", "Global Website Redesign", "Enterprise Landing Page Design", "Custom Business Software", "Website Cleanup Sprint", "Website Design", "Website Redesign", "Landing Page Design", "Digital System Build"].map((name) => ({
+        makesOffer: ["World-Class Website Design", "CEO Website Design", "Global Website Redesign", "Enterprise Landing Page Design", "Custom Business Software", "Website Cleanup Sprint", "Website Design", "Website Redesign", "Landing Page Design", "Digital System Build"].map((name) => ({
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
@@ -227,12 +234,58 @@ const servicePackages = [
           Premium websites, landing pages, and digital systems built to help serious businesses look sharper, sell clearer, and generate better leads.
         </p>
         <div class="trust-link-row">
+          <a class="project-link trust-link" href={`${basePath}world-class-website-design/`}>World-class website design</a>
           <a class="project-link trust-link" href={`${basePath}ceo-website-design/`}>CEO and executive website design</a>
           <a class="project-link trust-link" href={`${basePath}global-website-redesign/`}>Global website redesign</a>
           <a class="project-link trust-link" href={`${basePath}enterprise-landing-page-design/`}>Enterprise landing pages</a>
           <a class="project-link trust-link" href={`${basePath}digital-system-build/`}>Custom business software</a>
           <a class="project-link trust-link" href={`${basePath}local-business-websites/`}>Explore local business website design</a>
           <a class="project-link trust-link" href={`${basePath}fayetteville-nc-website-design/`}>Fayetteville NC website design</a>
+        </div>
+      </section>
+
+      <section class="world-conquest section-shell" aria-labelledby="world-conquest-title">
+        <div class="section-heading split">
+          <div>
+            <p class="eyebrow">World-Class Design Conquest</p>
+            <h2 id="world-conquest-title">Not a better brochure. A website that makes the brand feel dangerous to compete with.</h2>
+          </div>
+          <p>
+            The next era of Tootie Designs is built for companies that want cinematic identity, serious conversion architecture, and global-level trust in the same system.
+          </p>
+        </div>
+        <div class="conquest-grid">
+          <article class="conquest-map-card" aria-label="Website conquest map">
+            <span class="conquest-orbit orbit-one"></span>
+            <span class="conquest-orbit orbit-two"></span>
+            <span class="conquest-pulse"></span>
+            <div>
+              <span>GLOBAL STANDARD</span>
+              <strong>Fayetteville craft. Worldwide ambition.</strong>
+              <p>Every build has to survive the same test: would a buyer, founder, investor, or premium client feel more certain after the first ten seconds?</p>
+            </div>
+          </article>
+          <div class="conquest-card-stack">
+            <article>
+              <span>01 / CINEMA</span>
+              <h3>Visual identity that is hard to forget.</h3>
+              <p>Motion, texture, editorial scale, and interaction used to make the business feel singular — never template-made.</p>
+            </article>
+            <article>
+              <span>02 / CONVERSION</span>
+              <h3>Every dramatic moment still moves toward revenue.</h3>
+              <p>Hero, proof, services, diagnostics, forms, and CTAs are sequenced like a sales system, not a mood board.</p>
+            </article>
+            <article>
+              <span>03 / COMMAND</span>
+              <h3>The website becomes the control center.</h3>
+              <p>Landing pages, audits, dashboards, automations, and software paths turn the site into the front door of a larger business machine.</p>
+            </article>
+          </div>
+        </div>
+        <div class="conquest-actions">
+          <a class="button primary" href={`${basePath}world-class-website-design/`} data-event="service_page_click" data-label="home world class conquest">Explore World-Class Website Design</a>
+          <a class="button secondary" href={`${basePath}website-audit/`} data-event="audit_cta_click" data-label="home world class audit">Start With the Audit</a>
         </div>
       </section>
 

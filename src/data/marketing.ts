@@ -1022,6 +1022,68 @@ springLakeWebsiteDesign: {
     },
   ],
 },
+  worldClassWebsiteDesign: {
+    slug: "world-class-website-design",
+    eyebrow: "World-Class Website Design",
+    title: "World-class websites for brands that want to look impossible to ignore.",
+    description:
+      "Tootie Designs builds cinematic, conversion-aware website systems for founders, agencies, creative operators, and serious service brands that want a site with global polish, distinctive motion, proof architecture, and a direct path to premium inquiry.",
+    seoTitle: "World-Class Website Design | Tootie Designs",
+    seoDescription:
+      "World-class website design for founders, creative brands, agencies, consultants, and premium service companies that need cinematic visuals, conversion strategy, proof architecture, and global-level trust.",
+    serviceName: "World-Class Website Design",
+    primaryCta: "Request a World-Class Website Audit",
+    secondaryCta: "See the Proof System",
+    price: "World-class builds start at $3,500",
+    problemTitle: "The internet is crowded with clean websites. Serious brands need a site people remember, trust, and act on.",
+    problems: [
+      "The current website may be functional, but it feels interchangeable with every modern template in the market.",
+      "A premium buyer cannot quickly see the story, proof, offer, and reason to trust the company at a higher level.",
+      "The visual direction lacks the cinematic edge, motion, and editorial confidence needed to make the brand feel inevitable.",
+      "The site gets attention, but it does not convert that attention into qualified audit requests, premium inquiries, or serious conversations.",
+    ],
+    outcomes: [
+      "A distinctive visual system that makes the brand feel larger, sharper, and harder to compare",
+      "A conversion-first narrative that moves from first impression to proof, offer, and inquiry without losing momentum",
+      "Cinematic sections, interactive diagnostics, and premium motion that support the business case instead of becoming decoration",
+      "A global-ready service structure with metadata, schema, internal links, mobile polish, and future content expansion",
+      "A clear audit-led path for visitors who are intrigued but not ready to request a full build immediately",
+    ],
+    deliverables: [
+      "Website strategy and conquest narrative",
+      "Cinematic art direction and responsive interface system",
+      "Conversion copy hierarchy and proof architecture",
+      "Interactive or motion-led homepage moments when appropriate",
+      "Astro front-end build with SEO, schema, analytics hooks, and launch support",
+    ],
+    fit: ["founders", "creative agencies", "premium service brands", "consultants", "global operators", "local businesses ready to look national", "companies tired of template websites"],
+    pathLinks: {
+      eyebrow: "Conquest paths",
+      title: "A world-class site can start as a brand weapon, then expand into the full growth platform.",
+      intro: "The strongest path depends on the buyer: executive authority, global redesign, campaign landing page, local dominance, or a custom digital system behind the website.",
+      links: [
+        ["Global website redesign", "/global-website-redesign/"],
+        ["CEO website design", "/ceo-website-design/"],
+        ["Enterprise landing pages", "/enterprise-landing-page-design/"],
+        ["Digital system build", "/digital-system-build/"],
+        ["Sample website audit", "/sample-website-audit/"],
+      ],
+    },
+    faq: [
+      {
+        question: "What makes a website world-class instead of just modern?",
+        answer: "A world-class website combines distinctive visual direction, clear positioning, proof architecture, mobile polish, conversion strategy, and technical execution. It does not only look impressive — it makes the business easier to trust and easier to contact.",
+      },
+      {
+        question: "Can a small or local business use this level of design?",
+        answer: "Yes. A local business can use world-class design to look more established, win better referrals, support search traffic, and compete above its weight without pretending to be something it is not.",
+      },
+      {
+        question: "Where does a project like this start?",
+        answer: "Start with the audit. Tootie Designs reviews the current first impression, proof, offer clarity, mobile path, and revenue friction before recommending whether the next move is a cleanup sprint, landing page, redesign, executive site, or full digital system.",
+      },
+    ],
+  },
 };
 
 export const proofSignals = [
