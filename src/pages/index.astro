@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import DecryptedHeroTitle from "../components/DecryptedHeroTitle";
+import GrowthSignalConsole from "../components/GrowthSignalConsole";
 import LaserIntro from "../components/LaserIntro";
 import { proofEngine, proofMetrics } from "../data/marketing";
 import { primaryCapabilities, depthCapabilities, email, fieldNotes, process as processSteps, projects, tech, techCategories, websiteShowcase } from "../data/site";
@@ -261,6 +262,19 @@ const servicePackages = [
           <a class="button primary" href={`${basePath}executive-website-audit/`} data-event="audit_cta_click" data-label="home executive audit">Start Executive Website Audit</a>
           <a class="button secondary" href={`${basePath}global-website-redesign/`} data-event="service_page_click" data-label="home global redesign">Explore Global Redesign</a>
         </div>
+      </section>
+
+      <section class="growth-diagnostic section-shell" aria-labelledby="growth-diagnostic-title">
+        <div class="section-heading split">
+          <div>
+            <p class="eyebrow">Live Growth Diagnostic</p>
+            <h2 id="growth-diagnostic-title">A cinematic control panel that shows what your website is costing you.</h2>
+          </div>
+          <p>
+            Move the signals like a mission board. The console translates weak clarity, trust, mobile flow, proof, and lead capture into the next best Tootie Designs path — audit, cleanup, landing page, redesign, or digital system.
+          </p>
+        </div>
+        <GrowthSignalConsole basePath={basePath} client:load />
       </section>
 
       <section class="audit-funnel section-shell" id="audit" aria-labelledby="audit-title">
