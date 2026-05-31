@@ -3,6 +3,7 @@ import "../styles/global.css";
 import DecryptedHeroTitle from "../components/DecryptedHeroTitle";
 import GrowthSignalConsole from "../components/GrowthSignalConsole";
 import LaserIntro from "../components/LaserIntro";
+import StandoutGrowthSuite from "../components/StandoutGrowthSuite";
 import WowFeatureSuite from "../components/WowFeatureSuite";
 import { proofEngine, proofMetrics } from "../data/marketing";
 import { primaryCapabilities, depthCapabilities, email, fieldNotes, process as processSteps, projects, tech, techCategories, websiteShowcase } from "../data/site";
@@ -289,6 +290,19 @@ const servicePackages = [
           </p>
         </div>
         <WowFeatureSuite basePath={basePath} client:load />
+      </section>
+
+      <section class="next-five-stack section-shell" aria-labelledby="next-five-title" data-homepage-rhythm-map>
+        <div class="section-heading split">
+          <div>
+            <p class="eyebrow">Next Five Moves</p>
+            <h2 id="next-five-title">The homepage becomes a diagnostic product, proof theater, and operating-system preview.</h2>
+          </div>
+          <p>
+            This is the competitor gap: not another agency portfolio, but a cinematic buyer journey that audits the site, previews the rebuild, opens case-study rooms, and shows the system behind the work.
+          </p>
+        </div>
+        <StandoutGrowthSuite basePath={basePath} client:load />
       </section>
 
       <section class="audit-funnel section-shell" id="audit" aria-labelledby="audit-title">
