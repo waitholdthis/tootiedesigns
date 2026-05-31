@@ -3,6 +3,7 @@ import "../styles/global.css";
 import DecryptedHeroTitle from "../components/DecryptedHeroTitle";
 import GrowthSignalConsole from "../components/GrowthSignalConsole";
 import LaserIntro from "../components/LaserIntro";
+import WowFeatureSuite from "../components/WowFeatureSuite";
 import { proofEngine, proofMetrics } from "../data/marketing";
 import { primaryCapabilities, depthCapabilities, email, fieldNotes, process as processSteps, projects, tech, techCategories, websiteShowcase } from "../data/site";
 import parkerHeadshot from "../../photos/headshot.jpg";
@@ -275,6 +276,19 @@ const servicePackages = [
           </p>
         </div>
         <GrowthSignalConsole basePath={basePath} client:load />
+      </section>
+
+      <section class="wow-feature-stack section-shell" aria-labelledby="wow-feature-stack-title">
+        <div class="section-heading split">
+          <div>
+            <p class="eyebrow">Conversion Theater</p>
+            <h2 id="wow-feature-stack-title">Five premium experiences that turn curiosity into a serious project path.</h2>
+          </div>
+          <p>
+            Tootie Designs should not feel like a normal agency site. This stack turns the homepage into an interactive sales environment: brief the mission, see the transformation, stage the audit, choose the path, and unlock proof.
+          </p>
+        </div>
+        <WowFeatureSuite basePath={basePath} client:load />
       </section>
 
       <section class="audit-funnel section-shell" id="audit" aria-labelledby="audit-title">

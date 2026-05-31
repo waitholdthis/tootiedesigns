@@ -4524,6 +4524,450 @@ textarea:focus-visible {
   }
 }
 
+/* Wow conversion feature stack */
+.wow-feature-stack {
+  position: relative;
+  overflow: hidden;
+  padding-top: clamp(4.75rem, 8vw, 7.5rem);
+  padding-bottom: clamp(4.75rem, 8vw, 7.5rem);
+  border-bottom: 1px solid var(--line);
+}
+
+.wow-feature-stack::before {
+  position: absolute;
+  inset: 0 auto auto 4%;
+  width: min(42rem, 68vw);
+  height: min(42rem, 68vw);
+  border-radius: 50%;
+  content: "";
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(80, 122, 160, 0.16), transparent 67%);
+  filter: blur(10px);
+}
+
+.wow-suite {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: clamp(1rem, 2vw, 1.4rem);
+  margin-top: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.mission-brief-console,
+.before-after-theater,
+.autopsy-chamber,
+.build-path-selector,
+.proof-vault {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  gap: clamp(1rem, 2vw, 1.4rem);
+  border: 1px solid rgba(210, 173, 116, 0.22);
+  border-radius: clamp(1.5rem, 3vw, 2.5rem);
+  padding: clamp(1rem, 2.6vw, 2rem);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.075), transparent 42%),
+    rgba(8, 11, 14, 0.84);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    0 28px 80px rgba(0, 0, 0, 0.32);
+  backdrop-filter: blur(20px) saturate(1.18);
+}
+
+.mission-brief-console::before,
+.before-after-theater::before,
+.autopsy-chamber::before,
+.build-path-selector::before,
+.proof-vault::before {
+  position: absolute;
+  inset: 1rem;
+  border: 1px solid rgba(210, 173, 116, 0.09);
+  border-radius: inherit;
+  content: "";
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(210, 173, 116, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(210, 173, 116, 0.05) 1px, transparent 1px);
+  background-size: 46px 46px;
+  mask-image: linear-gradient(115deg, black, transparent 78%);
+}
+
+.mission-brief-console,
+.before-after-theater,
+.autopsy-chamber,
+.build-path-selector {
+  grid-template-columns: minmax(22rem, 0.52fr) minmax(0, 1fr);
+  align-items: start;
+}
+
+.wow-panel-copy,
+.mission-form,
+.reality-slider,
+.autopsy-console,
+.build-path-grid,
+.build-path-output,
+.proof-vault-grid {
+  position: relative;
+  z-index: 1;
+}
+
+.wow-panel-copy h2 {
+  max-width: 18ch;
+  margin: 0;
+  color: var(--bone);
+  font-size: clamp(2rem, 3.5vw, 4.15rem);
+  line-height: 0.96;
+  letter-spacing: -0.06em;
+}
+
+.wow-panel-copy p:last-child {
+  margin: 1rem 0 0;
+  color: rgba(243, 238, 229, 0.82);
+  font-size: clamp(1.04rem, 1.45vw, 1.16rem);
+  line-height: 1.7;
+}
+
+.mission-form,
+.autopsy-console {
+  display: grid;
+  gap: 1rem;
+}
+
+.mission-form fieldset {
+  display: grid;
+  gap: 0.8rem;
+  min-width: 0;
+  border: 1px solid rgba(255, 255, 255, 0.075);
+  border-radius: 1.35rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.mission-form legend,
+.autopsy-console label,
+.reality-slider label,
+.mission-output > span,
+.autopsy-readout > span,
+.build-path-output > span,
+.proof-vault-card > span {
+  color: var(--bronze-2);
+  font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.72rem;
+  font-weight: 850;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.mission-choice-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.7rem;
+}
+
+.mission-choice-grid.compact {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.mission-choice-grid button,
+.build-path-grid button {
+  display: grid;
+  gap: 0.45rem;
+  min-height: 7.5rem;
+  border: 1px solid rgba(210, 173, 116, 0.16);
+  border-radius: 1rem;
+  padding: 0.9rem;
+  background: rgba(255, 255, 255, 0.035);
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 180ms ease, background 180ms ease, transform 180ms ease;
+}
+
+.mission-choice-grid button:hover,
+.mission-choice-grid button.active,
+.build-path-grid button:hover,
+.build-path-grid button.active {
+  border-color: rgba(210, 173, 116, 0.52);
+  background: rgba(210, 173, 116, 0.11);
+  transform: translateY(-2px);
+}
+
+.mission-choice-grid strong,
+.build-path-grid strong {
+  color: var(--bone);
+  font-size: 1rem;
+  line-height: 1.15;
+}
+
+.mission-choice-grid span,
+.build-path-grid span {
+  color: rgba(243, 238, 229, 0.76);
+  font-size: 0.94rem;
+  line-height: 1.45;
+}
+
+.mission-output,
+.autopsy-readout,
+.build-path-output {
+  display: grid;
+  gap: 0.85rem;
+  border: 1px solid rgba(210, 173, 116, 0.26);
+  border-radius: 1.35rem;
+  padding: clamp(1rem, 2vw, 1.25rem);
+  background:
+    radial-gradient(circle at top right, rgba(210, 173, 116, 0.13), transparent 46%),
+    rgba(10, 13, 17, 0.82);
+}
+
+.mission-output h3,
+.autopsy-readout h3,
+.build-path-output h3,
+.proof-vault-card h3 {
+  margin: 0;
+  color: var(--bone);
+  font-size: clamp(1.45rem, 2.3vw, 2.35rem);
+  line-height: 1.02;
+  letter-spacing: -0.04em;
+}
+
+.mission-output p,
+.autopsy-readout p,
+.build-path-output p,
+.proof-vault-card p {
+  margin: 0;
+  color: rgba(243, 238, 229, 0.8);
+  line-height: 1.6;
+}
+
+.wow-action-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.reality-slider {
+  display: grid;
+  gap: 1rem;
+}
+
+.reality-stage {
+  position: relative;
+  overflow: hidden;
+  min-height: clamp(24rem, 43vw, 35rem);
+  border: 1px solid rgba(210, 173, 116, 0.22);
+  border-radius: 1.8rem;
+  background: rgba(0, 0, 0, 0.24);
+}
+
+.reality-site {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  align-content: center;
+  gap: 1rem;
+  padding: clamp(1.2rem, 3vw, 2.2rem);
+}
+
+.reality-site.before {
+  background:
+    linear-gradient(135deg, rgba(90, 97, 105, 0.2), rgba(8, 11, 14, 0.94)),
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.03) 0 1px, transparent 1px 18px);
+  filter: saturate(0.55);
+}
+
+.reality-site.after {
+  clip-path: inset(0 calc(100% - var(--reveal)) 0 0);
+  background:
+    radial-gradient(circle at 70% 20%, rgba(210, 173, 116, 0.26), transparent 38%),
+    linear-gradient(135deg, rgba(13, 18, 23, 0.92), rgba(8, 11, 14, 0.96));
+}
+
+.reality-site span {
+  width: fit-content;
+  border: 1px solid rgba(210, 173, 116, 0.24);
+  border-radius: 999px;
+  padding: 0.48rem 0.68rem;
+  color: var(--bronze-2);
+  font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.7rem;
+  font-weight: 850;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.reality-site strong {
+  max-width: 9ch;
+  color: var(--bone);
+  font-size: clamp(3rem, 7vw, 7rem);
+  line-height: 0.82;
+  letter-spacing: -0.08em;
+}
+
+.reality-site p {
+  max-width: 28rem;
+  margin: 0;
+  color: rgba(243, 238, 229, 0.74);
+  font-size: 1.05rem;
+  line-height: 1.58;
+}
+
+.reality-site i {
+  display: block;
+  width: min(34rem, 70%);
+  height: 0.7rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.reality-site.after i {
+  background: linear-gradient(90deg, rgba(210, 173, 116, 0.74), rgba(255, 255, 255, 0.12));
+}
+
+.reality-divider {
+  position: absolute;
+  inset: 0 auto 0 var(--reveal);
+  width: 2px;
+  background: rgba(210, 173, 116, 0.86);
+  box-shadow: 0 0 32px rgba(210, 173, 116, 0.45);
+}
+
+.reality-slider input[type="range"] {
+  width: 100%;
+  min-height: 1.8rem;
+  accent-color: var(--bronze-2);
+  cursor: pointer;
+}
+
+.autopsy-console label {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.autopsy-console input {
+  width: 100%;
+  border: 1px solid rgba(210, 173, 116, 0.24);
+  border-radius: 1rem;
+  padding: 0.95rem 1rem;
+  background: rgba(255, 255, 255, 0.055);
+  color: var(--bone);
+}
+
+.autopsy-readout ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.autopsy-readout li,
+.proof-vault-card strong {
+  border: 1px solid rgba(210, 173, 116, 0.18);
+  border-radius: 999px;
+  padding: 0.42rem 0.65rem;
+  background: rgba(255, 255, 255, 0.045);
+  color: rgba(243, 238, 229, 0.82);
+  font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.build-path-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.7rem;
+  grid-column: 1 / -1;
+}
+
+.build-path-grid button {
+  min-height: 9rem;
+}
+
+.build-path-output {
+  grid-column: 2;
+}
+
+.proof-vault {
+  grid-template-columns: minmax(22rem, 0.42fr) minmax(0, 1fr);
+}
+
+.proof-vault-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.proof-vault-card {
+  display: grid;
+  gap: 0.9rem;
+  min-height: 21rem;
+  border: 1px solid rgba(210, 173, 116, 0.2);
+  border-radius: 1.45rem;
+  padding: clamp(1rem, 2vw, 1.35rem);
+  background:
+    linear-gradient(160deg, rgba(210, 173, 116, 0.12), transparent 42%),
+    rgba(255, 255, 255, 0.035);
+  color: inherit;
+  text-decoration: none;
+  transition: border-color 180ms ease, transform 180ms ease, background 180ms ease;
+}
+
+.proof-vault-card:hover {
+  border-color: rgba(210, 173, 116, 0.48);
+  background:
+    linear-gradient(160deg, rgba(210, 173, 116, 0.18), transparent 42%),
+    rgba(255, 255, 255, 0.055);
+  transform: translateY(-3px);
+}
+
+.proof-vault-card strong {
+  width: fit-content;
+  align-self: end;
+}
+
+@media (max-width: 1120px) {
+  .mission-brief-console,
+  .before-after-theater,
+  .autopsy-chamber,
+  .build-path-selector,
+  .proof-vault {
+    grid-template-columns: 1fr;
+  }
+
+  .wow-panel-copy h2 {
+    max-width: 16ch;
+  }
+
+  .build-path-output {
+    grid-column: auto;
+  }
+
+  .build-path-grid,
+  .proof-vault-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .mission-choice-grid,
+  .mission-choice-grid.compact,
+  .build-path-grid,
+  .proof-vault-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .reality-stage {
+    min-height: 30rem;
+  }
+
+  .reality-site strong {
+    font-size: clamp(2.7rem, 17vw, 4.8rem);
+  }
+}
+
 /* Proof engine */
 .proof-engine {
   position: relative;
