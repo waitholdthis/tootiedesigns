@@ -197,36 +197,66 @@ const servicePackages = [
           <p class="eyebrow">Fayetteville, NC / Digital Workshop</p>
           <DecryptedHeroTitle
             id="hero-title"
-            text="Premium websites. Sharper leads. Digital systems that sell."
+            text="Websites that make serious buyers stop, trust, and act."
             revealDirection="start"
             client:load
           />
           <p class="hero-copy">
-            Tootie Designs creates cinematic websites, conversion landing pages, and full-stack business tools for CEOs, founders, and serious brands that need a world-class first impression and a cleaner path to revenue.
+            Tootie Designs builds cinematic websites, conversion landing pages, and digital systems for founders, local businesses, consultants, and premium brands whose site needs to look unforgettable and produce the next real inquiry.
           </p>
           <div class="hero-actions">
-            <a class="button primary" href={`${basePath}website-audit/`} data-event="audit_cta_click" data-label="home hero audit">Request a Free Website Audit</a>
-            <a class="button secondary" href="#work" data-event="case_study_click" data-label="home hero work">View Recent Builds</a>
+            <a class="button primary hero-primary-cta" href={`${basePath}website-audit/`} data-event="audit_cta_click" data-label="home hero audit">Get My Free Website Audit</a>
+            <a class="button secondary" href="#start-path" data-event="pathfinder_click" data-label="home hero choose path">Choose a Build Path</a>
           </div>
-          <p class="hero-reassurance">Free first-impression review. No pressure, no obligation.</p>
+          <p class="hero-reassurance">Free first-impression review. Clear next step. No pressure, no obligation.</p>
         </div>
-        <aside class="hero-panel" aria-label="Studio pillars">
+        <aside class="hero-panel hero-flow-panel" aria-label="How Tootie Designs moves a visitor from attention to inquiry">
           <div>
             <span>01</span>
-            <strong>First impression</strong>
-            <p>Positioning, visuals, and clarity that make a business look serious fast.</p>
+            <strong>Capture attention</strong>
+            <p>Make the first screen instantly clear, premium, and hard to ignore.</p>
           </div>
           <div>
             <span>02</span>
-            <strong>Lead path</strong>
-            <p>Audit-driven pages, CTAs, and forms built to turn attention into inquiry.</p>
+            <strong>Build trust</strong>
+            <p>Show proof, fit, outcomes, and process before asking for commitment.</p>
           </div>
           <div>
             <span>03</span>
-            <strong>Systems</strong>
-            <p>Websites, dashboards, automations, and deployable tools that support the work.</p>
+            <strong>Route action</strong>
+            <p>Send visitors to the right audit, service, landing page, or system path.</p>
           </div>
         </aside>
+      </section>
+
+      <section class="start-path section-shell" id="start-path" aria-labelledby="start-path-title">
+        <div class="start-path-heading">
+          <p class="eyebrow">Start Here</p>
+          <h2 id="start-path-title">One site. Three clear paths. No guessing what to do next.</h2>
+          <p>
+            The homepage now works like a decision system: diagnose the problem, choose the right build path, then move into a website, landing page, cleanup sprint, or digital system that can actually be delivered.
+          </p>
+        </div>
+        <div class="path-card-grid">
+          <a class="path-card primary-path" href={`${basePath}website-audit/`} data-event="audit_cta_click" data-label="start path audit">
+            <span>01 / NOT SURE YET</span>
+            <strong>Start with the free audit.</strong>
+            <p>Best for visitors who know the site is underperforming but need the clearest first move before spending money.</p>
+            <em>Get the diagnosis →</em>
+          </a>
+          <a class="path-card" href={`${basePath}world-class-website-design/`} data-event="service_page_click" data-label="start path world class">
+            <span>02 / NEED THE FLAGSHIP</span>
+            <strong>Build a world-class website.</strong>
+            <p>Best for brands that need cinematic identity, proof architecture, conversion copy, and global-level first impression.</p>
+            <em>Explore the website path →</em>
+          </a>
+          <a class="path-card" href={`${basePath}digital-system-build/`} data-event="service_page_click" data-label="start path systems">
+            <span>03 / NEED MORE THAN A SITE</span>
+            <strong>Turn operations into a system.</strong>
+            <p>Best when the website needs dashboards, automations, portals, internal tools, or software behind the lead flow.</p>
+            <em>Explore digital systems →</em>
+          </a>
+        </div>
       </section>
 
       <section class="trust-line section-shell" aria-label="Studio trust statement">
@@ -490,6 +520,7 @@ const servicePackages = [
             <h3>Digital System Build</h3>
             <strong>Custom quote</strong>
             <p>For dashboards, portals, automations, web apps, and internal tools where the website becomes part of a larger operating system.</p>
+            <a class="project-link" href={`${basePath}digital-system-build/`} data-event="service_page_click" data-label="offer ladder digital system">Explore digital systems</a>
           </article>
         </div>
       </section>

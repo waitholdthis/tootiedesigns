@@ -407,7 +407,7 @@ textarea {
   grid-template-columns: minmax(0, 1fr) 21rem;
   gap: clamp(1.5rem, 4vw, 3rem);
   padding-top: 7rem;
-  padding-bottom: clamp(2rem, 5vw, 4rem);
+  padding-bottom: clamp(3rem, 6vw, 5.25rem);
 }
 
 .hero-media {
@@ -572,8 +572,8 @@ h3 {
 }
 
 .secondary {
-  border-color: rgba(243, 238, 229, 0.22);
-  background: rgba(255, 255, 255, 0.055);
+  border-color: rgba(243, 238, 229, 0.3);
+  background: rgba(255, 255, 255, 0.07);
   color: var(--bone);
 }
 
@@ -624,6 +624,152 @@ h3 {
 .contact p {
   color: var(--muted);
   line-height: 1.65;
+}
+
+.hero-flow-panel div {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.055), transparent 44%),
+    rgba(10, 13, 16, 0.84);
+}
+
+.hero-flow-panel div::after {
+  position: absolute;
+  right: 1rem;
+  bottom: 0.85rem;
+  width: 2.8rem;
+  height: 1px;
+  content: "";
+  background: linear-gradient(90deg, transparent, rgba(210, 173, 116, 0.72));
+}
+
+.hero-primary-cta {
+  min-height: 3.05rem;
+  padding-inline: 1.45rem;
+  box-shadow:
+    0 16px 34px rgba(182, 138, 85, 0.24),
+    0 0 0 1px rgba(255, 255, 255, 0.08) inset;
+}
+
+.start-path {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.35fr);
+  gap: clamp(1rem, 3vw, 1.6rem);
+  padding-top: clamp(1.4rem, 3vw, 2rem);
+  padding-bottom: clamp(1rem, 2vw, 1.4rem);
+}
+
+.start-path::before {
+  position: absolute;
+  inset: 0 clamp(1rem, 3vw, 2rem);
+  z-index: -1;
+  border: 1px solid rgba(210, 173, 116, 0.16);
+  content: "";
+  background:
+    radial-gradient(circle at 16% 16%, rgba(210, 173, 116, 0.12), transparent 17rem),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.015));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.start-path-heading {
+  padding: clamp(1.1rem, 2vw, 1.35rem);
+}
+
+.start-path-heading h2 {
+  max-width: 13ch;
+  font-size: clamp(2rem, 3.4vw, 3.1rem);
+}
+
+.start-path-heading p:last-child {
+  max-width: 34rem;
+  margin: 1rem 0 0;
+  color: #d8cec0;
+  line-height: 1.7;
+}
+
+.path-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(0.75rem, 1.6vw, 1rem);
+}
+
+.path-card {
+  position: relative;
+  display: flex;
+  min-height: 18rem;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: clamp(1rem, 2vw, 1.25rem);
+  border: 1px solid rgba(210, 173, 116, 0.2);
+  overflow: hidden;
+  background:
+    linear-gradient(145deg, rgba(15, 19, 22, 0.94), rgba(18, 29, 45, 0.72)),
+    rgba(10, 13, 16, 0.92);
+  transition:
+    background 180ms ease,
+    transform 180ms ease;
+}
+
+.path-card::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background: radial-gradient(circle at 20% 0%, rgba(210, 173, 116, 0.18), transparent 13rem);
+  opacity: 0;
+  transition: opacity 180ms ease;
+}
+
+.path-card:hover,
+.path-card:focus-visible {
+  transform: translateY(-2px);
+  background:
+    linear-gradient(145deg, rgba(26, 30, 34, 0.98), rgba(20, 35, 55, 0.78)),
+    rgba(10, 13, 16, 0.96);
+}
+
+.path-card:hover::before,
+.path-card:focus-visible::before,
+.path-card.primary-path::before {
+  opacity: 1;
+}
+
+.path-card span,
+.path-card em {
+  position: relative;
+  z-index: 1;
+  color: var(--bronze-2);
+  font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.74rem;
+  font-style: normal;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.path-card strong {
+  position: relative;
+  z-index: 1;
+  display: block;
+  margin: 1rem 0 0.65rem;
+  color: var(--bone);
+  font-size: clamp(1.25rem, 2vw, 1.75rem);
+  line-height: 1.08;
+}
+
+.path-card p {
+  position: relative;
+  z-index: 1;
+  margin: 0 0 1.25rem;
+  color: #e0d6c8;
+  line-height: 1.62;
+}
+
+.path-card.primary-path {
+  background:
+    linear-gradient(145deg, rgba(59, 42, 24, 0.88), rgba(17, 22, 27, 0.94)),
+    rgba(10, 13, 16, 0.92);
 }
 
 .trust-line {
@@ -3579,6 +3725,7 @@ textarea:focus-visible {
   }
 
   .hero,
+  .start-path,
   .blueprint,
   .contact,
   .audit-funnel,
@@ -3615,6 +3762,14 @@ textarea:focus-visible {
 
   .hero-panel {
     grid-template-columns: 1fr;
+  }
+
+  .path-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .path-card {
+    min-height: 13.5rem;
   }
 
   .process-grid,
@@ -3773,6 +3928,28 @@ textarea:focus-visible {
   .hero-actions {
     display: grid;
     grid-template-columns: 1fr;
+  }
+
+  .start-path {
+    gap: 0.5rem;
+    padding-top: 1rem;
+  }
+
+  .start-path::before {
+    inset: 0;
+  }
+
+  .start-path-heading {
+    padding: 1rem;
+  }
+
+  .start-path-heading h2 {
+    max-width: 12ch;
+  }
+
+  .path-card {
+    min-height: auto;
+    padding: 1rem;
   }
 
   .button {
