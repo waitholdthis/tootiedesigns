@@ -6451,3 +6451,228 @@ textarea:focus-visible {
     grid-template-columns: 1fr;
   }
 }
+
+.audit-report-generator-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.audit-report-generator-section::before {
+  content: "";
+  position: absolute;
+  inset: 3rem auto auto 2rem;
+  width: 18rem;
+  height: 18rem;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(244, 195, 107, 0.18), transparent 68%);
+  pointer-events: none;
+}
+
+.audit-generator-shell {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(19rem, 0.72fr) minmax(0, 1fr);
+  gap: clamp(1rem, 3vw, 1.75rem);
+  margin-top: 1.5rem;
+  align-items: start;
+}
+
+.project-intelligence-intake,
+.generated-audit-report {
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 30px;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.082), rgba(255, 255, 255, 0.028)),
+    rgba(8, 8, 10, 0.86);
+  box-shadow: 0 22px 80px rgba(0, 0, 0, 0.34);
+  padding: clamp(1.15rem, 2.4vw, 1.8rem);
+}
+
+.project-intelligence-intake {
+  position: relative;
+  display: grid;
+  gap: 0.85rem;
+  align-self: start;
+}
+
+.project-intelligence-intake h3,
+.generated-audit-report h3 {
+  margin: 0.25rem 0 0.5rem;
+  font-size: clamp(1.65rem, 3.6vw, 2.7rem);
+  line-height: 0.98;
+}
+
+.project-intelligence-intake label,
+.audit-generator-handoff-form label {
+  display: grid;
+  gap: 0.4rem;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.88rem;
+}
+
+.project-intelligence-intake input,
+.project-intelligence-intake select,
+.audit-generator-handoff-form input {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.38);
+  color: #fff;
+  padding: 0.85rem 1rem;
+}
+
+.project-intelligence-intake select {
+  border-radius: 18px;
+}
+
+.generated-audit-report {
+  display: grid;
+  gap: 1rem;
+}
+
+.audit-report-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: start;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 1rem;
+}
+
+.audit-report-header strong {
+  color: #f4c36b;
+  font-size: clamp(2.6rem, 7vw, 5rem);
+  line-height: 0.86;
+}
+
+.audit-generator-scorecard {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.7rem;
+}
+
+.audit-generator-scorecard div {
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.045);
+  padding: 0.85rem;
+  min-height: 8.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.audit-generator-scorecard span,
+.handoff-brief-panel span,
+.recommended-package-panel span {
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.audit-generator-scorecard b {
+  color: #fff;
+  font-size: 1.55rem;
+}
+
+.audit-generator-scorecard i {
+  height: 0.45rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.09);
+  overflow: hidden;
+}
+
+.audit-generator-scorecard em {
+  display: block;
+  height: 100%;
+  width: var(--score, 50%);
+  border-radius: inherit;
+  background: linear-gradient(90deg, #f4c36b, rgba(255, 255, 255, 0.86));
+}
+
+.handoff-brief-panel,
+.recommended-package-panel,
+.audit-handoff-grids section {
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  border-radius: 22px;
+  background: radial-gradient(circle at 20% 0%, rgba(244, 195, 107, 0.13), transparent 38%), rgba(255, 255, 255, 0.04);
+  padding: 1rem;
+}
+
+.handoff-brief-panel p,
+.recommended-package-panel p,
+.audit-handoff-grids li {
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.6;
+}
+
+.recommended-package-panel h4 {
+  margin: 0.35rem 0;
+  font-size: clamp(1.4rem, 3vw, 2.2rem);
+}
+
+.audit-handoff-grids {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.audit-handoff-grids h4 {
+  margin: 0 0 0.7rem;
+  font-size: 1rem;
+}
+
+.audit-handoff-grids ol,
+.audit-handoff-grids ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.audit-generator-handoff-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
+  align-items: end;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1rem;
+}
+
+.audit-generator-handoff-form label {
+  grid-column: 1 / -1;
+}
+
+.audit-generator-handoff-form .button {
+  justify-content: center;
+  text-align: center;
+  min-width: 0;
+}
+
+@media (max-width: 1100px) {
+  .audit-generator-shell,
+  .audit-generator-handoff-form {
+    grid-template-columns: 1fr;
+  }
+
+  .project-intelligence-intake {
+    position: relative;
+    top: auto;
+  }
+
+  .audit-generator-scorecard {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .audit-report-header,
+  .audit-handoff-grids {
+    grid-template-columns: 1fr;
+    display: grid;
+  }
+
+  .audit-generator-scorecard {
+    grid-template-columns: 1fr;
+  }
+}

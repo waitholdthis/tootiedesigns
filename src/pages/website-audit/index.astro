@@ -1,5 +1,6 @@
 ---
 import "../../styles/global.css";
+import AuditReportGenerator from "../../components/AuditReportGenerator";
 
 const base = import.meta.env.BASE_URL;
 const basePath = base.endsWith("/") ? base : `${base}/`;
@@ -133,6 +134,19 @@ const schema = [
             </div>
           </div>
         </aside>
+      </section>
+
+      <section class="audit-report-generator-section section-shell" aria-labelledby="audit-generator-title" data-audit-report-generator-section>
+        <div class="section-heading split">
+          <div>
+            <p class="eyebrow">Tootie Website Growth Audit</p>
+            <h2 id="audit-generator-title">Generate a live report before you request the full review.</h2>
+          </div>
+          <p>
+            This frontend diagnostic turns your website context into a scorecard, package recommendation, priority fix sequence, and sales handoff brief. It is the first version of the Tootie audit engine — no API cost, no waiting, no generic consultation language.
+          </p>
+        </div>
+        <AuditReportGenerator basePath={basePath} deploymentBase={deploymentBase} client:load />
       </section>
 
       <section class="audit-landing-proof section-shell" aria-labelledby="audit-proof-title">
